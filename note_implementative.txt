@@ -1,1 +1,6 @@
-- 
+- noi useremo per lo sviluppo una barra di navigazione dinamica, che ha link circolari, quando consegnamo ricorarsi di toglierla
+
+Da ricordare:
+- aggiungere tutti gli xml:lang
+- tabelle accessibili grazie all'attributo headers
+
