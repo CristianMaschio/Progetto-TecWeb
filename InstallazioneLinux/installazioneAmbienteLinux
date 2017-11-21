@@ -15,7 +15,7 @@ sudo apt-get install -y apache2 apache2-doc apache2-utils libexpat1 ssl-cert
 
 # 2. Installazione di PHP
 # se avete già avviato il webserver è necessario riavviarlo per rendere php funzionante
-sudo apt-get install -y libapache2-mod-php
+sudo apt-get install -y libapache2-mod-php php-mysql
 
 # Dove vanno a finire le pagine web?
 # -> in /var/www/html/ questa è la cartella dove le pagine vengono(per ora!) hostate dal web server. Per fare qualsiasi azione su questa cartella è necessario essere amministratori
