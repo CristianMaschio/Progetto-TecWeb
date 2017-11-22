@@ -4,26 +4,25 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="it" lang="it" >
 <head>
-    <?= printHead('Template page'); ?>
+  <?= printHead('Template page'); ?>
 </head>
 <body>
-    <div id="header" >
+  <div id="header" >
 
-    </div>
+  </div>
 
-    <div id="breadcrumb">
+  <div id="breadcrumb">
+  </div>
 
-    </div>
+  <div id="nav-bar">
+    <?= printNavBar(); ?>
+  </div>
 
-    <div id="nav-bar">
-        <?= printNavBar(); ?>
-    </div>
+  <div id ="content">
+  </div>
 
-    <div id ="content">
-    </div>
-
-    <div id="footer">
-        <?= printFooter(); ?>
-    </div>
+  <div id="footer">
+    <?= printFooter(); ?>
+  </div>
 </body>
 </html>
