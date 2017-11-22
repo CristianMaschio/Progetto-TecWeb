@@ -14,6 +14,7 @@ function printHead($title){
 }
 
 function printHeader(){
+<<<<<<< HEAD
   echo("
   <h1>Home e logo</h1>
   ");
@@ -28,6 +29,33 @@ function printNavBar(){
   <li></li>
   </ul>
   ");
+=======
+    echo("
+    <div id='logoTitle'>
+        <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+        <h1>Home e logo</h1>
+    </div>
+   
+    <div id='findAll'>
+        <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+        <input type=\"text\" name=\"fname\">
+    </div>
+    ");
+}
+
+function printNavBar(){
+    echo("
+    <ul>
+        <li lang=\"en\"><img src=\"\">Home</li>
+        <li lang=\"en\"><img src=\"\"><abbr>Info</abbr></li>
+        <li lang=\"it\"><img src=\"\">Eventi</li>
+        <li lang=\"it\"><img src=\"\">Luoghi</li>
+    </ul>
+    <div id='navLog'>
+        <a>Login/Registrazione</a>
+    </div>
+    ");
+>>>>>>> 61b34d6da584b69017427c02e348a3115e5baa45
 }
 
 function printFooter(){

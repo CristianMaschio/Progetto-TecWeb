@@ -23,6 +23,5 @@
   <footer>
     <?= printFooter(); ?>
   </footer>
-
 </body>
 </html>
