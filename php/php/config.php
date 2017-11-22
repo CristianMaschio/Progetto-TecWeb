@@ -105,13 +105,13 @@ function consumeMessage(){
     {
       //valori da 1 a 3: 1 verde 2 giallo 3 rosso
       switch($_SESSION['msg_type']){
-        case 1: $tipo_messaggio='alert-box success';
+        case 1: $tipo_messaggio='message-success';
         break;
-        case 2: $tipo_messaggio='alert-box warning';
+        case 2: $tipo_messaggio='message-warning';
         break;
-        case 3: $tipo_messaggio='alert-box alert';
+        case 3: $tipo_messaggio='message-fail';
         break;
-        default: $tipo_messaggio='alert-box warning'; //se mal settato il tipo è warning
+        default: $tipo_messaggio='message-warning'; //se mal settato il tipo è warning
       }
     }
     $return = "<div class='$tipo_messaggio'> ".$_SESSION['message']."</div>";

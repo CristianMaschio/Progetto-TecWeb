@@ -27,6 +27,8 @@ function proprietario($user){
     <?= printNavBar(); ?>
   </nav>
 
+  <?= echo consumeMessage(); ?>
+
   <div id="content">
     Profilo di <?php
     echo $user['username'];

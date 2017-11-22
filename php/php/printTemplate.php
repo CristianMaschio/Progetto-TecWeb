@@ -26,7 +26,7 @@ function printHeader(){
   </div>
   ");
   //consima sotto l'header (per ora messaggi) se ce ne sono
-  echo consumeMessage();
+  
 }
 
 function printNavBar(){
