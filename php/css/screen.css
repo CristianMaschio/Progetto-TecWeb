@@ -3,7 +3,7 @@
     margin: 0;
     text-align: justify;
 }
-
+/*INIZIO Header & Nav*/
 header {
     background-color: #303030;
     color: white;
@@ -52,11 +52,20 @@ nav a, abbr{
     float: right;
     padding-right: 1em;
 }
+/*FINE Header & Nav*/
+/*INIZIO messaggi verso utente*/
+.message-success{
+    background-color: #3a945b;
+    color: white;
+}
+/*FINE messaggi verso utente*/
+
 html, body {
     max-width: 1024px; /* larghezza massima anche per schermi grandi */
     margin: auto; /* il browser da solo centra il contenuto */
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size:100%;
+    min-width: 760px;
 }
 
 body{

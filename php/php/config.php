@@ -18,7 +18,7 @@ define('redirect',true); //attiva/disattiva i redirect
 //CREDENZIALI DATABASE
 $host = '127.0.0.1';
 $user_db = 'root';
-$pass_db = 'root';
+$pass_db = '';
 $dbnm = 'biglietteria';
 
 $conn=null;
