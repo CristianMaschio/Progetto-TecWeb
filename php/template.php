@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <?php require_once('php/config.php'); ?>
 <?php require_once('php/printTemplate.php') ?>
 
 <html lang="it" >
 <head>
-  <?= printHead('Template page'); ?>
+  <?= printHead('Pagina template'); ?>
 </head>
 <body>
+
   <header>
     <?= printHeader(); ?>
   </header>
@@ -16,8 +17,8 @@
     <?= printNavBar(); ?>
   </nav>
 
-  <section id="content">
-  </section>
+  <div id="content">
+  </div>
 
   <footer>
     <?= printFooter(); ?>

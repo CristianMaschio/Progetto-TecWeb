@@ -1,0 +1,7 @@
+## INFORMAZIONI ##
+Qui troverete le informazioni riguardanti la biglietteria, in caso serva determinarle
+
+- Nome: BigliettiOnline
+- Indirizzo: Via Garibaldi n.2, Padova PD
+- Numero di telefono: +39 340 1234567
+- email: biglietteria@biglietteria.it

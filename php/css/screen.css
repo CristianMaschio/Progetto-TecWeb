@@ -1,0 +1,16 @@
+* {
+    padding: 0; /*resetto il valore di default impostati dai browser, mettere sempre*/
+    margin: 0;
+    text-align: justify;
+}
+
+html, body {
+    max-width: 1024px; /* larghezza massima anche per schermi grandi */
+    margin: auto; /* il browser da solo centra il contenuto */
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size:100%;
+}
+
+body{
+    border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
+}
