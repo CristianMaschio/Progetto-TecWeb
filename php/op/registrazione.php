@@ -1,17 +1,17 @@
 <?php
     require_once('config.php');
     if(isLogged()) {
-        message('Non puoi registrarti, sei già loggato!',3);
+        message('Non puoi registrarti, sei giÃ  loggato!',3);
         redirect('home.php');
         die();
     }
     /*
-    
+
     invia in post:
     username_r
     password_r
     tipo_r
-    
+
     */
 ?>
 

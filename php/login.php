@@ -20,18 +20,22 @@
   <div id="content">
     <h1>Login</h3>
       <hr>
-    <form method='POST' action='login_r.php'>
-    Username:
-    <input type='text' name='username'>
-    Password:
-    <input type='password' name='pass'>
-    <input type='submit' value='Accedi'>
-    </form>
-    Non hai un account? <a href='registrazione.php'>Registrati!</a>
-  </div>
+      <form method='POST' action='login_r.php'>
+        <label>
+          <span lang="en">Username:</span>
+          <input type='text' name='username'>
+        </label>
+        <label>
+          <span lang="en">Password:</span>
+          <input type='password' name='pass'>
+        </label>
+        <input type='submit' value='Accedi'>
+      </form>
+      Non hai un <span lang="en">account</span>? <a href='registrazione.php'>Registrati!</a>
+    </div>
 
-  <footer>
-    <?= printFooter(); ?>
-  </footer>
-</body>
-</html>
+    <footer>
+      <?= printFooter(); ?>
+    </footer>
+  </body>
+  </html>

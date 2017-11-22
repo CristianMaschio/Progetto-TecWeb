@@ -49,7 +49,7 @@ function printNavBar(){
     //utente loggato: mostriamo pagina del profilo
     // TODO: IL LINK AL PROFILO OVVIAMENTE NON FUNZIONA
     echo("<div id='navLog'>
-    <a href=\"profilo.php\">".$_SESSION['user_username']."</a>
+    <a href=\"utente_scheda.php?id_u=".$_SESSION['user_id']."\">".$_SESSION['user_username']."</a>
     </div>
     ");
   }
