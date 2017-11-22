@@ -14,22 +14,6 @@ function printHead($title){
 }
 
 function printHeader(){
-<<<<<<< HEAD
-  echo("
-  <h1>Home e logo</h1>
-  ");
-}
-
-function printNavBar(){
-  echo("
-  <ul>
-  <li lang=\"en\">Home</li>
-  <li><abbr>Info</abbr></li>
-  <li></li>
-  <li></li>
-  </ul>
-  ");
-=======
     echo("
     <div id='logoTitle'>
         <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
@@ -55,7 +39,6 @@ function printNavBar(){
         <a>Login/Registrazione</a>
     </div>
     ");
->>>>>>> 61b34d6da584b69017427c02e348a3115e5baa45
 }
 
 function printFooter(){
