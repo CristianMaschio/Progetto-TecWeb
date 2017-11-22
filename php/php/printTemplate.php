@@ -14,31 +14,45 @@ function printHead($title){
 }
 
 function printHeader(){
-    echo("
-    <div id='logoTitle'>
-        <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
-        <h1>Home e logo</h1>
-    </div>
-   
-    <div id='findAll'>
-        <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
-        <input type=\"text\" name=\"fname\">
-    </div>
-    ");
+  echo("
+  <div id='logoTitle'>
+  <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+  <h1>Home e logo</h1>
+  </div>
+
+  <div id='findAll'>
+  <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+  <input type=\"text\" name=\"fname\">
+  </div>
+  ");
+  //consima sotto l'header (per ora messaggi) se ce ne sono
+  echo consumeMessage();
 }
 
 function printNavBar(){
-    echo("
-    <ul>
-        <li lang=\"en\"><img src=\"\">Home</li>
-        <li lang=\"en\"><img src=\"\"><abbr>Info</abbr></li>
-        <li lang=\"it\"><img src=\"\">Eventi</li>
-        <li lang=\"it\"><img src=\"\">Luoghi</li>
-    </ul>
-    <div id='navLog'>
-        <a>Login/Registrazione</a>
+  //bisognerà discriminare il fatto che l' utente sia loggato o meno
+  echo("
+  <ul>
+  <li lang=\"en\"><a href=\"home.php\">Home</a></li>
+  <li lang=\"en\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
+  <li lang=\"it\"><a href=\"eventi.php\">Eventi</a></li>
+  <li lang=\"it\"><a href=\"luoghi.php\">Luoghi</a></li>
+  </ul>
+  ");
+  if(!isLogged()){
+    //utente non loggato: mostriamo la pagina di login
+    echo("<div id='navLog'>
+    <a href=\"login.php\"><span lang=\"en\">Login</span>/Registrazione</a>
     </div>
     ");
+  } else {
+    //utente loggato: mostriamo pagina del profilo
+    // TODO: IL LINK AL PROFILO OVVIAMENTE NON FUNZIONA
+    echo("<div id='navLog'>
+    <a href=\"profilo.php\">".$_SESSION['user_username']."</a>
+    </div>
+    ");
+  }
 }
 
 function printFooter(){
@@ -50,10 +64,10 @@ function printFooter(){
   </a>
 
   <address>
-    BigliettiOnline <br />
-    +39 340 1234567 <br />
-    Via Garibaldi n.2, Padova PD <br />
-    <a href=\"mailto:biglietteria@biglietteria.it\">biglietteria@biglietteria.it</a>
+  BigliettiOnline <br />
+  +39 340 1234567 <br />
+  Via Garibaldi n.2, Padova PD <br />
+  <a href=\"mailto:biglietteria@biglietteria.it\">biglietteria@biglietteria.it</a>
   </address>
 
   ");

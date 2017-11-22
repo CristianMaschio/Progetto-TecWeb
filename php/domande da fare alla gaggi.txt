@@ -1,0 +1,2 @@
+ma se usiamo html 5 l attributo giuusto è xml:lang oppure semplicemente lang?
+- inoltre risolvere la cosa del message(che sta solo nella testa di freppo, chiedere per chiarimenti)
