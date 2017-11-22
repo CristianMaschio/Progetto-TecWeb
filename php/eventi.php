@@ -31,6 +31,8 @@
     TODO: per l'accessibilità se ordiniamo una tabella forse dovremmo farlo con dei bottoni
     e non semplicemente toccando un th, cosa che facciamo per ora
 
+    TODO: quando si legge qualcosa con un accento lo visualizza male, problemi con la codfica (nella tabella seridò)
+
     */
 
     filterForm($filter,'Cerca un evento');
