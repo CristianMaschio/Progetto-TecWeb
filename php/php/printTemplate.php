@@ -13,18 +13,29 @@ function printHead($title){
 
 function printHeader(){
     echo("
-    <h1>Home e logo</h1>
+    <div id='logoTitle'>
+        <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+        <h1>Home e logo</h1>
+    </div>
+   
+    <div id='findAll'>
+        <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+        <input type=\"text\" name=\"fname\">
+    </div>
     ");
 }
 
 function printNavBar(){
     echo("
     <ul>
-        <li lang=\"en\">Home</li>
-        <li><abbr>Info</abbr></li>
-        <li></li>
-        <li></li>
+        <li lang=\"en\"><img src=\"\">Home</li>
+        <li lang=\"en\"><img src=\"\"><abbr>Info</abbr></li>
+        <li lang=\"it\"><img src=\"\">Eventi</li>
+        <li lang=\"it\"><img src=\"\">Luoghi</li>
     </ul>
+    <div id='navLog'>
+        <a>Login/Registrazione</a>
+    </div>
     ");
 }
 
