@@ -7,6 +7,7 @@ function printHead($title){
   <meta name=\"description\" content=\"Servizio di prenotazione biglietti per eventi di vario genere\">
   <meta name=\"keywords\" content=\"eventi, spettacoli, cinema, teatro, cultura, eventi sportivi, fiere, musei, musica\">
   <meta name=\"author\" content=\"Gruppo di progetto Tecnologie Web\">
+  <script type=\"text/javascript\" src=\"js/functions.js\"></script>
   <link rel=\"stylesheet\" type=\"text/css\" href=\"css/screen.css\" >
   <link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 480px)\" href=\"css/mobile.css\">
   <link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"css/print.css\">
@@ -26,7 +27,7 @@ function printHeader(){
   </div>
   ");
   //consima sotto l'header (per ora messaggi) se ce ne sono
-  
+
 }
 
 function printNavBar(){
@@ -47,7 +48,6 @@ function printNavBar(){
     ");
   } else {
     //utente loggato: mostriamo pagina del profilo
-    // TODO: IL LINK AL PROFILO OVVIAMENTE NON FUNZIONA
     echo("<div id='navLog'>
     <a href=\"utente_scheda.php?id_u=".$_SESSION['user_id']."\">".$_SESSION['user_username']."</a>
     </div>

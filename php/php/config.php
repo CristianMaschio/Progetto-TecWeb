@@ -36,7 +36,6 @@ function register($varname){
 }
 
 // FUNZIONI PER INTERFACCIARSI AL DATABASE
-
 // si connette al database
 function connect(){
   global $conn, $host, $user_db, $pass_db, $dbnm;
@@ -71,6 +70,35 @@ function select($sql){
   }
   return $table;
 }
+
+// FUNZIONI DI UTILITÀ GENERALE NEL DATABASE
+
+function get_nome_utente($id){
+  $utente=select("SELECT * FROM utenti WHERE id=$id");
+  return $utente[0]['username'];
+}
+
+function get_nome_categoria($id){
+  $cat=select("SELECT nome FROM categorie WHERE id=$id");
+  return $cat[0]['nome'];
+}
+
+function get_nome_evento($id){
+  $evt=select("SELECT nome FROM eventi WHERE id=$id");
+  return $evt[0]['nome'];
+}
+
+function get_nome_luogo($id){
+  $luogo=select("SELECT nome FROM luoghi WHERE id=$id");
+  return $luogo[0]['nome'];
+}
+
+function evento_has_spettacoli($eventoid){
+  $spettacoli = select("SELECT * FROM eventi JOIN spettacoli ON eventi.id=spettacoli.evento_id WHERE eventi.id=$eventoid");
+  if($spettacoli == NULL) return false;
+  else return true;
+}
+
 
 // FUNZIONE DI REDIRECT
 function redirect($url){
@@ -127,6 +155,37 @@ function isLogged(){
   //perchè sloggando mettevo -1 all'user id, ma non penso sia necessario in realtà
   if(isset($_SESSION['user_id'])) return true;
   else return false;
+}
+
+// STAMPA UNA FORM DI RICERCA CHE IN GET AGGIORNA LA PAGINA SU CUI VIENE RICHIAMATA
+// stampa un form di filtro: esso se cliccato su submit aggionge alla pagina
+// che l'ha richiamato un attributo (filter) con GET per permettere di filtrare
+// ciè fatto usando una funzione javascript
+function filterForm($filter,$placeholder=''){
+  echo "        <form  id=\"filterform\" action=\"\" method=\"GET\"
+  onsubmit=\"return addlocpar('filter', this.filter.value); return false;\">
+  <input type=\"submit\" value=\"Cerca\" class=\"postfix button\"/>
+  <input type=\"text\" name=\"filter\" value=\"".$filter."\"/ placeholder='$placeholder'>
+  <input type=\"submit\" value=\"Tutti\" onclick=\"this.form.filter.value=''\" class=\"prefix button secondary\"/>
+
+  </form>";
+}
+
+// FUNZIONI PER FORMATTARE DATI PARTICOLARI
+
+// data una durata grezza dal database la formatta a dovere, nel caso sia nulla
+// restituisce 'Giornata lavorativa', che è così per convenzione
+function format_durata($durata){
+  if($durata == NULL || $durata==0){
+    return "Giornata lavorativa";
+  }
+  else{
+    $ret = substr($durata,0,5);
+    $ret = str_replace(':','h ',$ret);
+    if(substr($ret,0,1) == '0') $ret = substr($ret,1,5);
+    $ret = $ret."min";
+    return $ret;
+  }
 }
 
 ?>

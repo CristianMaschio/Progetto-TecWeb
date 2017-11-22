@@ -1,7 +1,6 @@
-function addlocpar(par, val){ //funzione per aggiungere un parametro get    
+function addlocpar(par, val){ //funzione per aggiungere un parametro get
     if(location.search == ''){
         location.search += '?' + par + '=' +val;
-
     } else{
         var s = location.search.substr(1);
         var v = s.split('&');  // Suddivido la stringa e creo un vettore.

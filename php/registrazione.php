@@ -29,6 +29,8 @@ tipo_r
     <?= printNavBar(); ?>
   </nav>
 
+  <?php echo consumeMessage(); ?>
+
   <div id="content">
     <h2>Registrazione</h2>
     <hr />
