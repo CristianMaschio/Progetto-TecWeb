@@ -18,7 +18,7 @@
   </nav>
 
   <div id="content">
-    <h1>Login</h3>
+    <h3>Login</h3>
       <hr>
       <form method='POST' action='login_r.php'>
         <label>
