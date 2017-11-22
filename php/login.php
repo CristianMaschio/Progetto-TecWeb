@@ -17,6 +17,8 @@
     <?= printNavBar(); ?>
   </nav>
 
+  <?php echo consumeMessage(); ?>
+
   <div id="content">
     <h3>Login</h3>
       <hr>

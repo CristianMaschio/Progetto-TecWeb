@@ -17,6 +17,8 @@
     <?= printNavBar(); ?>
   </nav>
 
+  <?php echo consumeMessage(); ?>
+
   <div id="content">
   </div>
 
