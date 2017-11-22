@@ -44,9 +44,25 @@ nav li{
 }
 
 nav a, abbr{
-    color: white;
     text-decoration: none;
 }
+    nav a:link {
+        color: white;
+    }
+    /* visited link */
+    nav a:visited {
+        color: #cccccc;
+    }
+
+    /* mouse over link */
+    nav a:hover {
+        font-weight: bold;
+    }
+
+    /* selected link */
+    nav a:active {
+        font-weight: bold;
+    }
 
 #navLog{
     float: right;

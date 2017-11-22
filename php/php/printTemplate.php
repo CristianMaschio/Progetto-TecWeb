@@ -18,7 +18,7 @@ function printHeader(){
   echo("
   <div id='logoTitle'>
   <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
-  <h1>Home e logo</h1>
+  <h1>Biglietteria</h1>
   </div>
 
   <div id='findAll'>
