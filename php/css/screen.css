@@ -74,6 +74,17 @@ body{
     border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
 }
 /*INIZIO footer*/
+footer{
+    background-color: #303030;
+    color: white;
+    font-size: 0.8em;
+    padding: 1em;
+}
+
+footer a{
+    color: white;
+}
+
 footer img{
     float: right;
 }
