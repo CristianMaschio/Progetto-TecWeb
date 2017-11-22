@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="514ee74c-9c5a-46de-bb3c-e6ba25f24782" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/php/template.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/css/screen.css" afterPath="$PROJECT_DIR$/php/css/screen.css" />
     </list>
@@ -18,8 +17,8 @@
       <file leaf-file-name="screen.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/css/screen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+            <state relative-caret-position="549">
+              <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -28,8 +27,8 @@
       <file leaf-file-name="printTemplate.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/php/printTemplate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+            <state relative-caret-position="0">
+              <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding>
                 <marker date="1511358020546" expanded="true" signature="714:836" ph="..." />
                 <marker date="1511358020546" expanded="true" signature="858:996" ph="..." />
@@ -280,12 +279,12 @@
       <option name="presentableId" value="Default" />
       <updated>1511336502258</updated>
       <workItem from="1511336508457" duration="4155000" />
-      <workItem from="1511342869182" duration="11252000" />
+      <workItem from="1511342869182" duration="12697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15407000" />
+    <option name="totallyTimeSpent" value="16852000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -465,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/php/printTemplate.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
             <marker date="1511358020546" expanded="true" signature="714:836" ph="..." />
             <marker date="1511358020546" expanded="true" signature="858:996" ph="..." />
@@ -482,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/css/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="44" column="8" lean-forward="true" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+        <state relative-caret-position="549">
+          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
           <folding />
         </state>
       </provider>
