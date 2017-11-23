@@ -110,9 +110,13 @@ body{
 --------------------*/
 #contentLogin {
     margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
     width: 50%;
-    border-width:0.2em;
-    border-style:outset;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cccccc;
+    display: block;
 }
 #contentLogin h3{
     text-align: center;
@@ -121,24 +125,22 @@ body{
     padding: 0.2em;
 }
 
-#contentLogin .labelLogin{
-    float: left;
-    width: 100%;
-    padding: 0.5em;
+#contentLogin input{
+    width: 99.4%;
     display: block;
-}
-#contentLogin .labelLogin span{
-    float: left;
-    width: 10em;
-}
-#contentLogin .labelLogin input{
-    margin-left: 1em;
+    margin-right: 1px;
+    margin-bottom: 0.5em;
+    height: 2em;
+    font-size: 18px;
 }
 #contentLogin #buttonAccedi{
     display: block;
     margin: auto;
-    padding-left: 4em;
-    padding-right: 4em;
+    width: 50%;
+}
+#contentLogin p{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 /*  FINE Login  */
 
