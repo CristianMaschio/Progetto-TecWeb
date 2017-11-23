@@ -37,6 +37,7 @@ require_once('php/printTemplate.php')
       <dl>
         <dt>Durata:<?= format_durata($evento['durata'])?></dt>
         <dt>Categoria: <a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
+        <!-- TODO: manca modifica ed eliminazione dell evento da parte di un amministratore o operatore -->
       </dl>
     </aside>
 
@@ -56,7 +57,7 @@ require_once('php/printTemplate.php')
         <?php endif ?>
       </tr>
 
-      <?php //qui carico i varispettacoli
+      <?php //leggo i vari spettacoli
       $spettacoli = select("SELECT * FROM spettacoli WHERE evento_id=".$evento['id']." ORDER BY data_ora");
       if ( is_admin() || is_operatore() )	{
         no_result($spettacoli,7);
