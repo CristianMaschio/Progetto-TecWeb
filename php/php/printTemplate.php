@@ -40,7 +40,7 @@ function printNavBar(){
   <li lang=\"it\"><a href=\"luoghi.php\">Luoghi</a></li>
   </ul>
   ");
-  if(!isLogged()){
+  if(!is_logged()){
     //utente non loggato: mostriamo la pagina di login
     echo("<div id='navLog'>
     <a href=\"login.php\"><span lang=\"en\">Login</span>/Registrazione</a>

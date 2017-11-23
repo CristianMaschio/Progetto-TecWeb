@@ -385,7 +385,7 @@ function get_evento_from_spettacolo($id_spettacolo){
 
   function no_result($array,$colonne){
     if($array == NULL){
-      echo "<tr><td colspan=$colonne class='text-center'><b>Nessun risultato</b></td></tr>";
+      echo "<tr><td colspan=$colonne >Nessun risultato</td>";
     }
   }
 
