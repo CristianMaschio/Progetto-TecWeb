@@ -137,9 +137,8 @@ body{
 #contentLogin #buttonAccedi{
     display: block;
     margin: auto;
-    padding-left: 2em;
-    padding-right: 2em;
-    text-align: center;
+    padding-left: 4em;
+    padding-right: 4em;
 }
 /*  FINE Login  */
 
