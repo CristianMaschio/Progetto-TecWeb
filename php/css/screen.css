@@ -105,7 +105,43 @@ body{
     border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
 }
 
+/*--------------------
+    INIZIO Login
+--------------------*/
+#contentLogin {
+    margin: auto;
+    width: 50%;
+    border-width:0.2em;
+    border-style:outset;
+}
+#contentLogin h3{
+    text-align: center;
+    background-color: #303030;
+    color: white;
+    padding: 0.2em;
+}
 
+#contentLogin .labelLogin{
+    float: left;
+    width: 100%;
+    padding: 0.5em;
+    display: block;
+}
+#contentLogin .labelLogin span{
+    float: left;
+    width: 10em;
+}
+#contentLogin .labelLogin input{
+    margin-left: 1em;
+}
+#contentLogin #buttonAccedi{
+    display: block;
+    margin: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+}
+/*  FINE Login  */
 
 /*--------------------
     INIZIO footer
