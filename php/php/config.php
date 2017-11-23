@@ -206,6 +206,17 @@ function is_operatore($id_o=NULL) {
   else return false;
 }
 
+function user_linked_to_luogo($iduser,$idluogo){
+  // TODO: mettere controllo su tipologie utente="L"
+  if($iduser != NULL && $iduser != -1 ){
+    $user_link = select("SELECT luogo_id FROM utenti WHERE id=$iduser");
+    if($user_link[0]['luogo_id']==$idluogo) return true;
+    else return false;
+  }
+  else return false;
+}
+
+
 // STAMPA UNA FORM DI RICERCA CHE IN GET AGGIORNA LA PAGINA SU CUI VIENE RICHIAMATA
 // stampa un form di filtro: esso se cliccato su submit aggionge alla pagina
 // che l'ha richiamato un attributo (filter) con GET per permettere di filtrare
