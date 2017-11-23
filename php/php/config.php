@@ -161,13 +161,13 @@ function isLogged(){
 // stampa un form di filtro: esso se cliccato su submit aggionge alla pagina
 // che l'ha richiamato un attributo (filter) con GET per permettere di filtrare
 // ciè fatto usando una funzione javascript
-function filterForm($filter,$placeholder=''){
-  echo "        <form  id=\"filterform\" action=\"\" method=\"GET\"
+function filter_form($filter,$placeholder=''){
+  echo "
+  <form  id=\"filterform\" action=\"\" method=\"GET\"
   onsubmit=\"return addlocpar('filter', this.filter.value); return false;\">
   <input type=\"submit\" value=\"Cerca\" class=\"postfix button\"/>
   <input type=\"text\" name=\"filter\" value=\"".$filter."\"/ placeholder='$placeholder'>
   <input type=\"submit\" value=\"Tutti\" onclick=\"this.form.filter.value=''\" class=\"prefix button secondary\"/>
-
   </form>";
 }
 
@@ -185,6 +185,13 @@ function format_durata($durata){
     if(substr($ret,0,1) == '0') $ret = substr($ret,1,5);
     $ret = $ret."min";
     return $ret;
+  }
+}
+
+// FUNZIONE PER STAMPARE UN MESSAGGIO DI TABELLA VUOTA QUANDO LA TABELLA È VUOTA
+function no_result($array,$colonne){
+  if($array == NULL){
+    echo "<tr><td colspan=$colonne >Nessun risultato</td>";
   }
 }
 

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
-<?php require_once('php/config.php'); ?>
-<?php require_once('php/printTemplate.php') ?>
+<?php
+  require_once('php/config.php');
+  require_once('php/printTemplate.php');
+?>
 
 <html lang="it" >
 <head>

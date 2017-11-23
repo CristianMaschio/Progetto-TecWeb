@@ -35,7 +35,7 @@
 
     */
 
-    filterForm($filter,'Cerca un evento');
+    filter_form($filter,'Cerca un evento');
 
     $sql = "SELECT eventi.*,categorie.nome AS nome_categoria,categorie.id AS id_categoria
     FROM eventi JOIN categorie ON eventi.categoria_id=categorie.id
@@ -70,10 +70,10 @@
         <th onclick="addlocpar('ord','c')">Categoria</th>
         <th onclick="addlocpar('ord','d')">Durata</th>
         <th >Spettacoli disponibili</th>
-      </div>
+      
 
       <?php //riempimento della tabella
-
+      no_result($luoghi,3);
       foreach($eventi as $e){
         echo "<tr>";
 

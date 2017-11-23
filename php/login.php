@@ -33,7 +33,9 @@
         </label>
         <input type='submit' value='Accedi'>
       </form>
-      Non hai un <span lang="en">account</span>? <a href='registrazione.php'>Registrati!</a>
+      <p>
+        Non hai un <span lang="en">account</span>? <a href='registrazione.php'>Registrati!</a>
+      </p>
     </div>
 
     <footer>
