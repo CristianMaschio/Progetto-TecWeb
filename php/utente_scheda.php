@@ -80,7 +80,7 @@ function proprietario($user){
         <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
         <hr />
         <a href="logout_r.php">Logout</a>
-        <a href="utente_modifica_informazioni.php?id=u<?=$id_u?>">Modifica informazioni</a>
+        <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni</a>
       <?php endif ?>
     </div>
 

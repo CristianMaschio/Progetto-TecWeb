@@ -161,27 +161,49 @@ function is_logged(){
 function require_login($messaggio=''){
   if(!is_logged()){
     //utente non loggato
-    if($messaggio != '') message($messaggio,2);
-    else message('Ti devi autenticare per questa sezione',2);
+    message('Ti devi autenticare per questa sezione',2);
     redirect('home.php');
-    die();
   }
 }
 
 //richiede che l'utente sia loggato e anche che l'id_u che dovrebbe essere quello che viene richiesto dalla pagina
 function require_proprietario($id_u){
   require_login();
-  if(!isset($id_u)|| $id_u==''){
+  if(!isset($id_u) || $id_u==''){
+    die('non settata');
     message('Sezione privata',2);
     redirect('home.php');
   }
 
   $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
-  if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user['id']) {
+  if(!isset($user) || !isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user['id']) {
     message('Sezione privata',2);
     redirect('home.php');
   }
 
+}
+
+// FUNZIONI CHE CONTROLLANO CHE L UTENTE SIA AMMINISTRATORE O OPERATORE. se non vengono passati parametri si assume che si intenda l'utente loggato, per avere informazioni su altri usare il parametro
+
+function is_admin($id_a=NULL) {
+  //l' inizializzazione serve perchè se non si passano parametri si da per scontato che l' utente richiesto sia quello loggato
+  if($id_a == NULL)
+  if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'A') return true;
+  else return false;
+  else
+  $utente=select("SELECT * FROM utenti WHERE id=$id_a");
+  if($utente[0]['tipo'] == 'A') return true;
+  else return false;
+}
+
+function is_operatore($id_o=NULL) {
+  if($id_o == NULL)
+  if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'O') return true;
+  else return false;
+  else
+  $utente=select("SELECT * FROM utenti WHERE id=$id_o");
+  if($utente[0]['tipo'] == 'O') return true;
+  else return false;
 }
 
 // STAMPA UNA FORM DI RICERCA CHE IN GET AGGIORNA LA PAGINA SU CUI VIENE RICHIAMATA
