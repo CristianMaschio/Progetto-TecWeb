@@ -150,11 +150,38 @@ function consumeMessage(){
 }
 
 // CONTROLLARE CHE UN UTENTE SIA LOGGATO
-function isLogged(){
+function is_logged(){
   //eliminato dal mio codice nel primo if ' && $_SESSION['user_id'] != -1',
   //perchè sloggando mettevo -1 all'user id, ma non penso sia necessario in realtà
   if(isset($_SESSION['user_id'])) return true;
   else return false;
+}
+
+//RICHIEDE CHE UN UTENTE SIA LOGGATO, ALTRIMENTI RIMANDA ALLA HOME
+function require_login($messaggio=''){
+  if(!is_logged()){
+    //utente non loggato
+    if($messaggio != '') message($messaggio,2);
+    else message('Ti devi autenticare per questa sezione',2);
+    redirect('home.php');
+    die();
+  }
+}
+
+//richiede che l'utente sia loggato e anche che l'id_u che dovrebbe essere quello che viene richiesto dalla pagina
+function require_proprietario($id_u){
+  require_login();
+  if(!isset($id_u)|| $id_u==''){
+    message('Sezione privata',2);
+    redirect('home.php');
+  }
+
+  $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
+  if(!isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user['id']) {
+    message('Sezione privata',2);
+    redirect('home.php');
+  }
+
 }
 
 // STAMPA UNA FORM DI RICERCA CHE IN GET AGGIORNA LA PAGINA SU CUI VIENE RICHIAMATA
@@ -186,6 +213,12 @@ function format_durata($durata){
     $ret = $ret."min";
     return $ret;
   }
+}
+
+//formatta un datetime in modo che sia leggibile in italia
+function format_data_ora($data){
+  $ret= new DateTime($data);
+  return $ret->format('j/m/Y, H:i');
 }
 
 // FUNZIONE PER STAMPARE UN MESSAGGIO DI TABELLA VUOTA QUANDO LA TABELLA È VUOTA

@@ -25,6 +25,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="content">
+    <h2>Eventi</h2><hr />
     <?php
     /*
 
@@ -70,7 +71,7 @@
         <th onclick="addlocpar('ord','c')">Categoria</th>
         <th onclick="addlocpar('ord','d')">Durata</th>
         <th >Spettacoli disponibili</th>
-      
+
 
       <?php //riempimento della tabella
       no_result($luoghi,3);
