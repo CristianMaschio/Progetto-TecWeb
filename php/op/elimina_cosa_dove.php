@@ -5,6 +5,4 @@
 	register('id');
 	query("DELETE FROM $table WHERE id=$id");
 	echo "<div class='small button round success expand'>Eliminato correttamente</div>";
-	
-	
 ?>
