@@ -24,7 +24,7 @@
 
   <div id="content">
 
-    <h1>Luoghi</h1>
+    <h2>Luoghi</h2>
     <hr>
 
     <?php

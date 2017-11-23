@@ -1,6 +1,5 @@
 <?php
 require_once('php/config.php');
-
 register('username');
 register('pass');
 
