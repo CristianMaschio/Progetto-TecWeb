@@ -22,7 +22,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="contentLuoghi">
 
     <h2>Luoghi</h2>
     <hr>

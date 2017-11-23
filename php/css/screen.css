@@ -94,8 +94,8 @@ INIZIO messaggi verso utente
 
 
 html, body {
-    max-width: 1024px; /* larghezza massima anche per schermi grandi */
-    margin: auto; /* il browser da solo centra il contenuto */
+    max-width: 1024px;  /* larghezza massima anche per schermi grandi */
+    margin: auto;       /* il browser da solo centra il contenuto */
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size:100%;
     min-width: 550px;
@@ -103,6 +103,12 @@ html, body {
 
 body{
     border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
+}
+
+table {
+    width: 100%;
+    background-color: #f1f1c1;
+    border: solid 1px red;
 }
 
 /*--------------------
@@ -147,11 +153,11 @@ body{
 /*--------------------
     INIZIO luoghi
 --------------------*/
-/*
-table #tableLuoghi {
-    text_align: center;
-    background-color: red;
-}*/
+
+#contentLuoghi {
+    width: 90%;
+    margin: auto;
+}
 
 /*FINE luoghi*/
 
