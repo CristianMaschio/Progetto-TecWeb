@@ -94,8 +94,8 @@ INIZIO messaggi verso utente
 
 
 html, body {
-    max-width: 1024px; /* larghezza massima anche per schermi grandi */
-    margin: auto; /* il browser da solo centra il contenuto */
+    max-width: 1024px;  /* larghezza massima anche per schermi grandi */
+    margin: auto;       /* il browser da solo centra il contenuto */
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size:100%;
     min-width: 550px;
@@ -105,8 +105,15 @@ body{
     border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
 }
 
+table {
+    width: 100%;
+    background-color: #CCCCCC;
+    color: white;
+    border: solid 1px black;
+}
+
 /*--------------------
-    INIZIO Login
+    INIZIO Login e Registrazione
 --------------------*/
 #contentLogin {
     margin: auto;
@@ -126,7 +133,7 @@ body{
 }
 
 #contentLogin input{
-    width: 99.4%;
+    width: 99.3%;
     display: block;
     margin-right: 1px;
     margin-bottom: 0.5em;
@@ -139,14 +146,22 @@ body{
     width: 50%;
 }
 #contentLogin p{
-    margin-top: 0.5em;
+    margin-top: 1em;
     margin-bottom: 0.5em;
 }
-/*  FINE Login  */
+/*  FINE Login e Registrazione */
 
 /*--------------------
     INIZIO luoghi
 --------------------*/
+
+#contentLuoghi {
+    width: 95%;
+    margin: auto;
+    padding-bottom: 1.5em;
+    //background-color: #A9A9A9;
+}
+
 /*FINE luoghi*/
 
 /*--------------------

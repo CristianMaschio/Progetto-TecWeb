@@ -23,7 +23,7 @@ function printHeader(){
 
   <div id='findAll'>
   <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
-  <input type=\"text\" name=\"fname\">
+  <input type=\"text\" name=\"fname\" placeholder='Cerca'>
   </div>
   ");
   //consima sotto l'header (per ora messaggi) se ce ne sono
