@@ -74,7 +74,7 @@
 
 
       <?php //riempimento della tabella
-      no_result($luoghi,3);
+      no_result($eventi,4);
       foreach($eventi as $e){
         echo "<tr>";
 
