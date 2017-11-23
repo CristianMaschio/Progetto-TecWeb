@@ -385,7 +385,7 @@ function get_evento_from_spettacolo($id_spettacolo){
 
   function no_result($array,$colonne){
     if($array == NULL){
-      echo "<tr><td colspan=$colonne >Nessun risultato</td>";
+      echo "<tr><td colspan=$colonne >Nessun risultato</td></tr>";
     }
   }
 
@@ -431,5 +431,5 @@ function get_evento_from_spettacolo($id_spettacolo){
         <input type=\"reset\" class=\"small button round expand secondary\"/></div>
         </div>";
       }
-
+      
       ?>
