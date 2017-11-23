@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="514ee74c-9c5a-46de-bb3c-e6ba25f24782" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Progetto-TecWeb.iml" afterPath="$PROJECT_DIR$/.idea/Progetto-TecWeb.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/css/screen.css" afterPath="$PROJECT_DIR$/php/css/screen.css" />
-    </list>
+    <list default="true" id="514ee74c-9c5a-46de-bb3c-e6ba25f24782" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -316,12 +312,12 @@
       <workItem from="1511363603556" duration="5499000" />
       <workItem from="1511429898742" duration="10718000" />
       <workItem from="1511448732326" duration="50000" />
-      <workItem from="1511448806428" duration="156000" />
+      <workItem from="1511448806428" duration="322000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35950000" />
+    <option name="totallyTimeSpent" value="36116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1382" height="744" extended-state="0" />
