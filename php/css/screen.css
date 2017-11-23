@@ -1,7 +1,6 @@
 * {
     padding: 0; /*resetto il valore di default impostati dai browser, mettere sempre*/
     margin: 0;
-    text-align: justify;
 }
 /*--------------------
 INIZIO Header & Nav
@@ -11,7 +10,6 @@ header {
     color: white;
     width:100%;
     height: 2em;
-    min-width: 760px;
 }
 
 nav {
@@ -19,12 +17,11 @@ nav {
     color: white;
     width:100%;
     height: 2em;
-    min-width: 760px;
 }
 
 #logoTitle{
     float: left;
-    width: 70%;
+    width: 50%;
 }
 #logoTitle img{
     float: left;
@@ -94,17 +91,22 @@ INIZIO messaggi verso utente
 }
 /*FINE messaggi verso utente*/
 
+
+
 html, body {
     max-width: 1024px; /* larghezza massima anche per schermi grandi */
     margin: auto; /* il browser da solo centra il contenuto */
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size:100%;
-    min-width: 760px;
+    min-width: 550px;
 }
 
 body{
     border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
 }
+
+
+
 /*--------------------
     INIZIO footer
 --------------------*/
@@ -114,9 +116,14 @@ footer{
     font-size: 0.8em;
     padding: 1em;
 }
-
+                    /*Link footer*/
 footer a{
     color: white;
+}
+
+/* visited link */
+footer a:visited {
+    color: #cccccc;
 }
 
 footer img{
