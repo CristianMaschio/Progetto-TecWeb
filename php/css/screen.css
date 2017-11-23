@@ -3,7 +3,9 @@
     margin: 0;
     text-align: justify;
 }
-/*INIZIO Header & Nav*/
+/*--------------------
+INIZIO Header & Nav
+--------------------*/
 header {
     background-color: #303030;
     color: white;
@@ -42,7 +44,7 @@ nav li{
     padding-left: 2em;
     float: left;
 }
-
+                                    /* Link menù */
 nav a, abbr{
     text-decoration: none;
 }
@@ -70,9 +72,23 @@ nav a, abbr{
 }
 /*FINE Header & Nav*/
 
-/*INIZIO messaggi verso utente*/
+/*--------------------------
+INIZIO messaggi verso utente
+--------------------------*/
 .message-success{
     background-color: #3a945b;
+    color: white;
+    text-align: center;
+}
+
+.message-warning{
+    background-color: #cf6e0e;
+    color: white;
+    text-align: center;
+}
+
+.message-fail{
+    background-color: #f04124;
     color: white;
     text-align: center;
 }
@@ -89,7 +105,9 @@ html, body {
 body{
     border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
 }
-/*INIZIO footer*/
+/*--------------------
+    INIZIO footer
+--------------------*/
 footer{
     background-color: #303030;
     color: white;
