@@ -28,6 +28,7 @@ require_proprietario($id_u);
   <div id="content">
 
     <?php
+    // TODO: aggiungere un javascript in questa pagina che prima di committare chieda all'utente se è sicuro di fare le modifiche?
     $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
     ?>
     <h2>Modifica le tue informazioni, <?php echo $user['username']; ?></h2> <hr />
@@ -35,13 +36,19 @@ require_proprietario($id_u);
     <form method='POST' action='utente_modifica_informazioni_r.php'>
       <label>
         <span>Nome:</span>
-        <input type='text' name='nome_u'>
+        <input type='text' value="<?php echo $user['nome']; ?>" name='nome_u'>
       </label>
       <label>
-        <span lang="en">Password:</span>
-        <input type='password' name='pass'>
+        <span >Cognome</span>
+        <input type='text' value="<?php echo $user['cognome']; ?>" name='cognome_u'>
       </label>
-      <input type='submit' value='Accedi'>
+      <label>
+        <span lang="en">Email</span>
+        <input type='email' value="<?php echo $user['email']; ?>" name='email_u'>
+      </label>
+      <input type="hidden" value="<?php echo $user['id']; ?>" name='id_u'>
+      <input type='submit' value='Conferma'>
+      <input type='reset' value='Annulla'>
     </form>
 
 
