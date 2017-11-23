@@ -23,15 +23,11 @@
     <h3>Login</h3>
       <hr>
       <form method='POST' action='login_r.php'>
-        <label class="labelLogin">
-          <span lang="en">Username:</span>
+          <label lang="en">Username:</label>
           <input type='text' name='username'>
-        </label>
-        <label class="labelLogin">
-          <span lang="en">Password:</span>
+          <label lang="en">Password:</label>
           <input type='password' name='pass'>
-        </label>
-        <input id="buttonAccedi" type='submit' value='Accedi'>
+          <input id="buttonAccedi" type='submit' value='Accedi'>
       </form>
       <p>
         Non hai un <span lang="en">account</span>? <a href='registrazione.php'>Registrati!</a>
