@@ -123,8 +123,7 @@ dl {
 dt {
     float: left;
     clear: left;
-    width: 100px;
-    text-align: right;
+    padding-left: 0.3em;
     font-weight: bold;
     color: green;
 }
@@ -132,7 +131,7 @@ dt::after {
     content: ":";
 }
 dd {
-    margin: 0 0 0 110px;
+    margin: 0 0 0 7em;
     padding: 0 0 0.5em 0;
 }
 
