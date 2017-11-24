@@ -119,7 +119,7 @@ table {
 /*--------------------
     INIZIO Login e Registrazione
 --------------------*/
-.loginReg {
+.box {
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -129,14 +129,14 @@ table {
     border-color: #cccccc;
     display: block;
 }
-.loginReg h3{
+.box h3{
     text-align: center;
     background-color: #303030;
     color: white;
     padding: 0.2em;
 }
 
-.loginReg input{
+.box input{
     width: 99.3%;
     display: block;
     margin-right: 1px;
@@ -144,12 +144,12 @@ table {
     height: 2em;
     font-size: 18px;
 }
-.loginReg #buttonAccedi{
+.box #buttonAccedi{
     display: block;
     margin: auto;
     width: 50%;
 }
-.loginReg p{
+.box p{
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
