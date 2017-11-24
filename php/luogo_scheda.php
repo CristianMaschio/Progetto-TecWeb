@@ -53,7 +53,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id;
         <?php if(is_logged()): ?>
           <th>Prenotazione</th>
         <?php endif ?>
-        <!-- TODO: probabilmente nel prossimo controllo ci varrà anche || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)) -->
+        <!-- TODO: proba  bilmente nel prossimo controllo ci varrà anche || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)) -->
         <?php if(is_admin() || is_operatore()): ?>
           <th>Posti Disponibili</th>
           <th>Modifica</th>
@@ -108,7 +108,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id;
         }
         if(is_admin() || is_operatore()){
           echo "<td>".$s['posti_disponibili']."</td>";
-          echo "<td><a href= >edit</a></td>";
+          echo "<td><a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
           echo "<td><a href= >delete</a></td>";
         }
 
