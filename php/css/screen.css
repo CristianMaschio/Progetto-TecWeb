@@ -139,13 +139,9 @@ dd {
     INIZIO Login e Registrazione
 --------------------*/
 .box {
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 1em auto; /*top-bottom right-left*/
     width: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #cccccc;
+    border: 1px solid #cccccc;
     display: block;
 }
 .box h3{
@@ -202,9 +198,7 @@ dd {
 }
 #content {
     //width: 95%;
-    margin: auto;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin: 1em auto;
 }
 
 /*   FINE content unici     */
