@@ -119,24 +119,24 @@ table {
 /*--------------------
     INIZIO Login e Registrazione
 --------------------*/
-.contentLogin {
-    //margin: auto;
+#contentLogin {
+    margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
-    //width: 50%;
+    width: 50%;
     border-width: 1px;
     border-style: solid;
     border-color: #cccccc;
     display: block;
 }
-.contentLogin h3{
+#contentLogin h3{
     text-align: center;
     background-color: #303030;
     color: white;
     padding: 0.2em;
 }
 
-.contentLogin input{
+#contentLogin input{
     width: 99.3%;
     display: block;
     margin-right: 1px;
@@ -144,12 +144,12 @@ table {
     height: 2em;
     font-size: 18px;
 }
-.contentLogin #buttonAccedi{
+#contentLogin #buttonAccedi{
     display: block;
     margin: auto;
     width: 50%;
 }
-.contentLogin p{
+#contentLogin p{
     margin-top: 1em;
     margin-bottom: 0.5em;
 }
