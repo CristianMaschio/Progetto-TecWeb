@@ -267,6 +267,38 @@ function format_data_ora($data){
   return $ret->format('j/m/Y, H:i');
 }
 
+
+function is_data_passata($data){
+  //creo un oggetto con la data di oggi
+  $stringa_oggi = date('Y-m-d');
+
+  //trasformo in oggetto la stringa passata
+  $data_oggetto = new DateTime($data);
+  
+  $data_formattata = $data_oggetto->format('Y-m-d');
+
+  if($data_formattata < $stringa_oggi)
+    return true; #data non disponibile
+  else
+    return false; #data disponibile
+}
+
+function format_costo($costo){
+  $ret = str_replace(',','.',$costo);
+  //controllo che sia stato inserito il valore decimale
+  if(strpos($ret,'.') == false) $ret = $ret.'.00';
+
+  //controllo che non abbia un solo decimale
+  if(substr($ret,strlen($ret)-2,1) == '.'){
+    //ha un solo decimale
+    $ret = $ret.'0';
+  }
+  return $ret;
+}
+
+
+
+
 // FUNZIONE PER STAMPARE UN MESSAGGIO DI TABELLA VUOTA QUANDO LA TABELLA È VUOTA
 function no_result($array,$colonne){
   if($array == NULL){
@@ -302,6 +334,8 @@ function submit_reset_buttons(){
   <input type=\"reset\" class=\"small button round expand secondary\"/></div>
   </div>";
 }
+
+
 
 
 

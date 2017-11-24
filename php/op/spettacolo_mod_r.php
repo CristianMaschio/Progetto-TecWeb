@@ -25,7 +25,8 @@
     posti_disponibili = $posti_s,
     prezzo = $costo_s 
     WHERE id=$id_mod";
-    query($sql);
-    message("Spettacolo modificato correttamente",1);
-    redirect($_SESSION['redirect_from_spettacolo']);
+    //query($sql);
+    echo($sql);
+    //message("Spettacolo modificato correttamente",1);
+   // redirect($_SESSION['redirect_from_spettacolo']);
 ?>
