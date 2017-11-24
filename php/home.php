@@ -24,12 +24,12 @@
 
       <dl>
             <?php $categorie = select("
-                SELECT * 
+                SELECT *
                 FROM categorie
                 ORDER BY id DESC
                 ");
             foreach($categorie as $c){
-                echo "<dt>".$c['nome']."</dt> <dd>".$c['descrizione']."</dd>";
+                echo "<dt><a href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>";
             }
             ?>
       </dl>
