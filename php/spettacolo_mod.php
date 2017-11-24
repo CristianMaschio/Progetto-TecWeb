@@ -68,10 +68,8 @@ area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
       <label for="costo_s">Costo spettacolo</label>
       <input value="<?php echo($cercato['prezzo']); ?>" type="number" step="0.01" id="costo_s" value="0.0" required/>
 
-      <a href="">submit</a>
-      <a href="">reset</a>
-
-
+      <input type="submit" value="Conferma">
+      <input type="reset" value="Annulla">
     </form>
   </div>
 

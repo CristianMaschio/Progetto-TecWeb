@@ -7,7 +7,6 @@ register('luogo_id');
 register('filter');
 register('ord');
 register('user_id');
-$_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id;
 ?>
 
 <html lang="it" >
@@ -54,7 +53,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id;
           <th>Prenotazione</th>
         <?php endif ?>
         <!-- TODO: proba  bilmente nel prossimo controllo ci varrà anche || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)) -->
-        <?php if(is_admin() || is_operatore()): ?>
+        <?php if(is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)) : ?>
           <th>Posti Disponibili</th>
           <th>Modifica</th>
           <th>Elimina</th>
@@ -79,7 +78,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id;
       $spettacoli = select($sql);
       filter_form($filter,'Cerca un evento');
 
-      if ( is_admin() || is_operatore() )	{
+      if ( is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id))	{
         // TODO: e forse qui il controllo di prima andrebbe aggiunto (quello nel precedente todo), se lo implementi anche prima
         no_result($spettacoli,7);
       } else if ( is_logged()) {
@@ -106,7 +105,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id;
           else
           echo "<td>Non ci sono posti disponibili</td>";
         }
-        if(is_admin() || is_operatore()){
+        if(is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)){
           echo "<td>".$s['posti_disponibili']."</td>";
           echo "<td><a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
           echo "<td><a href= >delete</a></td>";
