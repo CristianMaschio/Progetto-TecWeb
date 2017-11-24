@@ -37,9 +37,9 @@ function proprietario($user){
       <?php
       echo
       "<dl>
-      <dd>Nome</dd><dt>".$user['nome']."</dt>
-      <dd>Cognome</dd><dt>".$user['cognome']."</dt>
-      <dd><span lang=\"en\">Email</span></dd><dt>".$user['email']."</dt>
+      <dt>Nome</dt><dd>".$user['nome']."</dd>
+      <dt>Cognome</dt><dd>".$user['cognome']."</dd>
+      <dt><span lang=\"en\">Email</span></dt><dd>".$user['email']."</dd>
       </dl>";
       ?>
 
