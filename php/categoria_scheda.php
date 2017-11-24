@@ -24,7 +24,8 @@ register('filter');
   <?php echo consumeMessage(); ?>
 
   <div id="content">
-    <h2><?= get_nome_categoria($cat_id) ?></h2>
+      <div id="title"><h2><hr><?= get_nome_categoria($cat_id) ?></h2></div>
+
     <hr>
     <p> <?php
     $sql = "

@@ -22,9 +22,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="contentLuoghi">
-
-    <h2>Luoghi</h2>
+  <div id="content">
+    <div id="title"><h2><hr>Luoghi</h2></div>
     <hr>
 
     <?php

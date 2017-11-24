@@ -25,7 +25,8 @@
   <?php echo consumeMessage(); ?>
 
   <div id="content">
-    <h2>Eventi</h2><hr />
+      <div id="title"><h2><hr>Eventi</h2></div>
+    <hr />
     <?php
     /*
 
