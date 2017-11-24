@@ -24,6 +24,9 @@
 
   <div id="title"><h2><hr>Luoghi</h2></div>
   <hr>
+  <p>
+    Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare il tuo biglietto.
+  </p>
   <div id="content">
     <?php
     filter_form($filter,'Cerca un luogo');
@@ -39,7 +42,7 @@
 
     <table>
       <tr>
-        <th>Nome</th>
+        <th>Luogo</th>
         <th>Indirizzo</th>
         <th>Telefono</th>
 
