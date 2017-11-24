@@ -23,10 +23,10 @@
     <h3>Login</h3>
       <hr>
       <form method='POST' action='login_r.php'>
-          <label lang="en">Username:</label>
-          <input type='text' name='username'>
-          <label lang="en">Password:</label>
-          <input type='password' name='pass'>
+          <label lang="en" for="username">Username:</label>
+          <input id="username" type='text' name='username'>
+          <label lang="en" for="password">Password:</label>
+          <input id="password" type='password' name='pass'>
           <input id="buttonAccedi" type='submit' value='Accedi'>
       </form>
       <p>
