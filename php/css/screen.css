@@ -22,6 +22,7 @@ nav {
 #logoTitle{
     float: left;
     width: 50%;
+    font-size: 1em;
 }
 #logoTitle img{
     float: left;
@@ -29,6 +30,10 @@ nav {
 #findAll{
     padding-right: 1em;
     float: right;
+}
+
+#findAll input{
+    height: 1.5em;
 }
 
 nav ul{
@@ -163,6 +168,24 @@ table {
 }
 
 /*FINE luoghi*/
+
+
+/*--------------------
+    INIZIO content unici
+--------------------*/
+
+#title{
+    background-color: #303030;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#content h1{
+    color: white;
+    text-align: center;
+}
+
+/*   FINE content unici     */
 
 /*--------------------
     INIZIO footer
