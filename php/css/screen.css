@@ -179,6 +179,10 @@ table {
     padding-right: 1em;
     padding-left: 1em;
 }
+#content {
+    width: 95%;
+    margin: auto;
+}
 
 #content h1{
     color: white;
@@ -215,6 +219,7 @@ footer img{
     float: right;
 }
 /*FINE footer*/
+
 
 #filterform {
     padding-top: 0.20em;
