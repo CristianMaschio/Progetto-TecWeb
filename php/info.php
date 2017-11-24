@@ -22,7 +22,7 @@
 	<div id="content">
 		<!--div class="contentLogin">
 	        <div id="title"><h2><hr>Informazioni</h2></div>
-			<p>
+			<p-->
 				Benvenuto nella biglietteria <span xml:lang="eng">online</span>. &Egrave; qui possibile prenotare biglietti riguardanti varie <a href="categorie.php">categorie</a>, come
 				biglietti per musei, fiere o cinema. Inoltre se vuoi prenotare un determinato evento potrai cercare se &egrave; disponibile nell' apposita <a href="eventi.php">pagina</a>.
 				Utilizzare il nostro servizio ti permette di assicurarti un posto a uno qualunque
@@ -39,7 +39,7 @@
 				<hr><img src="img/biglietto.png">
 				<i>Troverai questa tabella nella pagina del profilo utente</i>
 			</p>
-  		</div-->
+  		<!--/div-->
   	</div>
 
   <footer>
