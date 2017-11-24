@@ -30,10 +30,12 @@ function proprietario($user){
 
   <?php echo consumeMessage(); ?>
 
+  <div id="title"><h2><hr>Profilo di <?php echo $user['username']?></h2></div>
+  <hr>
   <div id="content">
-    <h2>Profilo di
+
       <?php
-      echo $user['username']."</h2><hr />".
+      echo
       "<dl>
       <dd>Nome</dd><dt>".$user['nome']."</dt>
       <dd>Cognome</dd><dt>".$user['cognome']."</dt>
