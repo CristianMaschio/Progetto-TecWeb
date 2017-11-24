@@ -19,9 +19,10 @@
 
   <?php echo consumeMessage(); ?>
 
+  <div id="title"><h2><hr>Informazioni</h2></div>
+  <hr>
 	<div id="content">
 		<!--div class="contentLogin"-->
-	        <div id="title"><h2><hr>Informazioni</h2></div>
 			<p>
 				Benvenuto nella biglietteria <span xml:lang="eng">online</span>. &Egrave; qui possibile prenotare biglietti riguardanti varie <a href="categorie.php">categorie</a>, come
 				biglietti per musei, fiere o cinema. Inoltre se vuoi prenotare un determinato evento potrai cercare se &egrave; disponibile nell' apposita <a href="eventi.php">pagina</a>.

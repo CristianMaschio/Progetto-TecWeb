@@ -22,10 +22,9 @@
 
   <?php echo consumeMessage(); ?>
 
+  <div id="title"><h2><hr>Luoghi</h2></div>
+  <hr>
   <div id="content">
-    <div id="title"><h2><hr>Luoghi</h2></div>
-    <hr>
-
     <?php
     filter_form($filter,'Cerca un luogo');
     $sql = "SELECT *

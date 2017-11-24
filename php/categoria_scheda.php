@@ -23,10 +23,9 @@ register('filter');
 
   <?php echo consumeMessage(); ?>
 
+  <div id="title"><h2><hr><?= get_nome_categoria($cat_id) ?></h2></div>
+  <hr>
   <div id="content">
-      <div id="title"><h2><hr><?= get_nome_categoria($cat_id) ?></h2></div>
-
-    <hr>
     <p> <?php
     $sql = "
     SELECT descrizione

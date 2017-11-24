@@ -22,9 +22,9 @@
 
   <?php echo consumeMessage(); ?>
 
+  <div id="title"><h2><hr>Eventi</h2></div>
+  <hr>
   <div id="content">
-      <div id="title"><h2><hr>Eventi</h2></div>
-    <hr />
     <?php
     /*
 

@@ -18,12 +18,10 @@
   </nav>
 
   <?php echo consumeMessage(); ?>
-
+  <div id="title"><h2><hr>Categorie di eventi disponibili!</h2></div>
+  <hr>
   <div id="content">
-    <div id="title">
 
-        <h2><hr>Categorie di eventi disponibili!</h2>
-    </div>
       <dl>
             <?php $categorie = select("
                 SELECT * 

@@ -178,20 +178,14 @@ table {
     background-color: #303030;
     padding-right: 1em;
     padding-left: 1em;
+    color: white;
+    text-align: center;
 }
 #content {
     //width: 95%;
     margin: auto;
-}
-
-#content h1{
-    color: white;
-    text-align: center;
-}
-
-#content h2{
-    color: white;
-    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 /*   FINE content unici     */
