@@ -1,4 +1,6 @@
 <?php
+//faccio partire la sessione
+session_start();
 
 // TODO: sarà da togliere prima di consegnare, lo metto finchè scriviamo per avere un feedback
 ini_set('display_errors', 1);
@@ -13,9 +15,6 @@ user_username
 user_tipo
 
 */
-
-//faccio partire la sessione
-session_start();
 
 //VARIABILI CONFIGURAZIONE GLOBALI
 define('redirect',true); //attiva/disattiva i redirect
