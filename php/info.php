@@ -20,7 +20,7 @@
   <?php echo consumeMessage(); ?>
 
 	<div id="content">
-		<div id="contentLogin">
+		<div class="contentLogin">
 	        <div id="title"><h2><hr>Informazioni</h2></div>
 			<p>
 				Benvenuto nella biglietteria <span xml:lang="eng">online</span>. &Egrave; qui possibile prenotare biglietti riguardanti varie <a href="categorie.php">categorie</a>, come
