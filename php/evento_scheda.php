@@ -84,7 +84,7 @@ require_once('php/printTemplate.php')
         if(is_admin() || is_operatore()){
           echo "<td>".$s['posti_disponibili']."</td>";
           echo "<td>";
-          echo "<a href= >edit</a>";
+          echo "<a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit";
           echo "</td>";
           echo "<td>";
           echo "<a href= >delete</a>";
