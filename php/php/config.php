@@ -93,6 +93,14 @@ function get_nome_luogo($id){
   return $luogo[0]['nome'];
 }
 
+function get_evento_from_spettacolo($id_spettacolo){
+  $ret=select("SELECT eventi.* FROM eventi JOIN spettacoli ON eventi.id=spettacoli.evento_id
+    WHERE spettacoli.id=$id_spettacolo");
+    $ritorno = $ret[0];
+    return $ritorno;
+  }
+
+
 function evento_has_spettacoli($eventoid){
   $spettacoli = select("SELECT * FROM eventi JOIN spettacoli ON eventi.id=spettacoli.evento_id WHERE eventi.id=$eventoid");
   if($spettacoli == NULL) return false;
@@ -260,5 +268,37 @@ function no_result($array,$colonne){
     echo "<tr><td colspan=$colonne >Nessun risultato</td>";
   }
 }
+
+//la variabile deve essere impostata a a valore true se si vuole che l admin di un luogo possa accadere a un' area riservata.
+//in tal caso deve essere impostata anche la variabile che indica l' id del luogo a cui si deve accedere
+
+function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
+  require_login();
+  if($allow_admin_luogo){
+    if(!user_linked_to_luogo($_SESSION['user_id'],$id_luogo)
+    && !is_admin() && !is_operatore()){
+      message('Area riservata',2);
+      redirect('home.php');
+      die();
+    }
+  } else if(!is_admin() && !is_operatore()){
+      message('Area riservata',2);
+      redirect('home.php');
+      die();
+  }
+}
+
+
+function submit_reset_buttons(){
+  echo "<div class=\"row\">
+  <div class=\"large-6 column\">
+  <input type=\"submit\" class=\"small button round expand\"/></div>
+  <div class=\"large-6 column\">
+  <input type=\"reset\" class=\"small button round expand secondary\"/></div>
+  </div>";
+}
+
+
+
 
 ?>
