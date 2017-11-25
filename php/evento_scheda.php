@@ -50,6 +50,7 @@ require_once('php/printTemplate.php')
 
 
     <table>
+      <thead>
       <tr>
         <th>Luogo</th>
         <th>Data</th>
@@ -63,7 +64,8 @@ require_once('php/printTemplate.php')
           <th>Elimina</th>
         <?php endif ?>
       </tr>
-
+      </thead>
+      <tbody>
       <?php //leggo i vari spettacoli
       $spettacoli = select("SELECT * FROM spettacoli WHERE evento_id=".$evento['id']." ORDER BY data_ora");
       if ( is_admin() || is_operatore() )	{
@@ -97,6 +99,7 @@ require_once('php/printTemplate.php')
 
       }
       ?>
+      </tbody>
     </table>
   </div>
 

@@ -48,12 +48,15 @@ register('filter');
     $sql.= " ORDER BY nome";
     $eventi = select($sql);
     echo "<table>";
+    echo "<thead>";
     echo "<tr>";
     echo "<th class=\"text-center\" width=1000px>Nome";
     echo "</th>";
     echo "<th class=\"text-center\" width=1000px>Durata";
     echo "</th>";
     echo "</tr>";
+    echo "</thead>";
+    echo "<tbody>";
     no_result($eventi,2);
     foreach($eventi as $e){
       echo "<tr>";
@@ -64,6 +67,7 @@ register('filter');
       echo "</td>";
       echo "</tr>";
     }
+    echo "</tbody>";
     echo "</table>";
     ?>
 

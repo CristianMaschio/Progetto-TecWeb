@@ -41,11 +41,14 @@
     ?>
 
     <table>
-      <tr>
-        <th>Luogo</th>
-        <th>Indirizzo</th>
-        <th>Telefono</th>
-
+      <thead>
+        <tr>
+          <th>Luogo</th>
+          <th>Indirizzo</th>
+          <th>Telefono</th>
+        <tr>
+      </thead>
+      <tbody>
       <?php
       no_result($luoghi,3);
       foreach($luoghi as $l){
@@ -61,8 +64,8 @@
         echo "</td>";
       }
       ?>
+      </tbody>
     </table>
-  </div>
   </div>
 
   <footer>

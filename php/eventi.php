@@ -66,13 +66,15 @@
     ?>
 
     <table>
+      <thead>
       <tr>
-        <th onclick="addlocpar('ord','n')">Nome</th>
-        <th onclick="addlocpar('ord','c')">Categoria</th>
-        <th onclick="addlocpar('ord','d')">Durata</th>
-        <th >Spettacoli disponibili</th>
-
-
+          <th onclick="addlocpar('ord','n')">Nome</th>
+          <th onclick="addlocpar('ord','c')">Categoria</th>
+          <th onclick="addlocpar('ord','d')">Durata</th>
+          <th >Spettacoli disponibili</th>
+        </tr>
+      </thead>
+      <tbody>
       <?php //riempimento della tabella
       no_result($eventi,4);
       foreach($eventi as $e){
@@ -93,6 +95,7 @@
         echo "</td>";
       }
       ?>
+      </tbody>
     </table>
   </div>
   <footer>

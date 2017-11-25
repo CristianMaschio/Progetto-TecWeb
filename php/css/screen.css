@@ -46,27 +46,28 @@ nav li{
     padding-left: 2em;
     float: left;
 }
-                                    /* Link menù */
+/* Link menù */
 nav a, abbr{
     text-decoration: none;
 }
-    nav a:link {
-        color: white;
-    }
-    /* visited link */
-    nav a:visited {
-        color: #cccccc;
-    }
 
-    /* mouse over link */
-    nav a:hover {
-        font-weight: bold;
-    }
+nav a:link {
+    color: white;
+}
+/* visited link */
+nav a:visited {
+    color: #cccccc;
+}
 
-    /* selected link */
-    nav a:active {
-        font-weight: bold;
-    }
+/* mouse over link */
+nav a:hover {
+    font-weight: bold;
+}
+
+/* selected link */
+nav a:active {
+    font-weight: bold;
+}
 
 #navLog{
     float: right;
@@ -107,13 +108,29 @@ html, body {
 }
 
 body{
-    border: 1px solid #DDD; /* errore comune mettere questo nel precedente: avresti un bordo doppio! */
+    border: 1px solid #DDD; /* errore comune mettere questo nel precedente: 
+    						avresti un bordo doppio! */
 }
 
 table {
     width: 100%;
     background-color: #CCCCCC;
     border: solid 1px black;
+    border-collapse: collapse;	/*fa collassare i bordi della
+    							 tabella con quelli dei th, e td
+    							 in modo da non visualizzare spazi*/
+}
+
+thead {
+	background-color: #303030;
+    color: white;
+}
+
+/*tabella a strisce di zebra*/
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+td a:link, a:hover, a:active {
+    color: black;
 }
 
 dl {
