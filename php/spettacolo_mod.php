@@ -33,9 +33,10 @@ area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
     $data = substr($cercato['data_ora'],0,10);
     $ora = substr($cercato['data_ora'],11,5);
     ?>
-    <form method="post" action="spettacolo_mod_r.php">
-      <h2>Modifica spettacolo per  <?=get_evento_from_spettacolo($cercato['id'])['nome']?></h2><hr>
+    <h2>Modifica spettacolo per  <?=get_evento_from_spettacolo($cercato['id'])['nome']?></h2><hr>
 
+    <form method="post" action="spettacolo_mod_r.php">
+      
       <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>
       <?php
       if($_SESSION['user_tipo'] != 'L'): ?> <!-- controllo che sia un utente admin o operatore, altrimenti non può modificare il luogo -->
@@ -55,21 +56,21 @@ area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
           ?>
         <?php else: ?>
           <!-- se un amministratore di luogo richiede di modificare uno spettacolo non potrà modificare il luogo in cui si svolge -->
-          <input type="hidden" id="luogo_s" value="<?= $cercato['luogo_id']?>" />
+          <input type="hidden" name="luogo_s" value="<?= $cercato['luogo_id']?>" />
         <?php endif ?>
       </select>
 
       <label for="data_s">Data</label>
-      <input value="<?php echo"$data" ?>" type="date" id="data_s" required/>
+      <input value="<?php echo"$data" ?>" type="date" name="data_s" required/>
 
       <label for="ora_s">Orario di inizio</label>
-      <input value="<?php echo"$ora" ?>" type="time" id="ora_s" required/>
+      <input value="<?php echo"$ora" ?>" type="time" name="ora_s" required/>
 
       <label for="posti_s">Posti disponibili</label>
-      <input value="<?php echo($cercato['posti_disponibili']); ?>" type="number" id="posti_s" value=0 required/>
+      <input value="<?php echo($cercato['posti_disponibili']); ?>" type="number" name="posti_s" value=0 required/>
 
       <label for="costo_s">Costo spettacolo</label>
-      <input value="<?php echo($cercato['prezzo']); ?>" type="number" step="0.01" id="costo_s" value="0.0" required/>
+      <input value="<?php echo($cercato['prezzo']); ?>" type="number" step="0.01" name="costo_s" value="0.0" required/>
         
         
       <input type="submit" value="Conferma">

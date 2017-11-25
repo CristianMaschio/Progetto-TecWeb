@@ -1,8 +1,8 @@
 <?php
     require_once('config.php');
     register('id_mod');
-    $id_luogo_spettacolo =select("SELECT luogo_id FROM spettacoli WHERE id=$id_mod");# è la varabile che indica l'id del luogo in cui sarà ospitato lo spettacolo
-    area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
+    $id_luogo_spettacolo =select("SELECT luogo_id FROM spettacoli WHERE id=$id_mod");# ï¿½ la varabile che indica l'id del luogo in cui sarï¿½ ospitato lo spettacolo
+    area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']); // consente anche ad amministratori di luoghi di entrare qui
 ?>
 
 <html>
@@ -22,7 +22,7 @@
             <h2>Modifica spettacolo per  <?=  get_evento_from_spettacolo($cercato['id'])['nome']?></h2><hr>
             <form method="post" action="spettacolo_mod_r.php">
             <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>
-            <?php if($_SESSION['user_tipo'] != 'L'): ?> <!-- controllo che sia un utente admin o operatore, altrimentinon può modificare il luogo -->
+            <?php if($_SESSION['user_tipo'] != 'L'): ?> <!-- controllo che sia un utente admin o operatore, altrimentinon puï¿½ modificare il luogo -->
             Luogo <select name="luogo_s" required>
                 <?php $luoghi = select("SELECT * FROM luoghi ORDER BY nome ASC");
                 foreach($luoghi as $l){
@@ -34,7 +34,7 @@
                 }
                 ?>
             <?php else: ?>
-            <!-- se un amministratore di luogo richiede di modificare uno spettacolo non potrà modificare il luogo in cui si svolge -->
+            <!-- se un amministratore di luogo richiede di modificare uno spettacolo non potrï¿½ modificare il luogo in cui si svolge -->
                 <input type="hidden" name="luogo_s" value="<?= $cercato['luogo_id'] ?>" />
             <?php endif ?>
             </select>
