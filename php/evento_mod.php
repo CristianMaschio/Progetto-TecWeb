@@ -29,7 +29,7 @@ register('id_mod');
     $cercato = select("SELECT * FROM eventi WHERE id=$id_mod")[0];
     ?>
 
-    <h2>Modifica evento <?php  $cercato['nome']?></h2>
+    <h2>Modifica evento <?php echo $cercato['nome']?></h2>
     <hr>
     <form method="post" action="evento_mod_r.php">
       <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>

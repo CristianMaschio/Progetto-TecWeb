@@ -41,7 +41,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         <p><a href="luogo_mod.php?id_mod= <?= $luogo_id ?>">Modifica Luogo</a>
           <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
           <?php if(is_admin() || is_operatore()): ?>
-          <!-- metto questo solo ad admin e operatori in quanto un amministratore di luogo non dovrebbe essere in grado di eliminare il suo luogo -->
+            <!-- metto questo solo ad admin e operatori in quanto un amministratore di luogo non dovrebbe essere in grado di eliminare il suo luogo -->
             <a onclick='if(confirm("Eliminare categoria?"))
             ","messaggio")' href ="">Elimina Luogo</a>
           <?php endif ?>
