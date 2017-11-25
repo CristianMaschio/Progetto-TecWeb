@@ -52,9 +52,10 @@ function proprietario($user){
             <th>Data</th>
             <th>Prezzo</th>
             <th>Codice</th>
+            <th>Annulla prenotazione</th>
           </tr>
           <?php
-          $sql = "SELECT biglietti.codice AS codice,spettacoli.id AS idspettacolo,spettacoli.evento_id AS idevento,spettacoli.data_ora,spettacoli.prezzo,spettacoli.luogo_id AS idluogo
+          $sql = "SELECT biglietti.codice AS codice,spettacoli.id AS idspettacolo,spettacoli.evento_id AS idevento,spettacoli.data_ora,spettacoli.prezzo,spettacoli.luogo_id AS idluogo, biglietti.id AS idbiglietto
           FROM biglietti JOIN spettacoli ON biglietti.spettacolo_id=spettacoli.id
           WHERE utente_id=".$_SESSION['user_id']."";
           $biglietti=select($sql);
@@ -76,6 +77,8 @@ function proprietario($user){
 
             echo "<td>".$b['codice'];
             echo "</td>";
+
+            print_form_anullamento($b['idbiglietto'],get_nome_evento($b['idevento']));
           }
           ?>
         </table>

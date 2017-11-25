@@ -324,7 +324,7 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
   }
 }
 
-// STAMPA IL FORM PER LA PRENOTAZIONE
+// STAMPA IL FORM PER LA PRENOTAZIONE DI UN BIGLIETTO
 
 function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nome_spettacolo){
   if($posti_disponibili>0)
@@ -337,6 +337,17 @@ function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nom
   </td>";
   else
   echo "<td>Non ci sono posti disponibili</td>";
+}
+
+//STAMPA IL FORM PER L'ANNULLAMENTO DELLA PRENOTAZIONE DI UN BIGLIETTO
+
+function print_form_anullamento($id_biglietto,$nome_spettacolo){
+  echo"<td>
+  <form method=\"POST\" action=\"annulla_prenotazione.php\" onsubmit=\"return confirm('Confermi di voler annullare la prenotazione per $nome_spettacolo?');\" >
+    <input type=\"hidden\" name=\"id_b\" value=\"".$id_biglietto."\">
+    <input type=\"submit\" value=\"Annulla prenotazione\">
+  </form>
+  </td>";
 }
 
 ?>
