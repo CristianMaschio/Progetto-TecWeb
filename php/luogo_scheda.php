@@ -104,11 +104,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         echo "</td>";
 
         if(is_logged()){
-
-          if($s['posti_disponibili']>0)
-          echo "<td><a href=>Prenota ora</a></td>";
-          else
-          echo "<td>Non ci sono posti disponibili</td>";
+          print_form_prenotazione($s['id'], $_SESSION['user_id'],$s['posti_disponibili'],get_evento_from_spettacolo($s['id'])['nome']);
         }
         if(is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)){
           echo "<td>".$s['posti_disponibili']."</td>";

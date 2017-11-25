@@ -24,10 +24,10 @@
 
   <div id="title"><h2><hr>Luoghi</h2></div>
   <hr>
-  <p>
-    Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare il tuo biglietto.
-  </p>
   <div id="content">
+    <p>
+      Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare il tuo biglietto.
+    </p>
     <?php
     filter_form($filter,'Cerca un luogo');
     $sql = "SELECT *

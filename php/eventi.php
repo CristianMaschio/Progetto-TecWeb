@@ -25,6 +25,7 @@
   <div id="title"><h2><hr>Eventi</h2></div>
   <hr>
   <div id="content">
+  <p>Qui troverai una lista di tutti gli eventi eventi per i quali potrai prenotare il tuo biglietto</p>
     <?php
     /*
 
