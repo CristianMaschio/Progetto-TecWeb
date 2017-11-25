@@ -32,10 +32,11 @@ function printHeader(){
 
 function printNavBar(){
   //bisognerà discriminare il fatto che l' utente sia loggato o meno
+  //TODO: non vanno messi span?
   echo("
   <ul>
   <li lang=\"en\"><a href=\"home.php\">Home</a></li>
-  <li lang=\"en\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
+  <li lang=\"it\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
   <li lang=\"it\"><a href=\"eventi.php\">Eventi</a></li>
   <li lang=\"it\"><a href=\"luoghi.php\">Luoghi</a></li>
   </ul>

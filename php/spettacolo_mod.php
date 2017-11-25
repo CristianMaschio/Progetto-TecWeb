@@ -1,5 +1,8 @@
     <!DOCTYPE html>
 
+
+<!-- TODO: È DA FIXARE: I PARAMETRI NON VENGONO PASSATI CORRETTAMENTE A spettacolo_mod_r QUINDI NON FUNZIONA LA MODIFICA DI SPETTACOLO-->
+
 <?php
 require_once('php/config.php');
 require_once('php/printTemplate.php');
