@@ -15,8 +15,8 @@
     
     //controllo la data non sia passata
     if(is_data_passata($data_s)){
-        message('Non puoi creare spettacoli in date passate',3);
-        redirect('spettacolo_crea.php');
+        message('Non puoi inserire spettacoli in date passate',2);
+        redirect($_SERVER['HTTP_REFERER']);
     }
     
     //formatto il costo in modo corretto
@@ -29,8 +29,7 @@
     posti_disponibili = $posti_s,
     prezzo = $costo_s 
     WHERE id=$id_mod";
-    //echo ($sql);
     query($sql);
     message("Spettacolo modificato correttamente",1);
-    redirect($_SESSION['redirect_from_spettacolo']);
-?>
+    redirect($_SESSION['redirect_from_spettacolo']); 
+ ?>
