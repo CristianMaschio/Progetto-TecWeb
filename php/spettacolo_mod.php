@@ -27,8 +27,7 @@ area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
   <?php echo consumeMessage(); ?>
   <div id="content">
     <?php
-    $cercato_farlocco=select("SELECT * FROM spettacoli WHERE id=$id_mod");
-    $cercato = $cercato_farlocco[0];
+    $cercato = select("SELECT * FROM spettacoli WHERE id=$id_mod")[0];
 
     $data = substr($cercato['data_ora'],0,10);
     $ora = substr($cercato['data_ora'],11,5);

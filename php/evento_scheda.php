@@ -39,7 +39,7 @@ require_once('php/printTemplate.php')
         <dt>Categoria: <a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
         <!-- TODO: manca modifica ed eliminazione dell evento da parte di un amministratore o operatore -->
         <?php if(is_admin() || is_operatore() ) {
-          echo "<a href= >edit</a>";
+          echo "<a href=\"evento_mod.php?id_mod=$evt_id\" >edit</a>";
         }
         if(is_admin() || is_operatore()) {
           echo "<a href= >delete</a>";

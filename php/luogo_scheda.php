@@ -7,6 +7,7 @@ register('luogo_id');
 register('filter');
 register('ord');
 register('user_id');
+$_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; // quando modificherà uno spettacolo verrà rimandato alla pagina del luogo da cui proviene
 ?>
 
 <html lang="it" >

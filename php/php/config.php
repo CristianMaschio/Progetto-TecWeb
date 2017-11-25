@@ -324,19 +324,4 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
   }
 }
 
-
-function submit_reset_buttons(){
-  echo "<div class=\"row\">
-  <div class=\"large-6 column\">
-  <input type=\"submit\" class=\"small button round expand\"/></div>
-  <div class=\"large-6 column\">
-  <input type=\"reset\" class=\"small button round expand secondary\"/></div>
-  </div>";
-}
-
-
-
-
-
-
 ?>
