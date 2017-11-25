@@ -1,13 +1,11 @@
 <?php
-    
-    // TODO: è da fixare. Non riceve correttamente i parametri     
 
     //devo controllare che la data non sia passata e che il formato dell'input del prezzo sia giusto
     require_once("php/config.php");
     register('id_mod');
-    area_riservata(true,$id_mod);
     register('evento_s');
     register('luogo_s');
+    area_riservata(true,$luogo_s);
     register('data_s');
     register('ora_s');
     register('posti_s');
@@ -22,7 +20,6 @@
     //formatto il costo in modo corretto
     $costo_s = format_costo($costo_s);
     
-
     $sql="UPDATE spettacoli SET
     luogo_id = $luogo_s,
     data_ora = '$data_s, $ora_s:00',
