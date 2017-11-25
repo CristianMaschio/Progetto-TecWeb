@@ -34,6 +34,12 @@ register('filter');
     ";
     echo(select($sql)[0]['descrizione']);
     ?></p>
+    <?php if(is_admin() || is_operatore()): ?>
+      <a href="categoria_mod.php?id_mod=<?php $cat_id ?>">Modifica categoria</a>
+      <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
+      <a onclick='if(confirm("Eliminare categoria?"))
+      ajax("elimina_cosa_dove.php?table=categorie&id=<?php $cat_id ?>","messaggio")' href ="">Elimina categoria</a>
+    <?php endif ?>
 
     <?= filter_form($filter,'Cerca un evento') ?>
 
@@ -60,13 +66,6 @@ register('filter');
     }
     echo "</table>";
     ?>
-
-    <?php if(is_admin() || is_operatore()): ?>
-      <a href="categoria_mod.php?id_mod=<?php $cat_id ?>">Modifica categoria</a>
-      <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
-      <a onclick='if(confirm("Eliminare categoria?"))
-      ajax("elimina_cosa_dove.php?table=categorie&id=<?php $cat_id ?>","messaggio")' href ="">Elimina categoria</a>
-    <?php endif ?>
 
   </div>
 

@@ -35,18 +35,17 @@ require_once('php/printTemplate.php')
     <section><?= $evento['descrizione'] ?></section>
     <aside>
       <dl>
-        <dt>Durata:<?= format_durata($evento['durata'])?></dt>
-        <dt>Categoria: <a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
+        <dt>Durata</dt><dd><?= format_durata($evento['durata'])?></dd>
+        <dt>Categoria</dt><dd><a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
         <!-- TODO: manca modifica ed eliminazione dell evento da parte di un amministratore o operatore -->
-        <?php if(is_admin() || is_operatore() ) {
-          echo "<a href=\"evento_mod.php?id_mod=$evt_id\" >edit</a>";
-        }
-        if(is_admin() || is_operatore()) {
-          echo "<a href= >delete</a>";
-        }
-        ?>
-        <?
       </dl>
+      <?php if(is_admin() || is_operatore()): ?>
+        <p><a href="evento_mod.php?id_mod= <?= $evt_id ?>">Modifica Evento</a>
+        <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
+        <a onclick='if(confirm("Eliminare categoria?"))
+        ","messaggio")' href ="">Elimina evento</a>
+        </p>
+      <?php endif ?>
     </aside>
 
 

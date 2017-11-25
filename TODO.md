@@ -3,3 +3,4 @@
 - aggiongere una migliore formattazione in js(+html) dell'inserimento dell'indirizzo e del telefono di un luogo. in generale controllare con js che tutti gli inserimenti siano sensati.
 - modificare bene tutti i titoli delle pagine
 - togliere il display di AM/PM quando si inserisce una durata (tipo modifica/inserimento di un evento) tramite CSS: un link che può essere d'aiuto: https://stackoverflow.com/questions/24867625/how-to-make-a-time-input-with-out-am-pm
+-per accessibilità: mettere un link muto che vada da prima dell header della pagina direttamente al content
