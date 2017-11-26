@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!--  ATTENTI IN QUESTA PAGINA CON IL CSS: TENIAMOLA PER ULTIMA PERCHÈ LA PROGETTAZIONE DELLA UI È DIFFICILE E DOVREMO CAMBIARE L'HTML PESANTEMENTE -->
 <?php
 require_once('php/config.php');
 require_once('php/printTemplate.php');
@@ -37,8 +37,7 @@ register('filter');
     <?php if(is_admin() || is_operatore()): ?>
       <a href="categoria_mod.php?id_mod=<?php echo $cat_id ?>">Modifica Categoria</a>
       <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
-      <a onclick='if(confirm("Eliminare categoria?"))
-      ajax("elimina_cosa_dove.php?table=categorie&id=<?php $cat_id ?>","messaggio")' href ="">Elimina Categoria</a>
+      <a onclick=' return confirm("Confermi di voler eliminare ?")' href ="categoria_elimina.php?id=<?php echo $cat_id ?>">Elimina Categoria</a>
     <?php endif ?>
 
     <?= filter_form($filter,'Cerca un evento') ?>

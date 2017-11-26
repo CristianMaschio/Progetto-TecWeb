@@ -85,9 +85,20 @@ function proprietario($user){
         <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
         <hr />
         <a href="logout_r.php">Logout</a>
-        <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni</a>
+        <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
       <?php endif ?>
     </div>
+
+    <?php if(is_admin() || is_operatore()): ?>
+      <a href="categoria_crea.php">Crea categoria</a>
+      <a href="evento_crea.php">Crea evento</a>
+      <a href="luogo_crea.php">Crea luogo</a>
+      <a href="spettacolo_crea.php">Crea spettacolo</a>
+    <?php endif ?>
+
+    <?php if(is_gestore_luogo()): ?>
+      <a href="spettacolo_crea.php">Crea spettacolo</a>
+    <?php endif ?>
 
     <footer>
       <?= printFooter(); ?>

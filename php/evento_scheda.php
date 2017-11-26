@@ -42,8 +42,7 @@ require_once('php/printTemplate.php')
       <?php if(is_admin() || is_operatore()): ?>
         <p><a href="evento_mod.php?id_mod= <?= $evt_id ?>">Modifica Evento</a>
         <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
-        <a onclick='if(confirm("Eliminare categoria?"))
-        ","messaggio")' href ="">Elimina evento</a>
+        <a onclick='return confirm("Confermi di voler eliminare questo evento?")' href ="evento_elimina.php?id=<?php echo $evt_id;?>">Elimina evento</a>
         </p>
       <?php endif ?>
     </aside>

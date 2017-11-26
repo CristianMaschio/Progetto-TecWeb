@@ -208,6 +208,17 @@ function is_admin($id_a=NULL) {
   else return false;
 }
 
+function is_gestore_luogo($id_a=NULL) {
+  //l' inizializzazione serve perchè se non si passano parametri si da per scontato che l' utente richiesto sia quello loggato
+  if($id_a == NULL)
+  if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'L') return true;
+  else return false;
+  else
+  $utente=select("SELECT * FROM utenti WHERE id=$id_a");
+  if($utente[0]['tipo'] == 'L') return true;
+  else return false;
+}
+
 function is_operatore($id_o=NULL) {
   if($id_o == NULL)
   if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'O') return true;
@@ -218,16 +229,16 @@ function is_operatore($id_o=NULL) {
   else return false;
 }
 
-function user_linked_to_luogo($iduser,$idluogo){
+function user_linked_to_luogo($idluogo){
   // TODO: mettere controllo su tipologie utente="L"
-  if($iduser != NULL && $iduser != -1 ){
-    $user_link = select("SELECT luogo_id FROM utenti WHERE id=$iduser");
+  if(!is_logged()) return false;
+  if($_SESSION['user_id'] != NULL){
+    $user_link = select("SELECT luogo_id FROM utenti WHERE id=".$_SESSION['user_id']);
     if($user_link[0]['luogo_id']==$idluogo) return true;
     else return false;
   }
   else return false;
 }
-
 
 // STAMPA UNA FORM DI RICERCA CHE IN GET AGGIORNA LA PAGINA SU CUI VIENE RICHIAMATA
 // stampa un form di filtro: esso se cliccato su submit aggionge alla pagina
@@ -309,18 +320,17 @@ function no_result($array,$colonne){
 //in tal caso deve essere impostata anche la variabile che indica l' id del luogo a cui si deve accedere
 
 function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
+  // TODO: Pprobabilmente mettere un redirect ad http referer e non home
   require_login();
   if($allow_admin_luogo){
-    if(!user_linked_to_luogo($_SESSION['user_id'],$id_luogo)
+    if(!user_linked_to_luogo($id_luogo)
     && !is_admin() && !is_operatore()){
       message('Area riservata',2);
       redirect('home.php');
-      die();
     }
   } else if(!is_admin() && !is_operatore()){
       message('Area riservata',2);
       redirect('home.php');
-      die();
   }
 }
 

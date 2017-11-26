@@ -37,13 +37,12 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         <dt>Telefono</dt><dd><?= $luogo['telefono'] ?></dd>
       </dl>
 
-      <?php if(is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)): ?>
+      <?php if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)): ?>
         <p><a href="luogo_mod.php?id_mod= <?= $luogo_id ?>">Modifica Luogo</a>
           <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
           <?php if(is_admin() || is_operatore()): ?>
             <!-- metto questo solo ad admin e operatori in quanto un amministratore di luogo non dovrebbe essere in grado di eliminare il suo luogo -->
-            <a onclick='if(confirm("Eliminare categoria?"))
-            ","messaggio")' href ="">Elimina Luogo</a>
+            <a onclick='return confirm("Confermi di voler eliminare questo luogo?")' href ="luogo_elimina.php?id=<?php echo $luogo_id;?>">Elimina luogo</a>
           <?php endif ?>
         </p>
       <?php endif ?>
@@ -58,7 +57,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
           <th>Prenotazione</th>
         <?php endif ?>
         <!-- TODO: proba  bilmente nel prossimo controllo ci varrà anche || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)) -->
-        <?php if(is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)) : ?>
+        <?php if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)) : ?>
           <th>Posti Disponibili</th>
           <th>Modifica</th>
           <th>Elimina</th>
@@ -83,7 +82,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
       $spettacoli = select($sql);
       filter_form($filter,'Cerca un evento');
 
-      if ( is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id))	{
+      if ( is_admin() || is_operatore() || user_linked_to_luogo($luogo_id))	{
         // TODO: e forse qui il controllo di prima andrebbe aggiunto (quello nel precedente todo), se lo implementi anche prima
         no_result($spettacoli,7);
       } else if ( is_logged()) {
@@ -106,7 +105,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         if(is_logged()){
           print_form_prenotazione($s['id'], $_SESSION['user_id'],$s['posti_disponibili'],get_evento_from_spettacolo($s['id'])['nome']);
         }
-        if(is_admin() || is_operatore() || user_linked_to_luogo($_SESSION['user_id'],$luogo_id)){
+        if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)){
           echo "<td>".$s['posti_disponibili']."</td>";
           echo "<td><a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
           echo "<td><a href= >delete</a></td>";
