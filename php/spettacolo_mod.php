@@ -20,7 +20,7 @@ area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
   <header>
     <?= printHeader(); ?>
   </header>
-  <nav>
+  <nav id="nav" class="On">
     <?= printNavBar(); ?>
   </nav>
 

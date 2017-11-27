@@ -20,7 +20,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
     <?= printHeader(); ?>
   </header>
 
-  <nav>
+  <nav id="nav" class="On">
     <?= printNavBar(); ?>
   </nav>
 

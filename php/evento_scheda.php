@@ -20,7 +20,7 @@ require_once('php/printTemplate.php')
     <?= printHeader(); ?>
   </header>
 
-  <nav>
+  <nav id="nav" class="On">
     <?= printNavBar(); ?>
   </nav>
 
