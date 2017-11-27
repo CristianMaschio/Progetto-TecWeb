@@ -21,15 +21,32 @@ nav {
   overflow: auto;
 }
 
+.Off{
+    display: none;
+}
+
+.On{
+    display: block;
+}
+
 #logoTitle{
   float: left;
   width: 50%;
   font-size: 1em;
 }
 #logoTitle img{
-  display: block;
-  float: left;
+    display: none;
+    float: left;
 }
+#logoTitle a{
+    display: block;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    float: left;
+    font-size: 1.5em;
+    color: white;
+}
+
 #findAll{
   //display: none;
   float: right;
@@ -104,6 +121,7 @@ html, body {
   margin: auto;       /* il browser da solo centra il contenuto */
   font-family: Verdana,Arial,Helvetica,sans-serif;
   font-size:100%;
+    min-width: 480px;
 }
 
 body{

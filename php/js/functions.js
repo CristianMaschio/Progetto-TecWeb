@@ -23,3 +23,12 @@ function addlocpar(par, val){
     }
     return false;
 }
+
+function menuResponsive() {
+    var x = document.getElementById("nav");
+    if (x.className === "On") {
+        x.className = "Off";
+    } else {
+        x.className = "On";
+    }
+}

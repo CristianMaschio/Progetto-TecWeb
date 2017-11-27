@@ -13,7 +13,7 @@
     <?= printHeader(); ?>
   </header>
 
-  <nav>
+  <nav id="nav" class="On">
     <?= printNavBar(); ?>
   </nav>
 
