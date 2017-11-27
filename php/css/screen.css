@@ -178,14 +178,21 @@ dd {
     background-color: #303030;
     color: white;
     padding: 0.2em;
+    font-size: 1.5em;
 }
-
+.box h2{
+    text-align: center;
+    background-color: #303030;
+    color: white;
+    padding: 0.2em;
+    font-size: 1.5em;
+}
 .box input{
     width: 99.3%;
     display: block;
-    margin-right: 1px;
-    margin-bottom: 0.5em;
     height: 2em;
+    margin: auto;
+    margin-bottom: 0.5em;
     font-size: 18px;
 }
 .box #buttonAccedi{
@@ -196,6 +203,12 @@ dd {
 .box p{
     margin-top: 1em;
     margin-bottom: 0.5em;
+}
+
+textarea{
+    resize: none;
+    width: 99.6%;
+    height: 15em;
 }
 /*  FINE Login e Registrazione */
 
@@ -229,6 +242,7 @@ dd {
     //width: 95%;
     margin: 1em auto;
 }
+
 
 /*   FINE content unici     */
 
