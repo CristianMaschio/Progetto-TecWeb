@@ -256,8 +256,7 @@ footer img{
 
 /*INIZIO form di ricerca*/
 #filterform {
-    //padding-top: 0.5em;
-    //padding-bottom: 0.5em;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 /*FINE form di ricerca*/
