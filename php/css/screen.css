@@ -116,18 +116,27 @@ table {
     width: 100%;
     background-color: #CCCCCC;
     border: solid 1px black;
-    border-collapse: collapse;	/*fa collassare i bordi della
-    							 tabella con quelli dei th, e td
-    							 in modo da non visualizzare spazi*/
+    border-collapse: collapse;/*fa collassare i bordi della
+    						tabella con quelli dei th, e td
+    						in modo da non visualizzare spazi*/
 }
 
 thead {
 	background-color: #303030;
     color: white;
+    text-align: left;
 }
 
 /*tabella a strisce di zebra*/
 tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+	padding: 0.5em;
+}
+
+td {
+	vertical-align: bottom;
+}
 
 td a:link, a:hover, a:active {
     color: black;
@@ -247,7 +256,8 @@ footer img{
 
 /*INIZIO form di ricerca*/
 #filterform {
-    padding-top: 0.20em;
-    padding-bottom: 0.20em;
+    //padding-top: 0.5em;
+    //padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 /*FINE form di ricerca*/
