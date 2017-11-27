@@ -263,11 +263,10 @@ footer{
     font-size: 0.8em;
     padding: 1em;
 }
-                    /*Link footer*/
-footer a{
-    color: white;
-}
 
+footer a:link {
+    color: #bfe1ff;
+}
 
 footer img{
     float: right;
