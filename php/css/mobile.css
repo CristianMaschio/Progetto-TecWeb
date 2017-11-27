@@ -1,3 +1,252 @@
 * {
-  color:green;
+  padding: 0; /*resetto il valore di default impostati dai browser, mettere sempre*/
+  margin: 0;
 }
+/*--------------------
+INIZIO Header & Nav
+--------------------*/
+header {
+  background-color: #303030;
+  color: white;
+  width:100%;
+  height: 2.5em;
+}
+
+nav {
+  background-color: #303030;
+  color: white;
+  width: 50%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+}
+
+#logoTitle{
+  float: left;
+  width: 50%;
+  font-size: 1em;
+}
+#logoTitle img{
+  display: block;
+  float: left;
+}
+#findAll{
+  //display: none;
+  float: right;
+}
+
+#findAll input{
+  height: 1.5em;
+}
+
+nav li{
+  display: block;
+  float: left;
+  width: 100%;
+  padding: 1em;
+}
+/* Link menù */
+nav a, abbr{
+  text-decoration: none;
+}
+
+nav a:link {
+  color: white;
+}
+/* visited link */
+nav a:visited {
+  color: #cccccc;
+}
+
+/* mouse over link */
+nav a:hover {
+  font-weight: bold;
+}
+
+/* selected link */
+nav a:active {
+  font-weight: bold;
+}
+
+#navLog{
+  float: left;
+  padding:1em;
+  width: 100%;
+}
+/*FINE Header & Nav*/
+
+/*--------------------------
+INIZIO messaggi verso utente
+--------------------------*/
+.message-success{
+  background-color: #3a945b;
+  color: white;
+  text-align: center;
+}
+
+.message-warning{
+  background-color: #cf6e0e;
+  color: white;
+  text-align: center;
+}
+
+.message-fail{
+  background-color: #f04124;
+  color: white;
+  text-align: center;
+}
+/*FINE messaggi verso utente*/
+
+
+
+html, body {
+  max-width: 1024px;  /* larghezza massima anche per schermi grandi */
+  margin: auto;       /* il browser da solo centra il contenuto */
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size:100%;
+}
+
+body{
+  border: 1px solid #DDD; /* errore comune mettere questo nel precedente:
+    						avresti un bordo doppio! */
+}
+
+table {
+  width: 100%;
+  background-color: #CCCCCC;
+  border: solid 1px black;
+  border-collapse: collapse;	/*fa collassare i bordi della
+    							 tabella con quelli dei th, e td
+    							 in modo da non visualizzare spazi*/
+}
+
+thead {
+  background-color: #303030;
+  color: white;
+}
+
+/*tabella a strisce di zebra*/
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+td a:link, a:hover, a:active {
+  color: black;
+}
+
+dl {
+  border: 3px double #ccc;
+  padding: 0.5em;
+}
+dt {
+  float: left;
+  clear: left;
+  padding-left: 0.3em;
+  font-weight: bold;
+  color: green;
+}
+dt::after {
+  content: ":";
+}
+dd {
+  margin: 0 0 0 7em;
+  padding: 0 0 0.5em 0;
+}
+
+/*--------------------
+    INIZIO Login e Registrazione
+--------------------*/
+.box {
+  margin: 1em auto; /*top-bottom right-left*/
+  width: 50%;
+  border: 1px solid #cccccc;
+  display: block;
+}
+.box h3{
+  text-align: center;
+  background-color: #303030;
+  color: white;
+  padding: 0.2em;
+}
+
+.box input{
+  width: 99.3%;
+  display: block;
+  margin-right: 1px;
+  margin-bottom: 0.5em;
+  height: 2em;
+  font-size: 18px;
+}
+.box #buttonAccedi{
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+.box p{
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+/*  FINE Login e Registrazione */
+
+/*--------------------
+    INIZIO luoghi
+--------------------*/
+
+#contentLuoghi {
+  width: 95%;
+  margin: auto;
+  padding-top: 0.5em;
+  padding-bottom: 1.5em;
+//background-color: #A9A9A9;
+}
+
+/*FINE luoghi*/
+
+
+/*--------------------
+    INIZIO content unici
+--------------------*/
+
+#title{
+  background-color: #303030;
+  padding-right: 1em;
+  padding-left: 1em;
+  color: white;
+  text-align: center;
+}
+#content {
+//width: 95%;
+  margin: 1em auto;
+}
+
+/*   FINE content unici     */
+
+/*--------------------
+    INIZIO footer
+--------------------*/
+footer{
+  background-color: #303030;
+  color: white;
+  font-size: 0.8em;
+  padding: 1em;
+}
+/*Link footer*/
+footer a{
+  color: white;
+}
+
+/* visited link */
+footer a:visited {
+  color: #cccccc;
+}
+
+footer img{
+  float: right;
+}
+/*FINE footer*/
+
+
+/*INIZIO form di ricerca*/
+#filterform {
+  padding-top: 0.20em;
+  padding-bottom: 0.20em;
+}
+/*FINE form di ricerca*/

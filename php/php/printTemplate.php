@@ -9,7 +9,7 @@ function printHead($title){
   <meta name=\"author\" content=\"Gruppo di progetto Tecnologie Web\">
   <script type=\"text/javascript\" src=\"js/functions.js\"></script>
   <link rel=\"stylesheet\" type=\"text/css\" href=\"css/screen.css\" >
-  <link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 480px)\" href=\"css/mobile.css\">
+  <link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 540px)\" href=\"css/mobile.css\">
   <link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"css/print.css\">
   ");
 }
@@ -17,12 +17,11 @@ function printHead($title){
 function printHeader(){
   echo("
   <div id='logoTitle'>
-  <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
+  <img src=\"img/icone/view.png\" alt=\"Menu\" title=\"Menu\" >
   <h1>Biglietteria</h1>
   </div>
 
   <div id='findAll'>
-  <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
   <input type=\"text\" name=\"fname\" placeholder='Cerca'>
   </div>
   ");

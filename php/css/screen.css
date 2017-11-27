@@ -25,9 +25,11 @@ nav {
     font-size: 1em;
 }
 #logoTitle img{
+    display: none;
     float: left;
 }
 #findAll{
+    padding-top: 0.7em;
     padding-right: 1em;
     float: right;
 }
@@ -104,7 +106,6 @@ html, body {
     margin: auto;       /* il browser da solo centra il contenuto */
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size:100%;
-    min-width: 550px;
 }
 
 body{
