@@ -25,7 +25,7 @@ tipo_r
     <?= printHeader(); ?>
   </header>
 
-  <nav id="nav" class="On">
+  <nav id="nav" class="Off">
     <?= printNavBar(); ?>
   </nav>
 

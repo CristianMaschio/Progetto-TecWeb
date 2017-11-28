@@ -19,7 +19,7 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
     <?= printHeader(); ?>
   </header>
 
-  <nav id="nav" class="On">
+  <nav id="nav" class="Off">
     <?= printNavBar(); ?>
   </nav>
 

@@ -19,7 +19,7 @@ require_proprietario($id_u);
     <?= printHeader(); ?>
   </header>
 
-  <nav id="nav" class="On">
+  <nav id="nav" class="Off">
     <?= printNavBar(); ?>
   </nav>
 

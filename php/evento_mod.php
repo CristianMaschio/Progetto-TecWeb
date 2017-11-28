@@ -17,7 +17,7 @@ register('id_mod');
     <?= printHeader(); ?>
   </header>
 
-  <nav id="nav" class="On">
+  <nav id="nav" class="Off">
     <?= printNavBar(); ?>
   </nav>
 
@@ -50,7 +50,7 @@ register('id_mod');
         }
         ?>
       </select>
-      
+
       <input type="submit" value="Conferma">
       <input type="reset" value="Annulla">
     </form>
