@@ -7,8 +7,8 @@
 require_once('php/config.php');
 require_once('php/printTemplate.php');
 register('id_mod');
-$id_luogo_spettacolo =select("SELECT luogo_id FROM spettacoli WHERE id=$id_mod");# è la varabile che indica l'id del luogo in cui sarà ospitato lo spettacolo
-area_riservata(true,$id_luogo_spettacolo[0]['luogo_id']);
+$id_luogo_spettacolo =select("SELECT luogo_id FROM spettacoli WHERE id=$id_mod")[0]['luogo_id']; # è la varabile che indica l'id del luogo in cui sarà ospitato lo spettacolo
+area_riservata(true,$id_luogo_spettacolo);
 ?>
 
 <html lang="it" >

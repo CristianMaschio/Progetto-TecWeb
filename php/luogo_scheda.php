@@ -111,7 +111,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)){
           echo "<td>".$s['posti_disponibili']."</td>";
           echo "<td><a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
-          echo "<td><a href= >delete</a></td>";
+          echo "<td><a href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
         }
 
         echo "</tr>";
