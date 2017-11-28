@@ -264,6 +264,11 @@ footer{
     padding: 1em;
 }
 
+/*Link footer*/
+footer a{
+    color: white;
+}
+
 footer a:link {
     color: #bfe1ff;
 }
@@ -280,3 +285,13 @@ footer img{
     margin-bottom: 0.5em;
 }
 /*FINE form di ricerca*/
+
+
+/*Form per la modifica e 
+la creazione di un evento*/
+#formbox {
+	width: 90%;
+	background-color: #cccccc;
+	align: auto;
+	text-align: right;
+}

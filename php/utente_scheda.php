@@ -14,7 +14,10 @@ function proprietario($user){
 ?>
 
 <html lang="it" >
-<?php $user=select("SELECT * FROM utenti WHERE id=$id_u")[0]; //come prima cosa leggi di che utente si tratta ?>
+<?php
+  //come prima cosa leggi di che utente si tratta
+  $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
+?>
 <head>
   <?= printHead('Profilo '.$user['username']); ?>
 </head>
@@ -46,17 +49,18 @@ function proprietario($user){
       <?php if(is_logged() && proprietario($user)): ?>
         <hr><h3>Prenotazioni</h3>
         <table>
-        <thead>
-          <tr>
-            <th>Evento</th>
-            <th>Luogo</th>
-            <th>Data</th>
-            <th>Prezzo</th>
-            <th>Codice</th>
-            <th>Annulla prenotazione</th>
-          </tr>
-        </thead>
-        <tbody>
+
+          <thead>
+            <tr>
+              <th>Evento</th>
+              <th>Luogo</th>
+              <th>Data</th>
+              <th>Prezzo</th>
+              <th>Codice</th>
+              <th>Annulla prenotazione</th>
+            </tr>
+          </thead>
+          </tbody>
           <?php
           $sql = "SELECT biglietti.codice AS codice,spettacoli.id AS idspettacolo,spettacoli.evento_id AS idevento,spettacoli.data_ora,spettacoli.prezzo,spettacoli.luogo_id AS idluogo, biglietti.id AS idbiglietto
           FROM biglietti JOIN spettacoli ON biglietti.spettacolo_id=spettacoli.id
@@ -84,7 +88,7 @@ function proprietario($user){
             print_form_anullamento($b['idbiglietto'],get_nome_evento($b['idevento']));
           }
           ?>
-        <tbody>
+          </tbody>
         </table>
         <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
         <hr />

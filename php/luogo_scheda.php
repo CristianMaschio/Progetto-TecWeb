@@ -49,7 +49,8 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
     </aside>
 
     <table>
-    <thead>
+
+      <thead>
       <tr>
         <th><a>Evento</a></th>
         <th><a>Data</a></th>
@@ -118,6 +119,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
       }
       ?>
       <tbody>
+
     </table>
 
   </div>
