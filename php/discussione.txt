@@ -1,0 +1,23 @@
+-id title: deve fare parte del content, ad esempio "Informazioni" in info.php  
+
+
+-Cose vanno nel CONTENT. se vuoi fare titoli scrivi in h2.... RIMUOVERE HR!!!
+-perchè gaggi ha detto che per i ciechi bisogna link che va direttamente a content per agevolare la navigazione, se non c'è titolo è merda, quindi titolo va in content.
+
+
+-titoli: h2 in content, poi testo
+
+-nav bar: per ora bene cosi orizzontale alta
+
+-rimuovere HR  e DIV esterni a content
+-pagina amministratore: EDIT e REMOVE sono due link , vanno a destra.
+-pagine da non toccare: homepage(da ripensare), scheda utente.
+
+logout--> in alto a destra
+
+CSS MOBILE NON ORA!!!! NON C'È ANCORA CONSISTENZA TRA MOBILE/DESKTOP
+
+riassumendo:
+-NO MOBILE
+-RISPETTARE STANDARD (no div che inglobano content)
+-NON TOCCARE HOME E SCHEDA UTENTE
