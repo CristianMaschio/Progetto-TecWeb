@@ -49,6 +49,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
     </aside>
 
     <table>
+    <thead>
       <tr>
         <th><a>Evento</a></th>
         <th><a>Data</a></th>
@@ -63,6 +64,8 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
           <th>Elimina</th>
         <?php endif ?>
       </tr>
+      <thead>
+      <tbody>
 
       <?php //qui carico i varispettacoli
       $sql = "SELECT spettacoli.data_ora,spettacoli.prezzo,spettacoli.id,eventi.nome,eventi.id as idevento,spettacoli.posti_disponibili
@@ -114,6 +117,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         echo "</tr>";
       }
       ?>
+      <tbody>
     </table>
 
   </div>

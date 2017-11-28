@@ -69,8 +69,8 @@ nav a:hover {
 }
 
 /* selected link */
-nav a:active {
-    font-weight: bold;
+nav a:hover {
+    color: #cccccc;
 }
 
 #navLog{
@@ -116,16 +116,16 @@ body{
 }
 
 a:link {
-    color: #0066c1;
+    color: #0674d6;
 }
 /* visited link */
 a:visited {
-    color: #004582;
+    color: #00325e;
 }
 
 /* selected link */
-a:active {
-    font-weight: bold;
+a:hover {
+    color: #05b8ff;
 }
 
 table {
