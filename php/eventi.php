@@ -22,9 +22,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="title"><h2><hr>Eventi</h2></div>
-  <hr>
   <div id="content">
+      <div id="title"><h2>Eventi</h2></div>
   <p>Qui troverai una lista di tutti gli eventi eventi per i quali potrai prenotare il tuo biglietto</p>
     <?php
     /*

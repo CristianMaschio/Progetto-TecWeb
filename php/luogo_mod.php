@@ -28,7 +28,7 @@ area_riservata(true,$id_mod);
     $cercato = select("SELECT * FROM luoghi WHERE id=$id_mod")[0];
     ?>
     <h2>Modifica informazioni <?=  $cercato['nome']?></h2>
-    <hr>
+
     <form method="post" action="luogo_mod_r.php">
       <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>
       <label for="nome_l">Nome</label> <input type="text" value="<?= $cercato['nome'] ?>" maxlength=50 name="nome_l" id="nome_l" required/>

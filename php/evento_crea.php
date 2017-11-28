@@ -22,7 +22,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="content" class="box">
 
   <h2>Crea nuovo evento</h2>
   <hr>

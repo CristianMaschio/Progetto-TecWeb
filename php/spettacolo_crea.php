@@ -25,10 +25,9 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="content" class="box">
 
   <h2>Crea nuovo spettacolo</h2>
-  <hr>
     <form action="spettacolo_crea_r.php" method="POST">
         <label for="evento_s">Evento</label> <select name="evento_s" required>
         <!-- TODO: qui gli eventi dovrebbero essere raggruppati PRIMA per categoria e solo dopo ordinati per nome (non mi ricordo come si chiami l'attributo per fare questo ma esiste ed è anche molto importante fare questa cosa) -->

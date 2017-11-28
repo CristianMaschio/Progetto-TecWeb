@@ -31,7 +31,7 @@ require_once('php/printTemplate.php')
     $eventi=select("SELECT * FROM eventi WHERE id=$evt_id");
     $evento = $eventi[0];
     ?>
-    <h1><?= $evento['nome'] ?></h1><hr>
+    <h2><?= $evento['nome'] ?></h2><hr>
     <section><?= $evento['descrizione'] ?></section>
     <aside>
       <dl>

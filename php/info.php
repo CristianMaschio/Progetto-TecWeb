@@ -19,9 +19,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="title"><h2><hr>Informazioni</h2></div>
-  <hr>
 	<div id="content">
+        <div id="title"><h2>Informazioni</h2></div>
 		<!--div class="contentLogin"-->
 			<p>
 				Benvenuto nella biglietteria <span xml:lang="eng">online</span>. &Egrave; qui possibile prenotare biglietti riguardanti varie <a href="categorie.php">categorie</a>, come

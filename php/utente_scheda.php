@@ -33,9 +33,8 @@ function proprietario($user){
 
   <?php echo consumeMessage(); ?>
 
-  <div id="title"><h2><hr>Profilo di <?php echo $user['username']?></h2></div>
-  <hr>
   <div id="content">
+      <div id="title"><h2>Profilo di <?php echo $user['username']?></h2></div>
 
       <?php
       echo

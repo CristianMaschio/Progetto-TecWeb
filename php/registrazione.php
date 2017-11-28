@@ -32,8 +32,7 @@ tipo_r
   <?php echo consumeMessage(); ?>
 
   <div id="content" class="box">
-    <h3>Registrazione</h3>
-    <hr />
+    <h2>Registrazione</h2>
 
     <form action="registrazione_r.php" method="POST" name="form">
       <label lang="en" for="username">Username</label>

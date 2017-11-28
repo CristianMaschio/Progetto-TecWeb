@@ -22,10 +22,9 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="content" class="box">
 
   <h2>Crea nuovo luogo</h2>
-  <hr>
     <form action="luogo_crea_r.php" method="POST">
         <label for="nome_l">Nome</label> <input type="text" placeholder="Inserisci il nome del luogo" maxlength=50 id="nome_l" name="nome_l" required/>
         <label for="indirizzo_l">Indirizzo</label> <input type="text" id="indirizzo_l" name="indirizzo_l" required/>

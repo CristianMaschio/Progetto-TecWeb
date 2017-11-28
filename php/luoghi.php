@@ -22,9 +22,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="title"><h2><hr>Luoghi</h2></div>
-  <hr>
   <div id="content">
+      <div id="title"><h2>Luoghi</h2></div>
     <p>
       Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare il tuo biglietto.
     </p>

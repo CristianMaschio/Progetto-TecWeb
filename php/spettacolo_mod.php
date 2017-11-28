@@ -25,7 +25,7 @@ area_riservata(true,$id_luogo_spettacolo);
   </nav>
 
   <?php echo consumeMessage(); ?>
-  <div id="content">
+  <div id="content" class="box">
     <?php
     $cercato = select("SELECT * FROM spettacoli WHERE id=$id_mod")[0];
 

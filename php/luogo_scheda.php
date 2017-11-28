@@ -30,7 +30,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
     <?php
     $luogo = select("SELECT * FROM luoghi WHERE id=$luogo_id")[0];
     ?>
-    <h2><hr><?= $luogo['nome'] ?></h2><hr>
+    <h2><?= $luogo['nome'] ?></h2>
     <aside>
       <dl>
         <dt>Indirizzo</dt><dd><?= $luogo['indirizzo'] ?></dd>
