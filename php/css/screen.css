@@ -181,20 +181,14 @@ dd {
     border: 1px solid #cccccc;
     display: block;
 }
-.box h3{
+.box h3, .box h2, .box h1{
     text-align: center;
     background-color: #303030;
     color: white;
     padding: 0.2em;
     font-size: 1.5em;
 }
-.box h2{
-    text-align: center;
-    background-color: #303030;
-    color: white;
-    padding: 0.2em;
-    font-size: 1.5em;
-}
+
 .box input{
     width: 99.3%;
     display: block;
@@ -217,6 +211,10 @@ textarea{
     resize: none;
     width: 99.6%;
     height: 15em;
+}
+
+.box label{
+    font-weight: bold;
 }
 /*  FINE Login e Registrazione */
 
