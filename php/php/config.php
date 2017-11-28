@@ -240,6 +240,19 @@ function user_linked_to_luogo($idluogo){
   else return false;
 }
 
+// se è un amministratore di luogo ritorna l 'id del luogo amministrato, altrimentin NULL
+function id_luogo_amministrato($id_user){
+  if(!is_gestore_luogo($id_user))
+    return NULL;
+  //è un amministratore di luogo
+  $id_l = select(
+    "SELECT *
+    FROM utenti
+    WHERE id=".$id_user
+  )[0]['luogo_id'];
+  return $id_l;
+}
+
 // STAMPA UNA FORM DI RICERCA CHE IN GET AGGIORNA LA PAGINA SU CUI VIENE RICHIAMATA
 // stampa un form di filtro: esso se cliccato su submit aggionge alla pagina
 // che l'ha richiamato un attributo (filter) con GET per permettere di filtrare

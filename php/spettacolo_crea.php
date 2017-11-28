@@ -27,7 +27,7 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
 
   <div id="content">
 
-  <h2>Crea nuovo luogo</h2>
+  <h2>Crea nuovo spettacolo</h2>
   <hr>
     <form action="spettacolo_crea_r.php" method="POST">
         <label for="evento_s">Evento</label> <select name="evento_s" required>
@@ -51,11 +51,7 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
         <?php else: ?>
                 <!-- sei la'mministratore del luogo e dunque non puoi decidere dove metterlo -->
                 <?php
-                    $id_luogo_amministrato = select(
-                        "SELECT *
-                        FROM utenti
-                        WHERE id=".$_SESSION['user_id']
-                    )[0]['luogo_id'];
+                    $id_luogo_amministrato = id_luogo_amministrato($_SESSION['user_id']);
                 ?>
                 <input type="hidden" name="luogo_s" value=<?php echo $id_luogo_amministrato; ?> />
         <?php endif ?>
