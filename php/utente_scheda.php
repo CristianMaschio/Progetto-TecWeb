@@ -34,66 +34,68 @@ function proprietario($user){
   <?php echo consumeMessage(); ?>
 
   <div id="content">
-      <div id="title"><h2>Profilo di <?php echo $user['username']?></h2></div>
-
-      <?php
-      echo
-      "<dl>
+      <div class="title"><h2>Profilo di <?php echo $user['username']?></h2></div>
+      <div class="content">
+          <?php
+          echo
+              "<dl>
       <dt>Nome</dt><dd>".$user['nome']."</dd>
       <dt>Cognome</dt><dd>".$user['cognome']."</dd>
       <dt><span lang=\"en\">Email</span></dt><dd>".$user['email']."</dd>
       </dl>";
-      ?>
+          ?>
 
-      <?php if(is_logged() && proprietario($user)): ?>
-        <hr><h3>Prenotazioni</h3>
-        <table>
+          <?php if(is_logged() && proprietario($user)): ?>
+              <hr><h3>Prenotazioni</h3>
+              <table>
 
-          <thead>
-            <tr>
-              <th>Evento</th>
-              <th>Luogo</th>
-              <th>Data</th>
-              <th>Prezzo</th>
-              <th>Codice</th>
-              <th>Annulla prenotazione</th>
-            </tr>
-          </thead>
-          </tbody>
-          <?php
-          $sql = "SELECT biglietti.codice AS codice,spettacoli.id AS idspettacolo,spettacoli.evento_id AS idevento,spettacoli.data_ora,spettacoli.prezzo,spettacoli.luogo_id AS idluogo, biglietti.id AS idbiglietto
+                  <thead>
+                  <tr>
+                      <th>Evento</th>
+                      <th>Luogo</th>
+                      <th>Data</th>
+                      <th>Prezzo</th>
+                      <th>Codice</th>
+                      <th>Annulla prenotazione</th>
+                  </tr>
+                  </thead>
+                  </tbody>
+                  <?php
+                  $sql = "SELECT biglietti.codice AS codice,spettacoli.id AS idspettacolo,spettacoli.evento_id AS idevento,spettacoli.data_ora,spettacoli.prezzo,spettacoli.luogo_id AS idluogo, biglietti.id AS idbiglietto
           FROM biglietti JOIN spettacoli ON biglietti.spettacolo_id=spettacoli.id
           WHERE utente_id=".$_SESSION['user_id']."";
-          $biglietti=select($sql);
-          no_result($biglietti,6);
-          foreach($biglietti as $b){
-            echo "<tr>";
+                  $biglietti=select($sql);
+                  no_result($biglietti,6);
+                  foreach($biglietti as $b){
+                      echo "<tr>";
 
-            echo "<td><a href='evento_scheda.php?evt_id=".$b['idevento']."'>".get_nome_evento($b['idevento']);
-            echo "</a></td>";
+                      echo "<td><a href='evento_scheda.php?evt_id=".$b['idevento']."'>".get_nome_evento($b['idevento']);
+                      echo "</a></td>";
 
-            echo "<td><a href=luogo_scheda.php?luogo_id=".$b['idluogo'].">".get_nome_luogo($b['idluogo']);
-            echo "</a></td>";
+                      echo "<td><a href=luogo_scheda.php?luogo_id=".$b['idluogo'].">".get_nome_luogo($b['idluogo']);
+                      echo "</a></td>";
 
-            echo "<td>".format_data_ora($b['data_ora']);
-            echo "</td>";
+                      echo "<td>".format_data_ora($b['data_ora']);
+                      echo "</td>";
 
-            echo "<td>".$b['prezzo']."&euro;";
-            echo "</td>";
+                      echo "<td>".$b['prezzo']."&euro;";
+                      echo "</td>";
 
-            echo "<td>".$b['codice'];
-            echo "</td>";
+                      echo "<td>".$b['codice'];
+                      echo "</td>";
 
-            print_form_anullamento($b['idbiglietto'],get_nome_evento($b['idevento']));
-          }
-          ?>
-          </tbody>
-        </table>
-        <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
-        <hr />
-        <a href="logout_r.php">Logout</a>
-        <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
-      <?php endif ?>
+                      print_form_anullamento($b['idbiglietto'],get_nome_evento($b['idevento']));
+                  }
+                  ?>
+                  </tbody>
+              </table>
+              <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
+              <hr />
+              <a href="logout_r.php">Logout</a>
+              <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
+          <?php endif ?>
+      </div>
+
     </div>
 
     <?php if(is_admin() || is_operatore()): ?>

@@ -23,7 +23,7 @@ area_riservata(true,$id_mod);
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="content" class="box">
     <?php
     $cercato = select("SELECT * FROM luoghi WHERE id=$id_mod")[0];
     ?>

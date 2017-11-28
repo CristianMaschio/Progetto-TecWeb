@@ -239,14 +239,19 @@ textarea{
     INIZIO content unici
 --------------------*/
 
-#title{
+.title{
     background-color: #303030;
-    padding-right: 1em;
-    padding-left: 1em;
+}
+.title h1, .title h2, .title h3{
     color: white;
     text-align: center;
+    border-top: ridge;
+    border-color: #CCCCCC;
+    margin-left: 1em;
+    margin-right: 1em;
 }
-#content {
+
+.content {
     //width: 95%;
     margin: 1em auto;
 }
