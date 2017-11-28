@@ -58,6 +58,8 @@ function printNavBar(){
 
 function printFooter(){
   echo("
+<div class='footer'>
+
   <a href=\"http://www.w3.org/html/logo/\">
   <img src=\"https://www.w3.org/html/logo/badge/html5-badge-h-css3.png\" width=\"133\" height=\"64\" alt=\"HTML5 Powered with CSS3 / Styling\" title=\"HTML5 Powered with CSS3 / Styling\">
   </a>
@@ -68,6 +70,7 @@ function printFooter(){
   Via Garibaldi n.2, Padova PD <br />
   <a href=\"mailto:biglietteria@biglietteria.it\">biglietteria@biglietteria.it</a>
   </address>
+</div>
 
   ");
 }
