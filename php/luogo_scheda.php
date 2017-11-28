@@ -49,6 +49,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
     </aside>
 
     <table>
+
       <thead>
       <tr>
         <th><a>Evento</a></th>
@@ -64,8 +65,9 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
           <th>Elimina</th>
         <?php endif ?>
       </tr>
-      </thead>
+      <thead>
       <tbody>
+
       <?php //qui carico i varispettacoli
       $sql = "SELECT spettacoli.data_ora,spettacoli.prezzo,spettacoli.id,eventi.nome,eventi.id as idevento,spettacoli.posti_disponibili
       FROM spettacoli JOIN eventi ON spettacoli.evento_id=eventi.id
@@ -110,13 +112,14 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
         if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)){
           echo "<td>".$s['posti_disponibili']."</td>";
           echo "<td><a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
-          echo "<td><a href= >delete</a></td>";
+          echo "<td><a href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
         }
 
         echo "</tr>";
       }
       ?>
-      </tbody>
+      <tbody>
+
     </table>
 
   </div>

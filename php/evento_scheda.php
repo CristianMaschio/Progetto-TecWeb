@@ -91,9 +91,7 @@ require_once('php/printTemplate.php')
           echo "<td>";
           echo "<a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit";
           echo "</td>";
-          echo "<td>";
-          echo "<a href= >delete</a>";
-          echo "</td>";
+          echo "<td><a href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
         }
 
       }

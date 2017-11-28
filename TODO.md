@@ -5,3 +5,4 @@
 - togliere il display di AM/PM quando si inserisce una durata (tipo modifica/inserimento di un evento) tramite CSS: un link che può essere d'aiuto: https://stackoverflow.com/questions/24867625/how-to-make-a-time-input-with-out-am-pm
 -per accessibilità: mettere un link muto che vada da prima dell header della pagina direttamente al content
 -modificare il database: inserire trigger per cui quando un biglietto viene rimosso viene automaticamente aumentato il unmero di posti disponibili di 1. inoltre mettere tutte le politiche di delete cascade
+- controllare che tutti i caratteri tipo < e > oppure & siano messi con la notazione $parolacheloidentificainUNICODE;

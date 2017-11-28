@@ -49,6 +49,7 @@ function proprietario($user){
       <?php if(is_logged() && proprietario($user)): ?>
         <hr><h3>Prenotazioni</h3>
         <table>
+
           <thead>
             <tr>
               <th>Evento</th>
