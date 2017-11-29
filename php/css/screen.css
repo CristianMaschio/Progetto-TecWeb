@@ -237,6 +237,50 @@ dd {
 
 
 /*--------------------
+    INIZIO pannello amministrazione
+--------------------*/
+#amministrazione{
+    background-color: #303030;
+    padding-bottom: 1em;
+}
+#amministrazione li{
+    display: block;
+    margin: auto;
+    width: 100%;
+    padding-top: 1em;
+    text-align: center;
+}
+                        /* Link amm */
+
+#amministrazione a:link {
+    color: white;
+    text-decoration: none;
+}
+/* visited link */
+#amministrazione a:visited {
+    color: #cccccc;
+}
+/* mouse over link */
+#amministrazione a:hover {
+    font-weight: bold;
+}
+/* selected link */
+#amministrazione a:hover {
+    color: #cccccc;
+}
+
+.panOn{
+    display: block;
+}
+
+.panOff{
+    display: none;
+}
+
+/*FINE pannello amministrazione*/
+
+
+/*--------------------
     INIZIO content unici
 --------------------*/
 
