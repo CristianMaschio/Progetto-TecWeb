@@ -48,7 +48,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
                   </p>
               <?php endif ?>
           </aside>
-
+          <?php filter_form($filter,'Cerca un evento'); ?>
           <table>
 
               <thead>
@@ -85,7 +85,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
                   }
               }
               $spettacoli = select($sql);
-              filter_form($filter,'Cerca un evento');
+
 
               if ( is_admin() || is_operatore() || user_linked_to_luogo($luogo_id))	{
                   // TODO: e forse qui il controllo di prima andrebbe aggiunto (quello nel precedente todo), se lo implementi anche prima

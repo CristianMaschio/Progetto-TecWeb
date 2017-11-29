@@ -75,7 +75,14 @@ nav a:hover {
 
 #navLog{
     float: right;
+    display: inline;
     padding-right: 1em;
+}
+#navLog ul{
+    width: 100%;
+}
+#navLog li{
+    //float: right;
 }
 /*FINE Header & Nav*/
 

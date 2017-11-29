@@ -33,20 +33,20 @@ require_once('php/printTemplate.php')
       ?>
       <div class="title"><h2><?= $evento['nome'] ?></h2></div>
       <div class="content">
-          <section><?= $evento['descrizione'] ?></section>
-          <aside>
               <dl>
                   <dt>Durata</dt><dd><?= format_durata($evento['durata'])?></dd>
                   <dt>Categoria</dt><dd><a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
                   <!-- TODO: manca modifica ed eliminazione dell evento da parte di un amministratore o operatore -->
               </dl>
+
+              <p><?= $evento['descrizione'] ?></p>
               <?php if(is_admin() || is_operatore()): ?>
                   <p><a href="evento_mod.php?id_mod= <?= $evt_id ?>">Modifica Evento</a>
                       <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
                       <a onclick='return confirm("Confermi di voler eliminare questo evento?")' href ="evento_elimina.php?id=<?php echo $evt_id;?>">Elimina evento</a>
                   </p>
               <?php endif ?>
-          </aside>
+
 
 
           <table>
