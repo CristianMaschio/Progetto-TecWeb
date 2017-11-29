@@ -261,9 +261,9 @@ function filter_form($filter,$placeholder=''){
   echo "
   <form  id=\"filterform\" action=\"\" method=\"GET\"
   onsubmit=\"return addlocpar('filter', this.filter.value); return false;\">
-  <input type=\"submit\" value=\"Cerca\" class=\"postfix button\"/>
-  <input type=\"text\" name=\"filter\" value=\"".$filter."\"/ placeholder='$placeholder'>
-  <input type=\"submit\" value=\"Tutti\" onclick=\"this.form.filter.value=''\" class=\"prefix button secondary\"/>
+  <input  id=\"cercaText\" type=\"text\" name=\"filter\" value=\"".$filter."\"/ placeholder='$placeholder'>
+  <input id=\"cercaButton\" type=\"submit\" value=\"Cerca\" class=\"postfix button\"/>
+  <input  id=\"tuttiButton\" type=\"submit\" value=\"Tutti\" onclick=\"this.form.filter.value=''\" class=\"prefix button secondary\"/>
   </form>";
 }
 

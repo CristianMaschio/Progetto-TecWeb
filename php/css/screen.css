@@ -248,7 +248,7 @@ dd {
     margin-right: 1em;
 }
 
-#content {
+.content {
     width: 95%;
     margin: 1em auto;
     display: block;
@@ -292,7 +292,28 @@ footer img{
 #filterform {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
+
+#filterform input{
+    height: 2em;
+}
+
+#filterform #cercaButton{
+    /* sotto questa soglia rimpicciolendo esplode */
+    width: 24%;
+}
+#filterform #tuttiButton{
+    width: 24%;
+}
+#filterform #cercaText{
+    height: 1.7em;
+    width: 49%;
+}
+
 /*FINE form di ricerca*/
 
 
