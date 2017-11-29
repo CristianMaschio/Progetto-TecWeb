@@ -95,16 +95,26 @@ function proprietario($user){
               <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
           <?php endif ?>
 
-          <?php if(is_admin() || is_operatore()): ?>
-      <a href="categoria_crea.php">Crea categoria</a>
-      <a href="evento_crea.php">Crea evento</a>
-      <a href="luogo_crea.php">Crea luogo</a>
-      <a href="spettacolo_crea.php">Crea spettacolo</a>
-     <?php endif ?>
+          <div id="amministrazione">
+              <div class="title"><h3>Pannello Amministazione</h3></div>
+              <div id="panAmm" class="panOn">
+                  <?php if(is_admin() || is_operatore()): ?>
+                      <ul>
+                          <li><a href="categoria_crea.php">Crea categoria</a></li>
+                          <li><a href="evento_crea.php">Crea evento</a></li>
+                          <li><a href="luogo_crea.php">Crea luogo</a></li>
+                          <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
+                      </ul>
+                  <?php endif ?>
 
-     <?php if(is_gestore_luogo()): ?>
-      <a href="spettacolo_crea.php">Crea spettacolo</a>
-    <?php endif ?>
+                  <?php if(is_gestore_luogo()): ?>
+                      <ul>
+                          <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
+                      </ul>
+                  <?php endif ?>
+              </div>
+          </div>
+
       </div>
 
 
