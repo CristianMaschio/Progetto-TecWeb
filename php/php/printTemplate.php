@@ -49,8 +49,12 @@ function printNavBar(){
     ");
   } else {
     //utente loggato: mostriamo pagina del profilo
-    echo("<div id='navLog'>
-    <a href=\"utente_scheda.php?id_u=".$_SESSION['user_id']."\">".$_SESSION['user_username']."</a>
+    echo(
+    "<div id='navLog'>
+    <ul>
+      <li><a href=\"utente_scheda.php?id_u=".$_SESSION['user_id']."\">".$_SESSION['user_username']."</a> </li>
+      <li><a href=logout_r.php >Logout</a> <li>
+    </ul>
     </div>
     ");
   }
