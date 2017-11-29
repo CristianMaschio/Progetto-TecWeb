@@ -213,12 +213,6 @@ dd {
     font-size: 16px;
 }
 
-textarea{
-    resize: none;
-    width: 99.6%;
-    height: 15em;
-}
-
 .box label{
     font-weight: bold;
 }
@@ -233,7 +227,6 @@ textarea{
     margin: auto;
     padding-top: 0.5em;
     padding-bottom: 1.5em;
-    //background-color: #A9A9A9;
 }
 
 /*FINE luoghi*/
@@ -258,6 +251,7 @@ textarea{
 .content {
     width: 95%;
     margin: 1em auto;
+    display: block;
 }
 
 
@@ -323,11 +317,85 @@ footer img{
 /*FINE form di ricerca*/
 
 
-/*Form per la modifica e 
-la creazione di un evento*/
-#formbox {
-	width: 90%;
+/*--------------------------------------
+INIZIO css per la modifica e 
+la creazione di un evento
+---------------------------------------*/
+.formbox {
+	width: 100%;
 	background-color: #cccccc;
-	align: auto;
-	text-align: right;
+	margin: auto;
+	display: block;
+	padding: 0.1em;	/*in contenuto non c'è*/
 }
+
+/*Serve per contenere
+la combo <label> <input>
+o <label><textarea>, ecc...*/
+.formbox .field {
+	width: 100%;
+	margin: auto;
+	display: block;
+	margin-bottom: 1em;
+	clear: left;
+}
+
+.formbox label {
+	width: 20%;
+	display: inline-block;
+    float: left;
+    clear: left;
+    text-align: right;
+    //margin-right: 0.5em;
+    margin: auto;
+}
+
+
+.formbox input[type=submit], input[type=reset] {
+    width: 20%;
+}
+
+.formbox input[type=time], select {
+	width: 15%;
+}
+
+.formbox textarea{
+    resize: none;
+    width: 50%;
+    height: 15em;
+    margin: auto;
+    //display: block;
+}
+
+.formbox .textinfo {
+	width: 50%;
+	margin: auto;
+	display: inline-block;
+	clear: left;
+	float: right;
+}
+
+/*--------------------------------------
+FINE css per la modifica e 
+la creazione di un evento
+---------------------------------------*/
+
+/*
+schede evento:
+nome, descr ed infox;
+
+
+
+d fare classi per metterle senza box
+*/
+
+
+/*
+css non toccare tabella admin
+
+
+
+non fare il mobile per adesso
+
+va fluido e non fixed
+*/
