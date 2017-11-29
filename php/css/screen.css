@@ -256,7 +256,7 @@ textarea{
 }
 
 .content {
-    //width: 95%;
+    width: 95%;
     margin: 1em auto;
 }
 
@@ -298,7 +298,24 @@ footer img{
 #filterform {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    width: 100%;
 }
+
+#filterform input{
+    height: 2em;
+}
+
+#filterform #cercaButton{
+    /* sotto questa soglia rimpicciolendo esplode */
+    width: 49.5%;
+}
+#filterform #tuttiButton{
+    width: 49.5%;
+}
+#filterform #cercaText{
+    width: 99%;
+}
+
 /*FINE form di ricerca*/
 
 
