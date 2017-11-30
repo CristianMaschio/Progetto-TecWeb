@@ -360,8 +360,6 @@ footer img{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
     width: 100%;
 }
 
@@ -375,6 +373,7 @@ footer img{
 }
 #filterform #tuttiButton{
     width: 24%;
+    float: right;
 }
 #filterform #cercaText{
     height: 1.7em;
