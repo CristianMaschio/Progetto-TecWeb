@@ -246,7 +246,8 @@ dd {
     display: block;
     margin: auto;
     width: 100%;
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     text-align: center;
 }
                         /* Link amm */
