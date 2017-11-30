@@ -183,6 +183,7 @@ dd {
 .box {
     margin: auto; /*top-bottom right-left*/
     width: 50%;
+    min-width: 25em;
     border: 2px solid #303030;
     display: block;
     background-color: #4d4d4d;
