@@ -25,7 +25,8 @@ area_riservata(true,$id_luogo_spettacolo);
   </nav>
 
   <?php echo consumeMessage(); ?>
-  <div id="content" class="box">
+  <div id="content" class="contentBox">
+      <div class="box">
     <?php
     $cercato = select("SELECT * FROM spettacoli WHERE id=$id_mod")[0];
 
@@ -75,6 +76,7 @@ area_riservata(true,$id_luogo_spettacolo);
             <input id="buttonRight" type="reset" value="Annulla">
         </div>
     </form>
+      </div>
   </div>
 
 

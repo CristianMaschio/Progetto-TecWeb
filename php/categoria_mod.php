@@ -23,7 +23,8 @@ register('id_mod');
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="box">
+  <div id="content" class="contentBox">
+      <div class="box">
     <?php
     $cercato = select("SELECT * FROM categorie WHERE id=$id_mod")[0];
     ?>
@@ -38,6 +39,7 @@ register('id_mod');
             <input id="buttonRight" type="reset" value="Annulla">
         </div>
     </form>
+      </div>
   </div>
 
   <footer>

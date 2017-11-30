@@ -25,8 +25,8 @@ require_proprietario($id_u);
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="box">
-
+  <div id="content" class="contentBox">
+      <div class="box">
     <?php
     // TODO: aggiungere un javascript in questa pagina che prima di committare chieda all'utente se è sicuro di fare le modifiche?
     $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];

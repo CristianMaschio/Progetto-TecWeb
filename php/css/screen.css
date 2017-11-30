@@ -181,7 +181,7 @@ dd {
     INIZIO Login Registrazione Modifiche
 --------------------*/
 .box {
-    margin: 1em auto; /*top-bottom right-left*/
+    margin: auto; /*top-bottom right-left*/
     width: 50%;
     border: 2px solid #303030;
     display: block;
@@ -248,20 +248,6 @@ dd {
 /*  FINE Login Registrazione Modifiche*/
 
 /*--------------------
-    INIZIO luoghi
---------------------*/
-
-#contentLuoghi {
-    width: 95%;
-    margin: auto;
-    padding-top: 0.5em;
-    padding-bottom: 1.5em;
-}
-
-/*FINE luoghi*/
-
-
-/*--------------------
     INIZIO pannello amministrazione
 --------------------*/
 #amministrazione{
@@ -325,8 +311,10 @@ dd {
 
 .content {
     width: 95%;
-    margin: 1em auto;
+    margin: auto;
     display: block;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 .linkDestra {
@@ -339,6 +327,15 @@ dd {
 .marginTopBottom{
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+#content{
+    background-color: gainsboro;
+}
+
+.contentBox{
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 /*   FINE content unici \ GLOBAL    */

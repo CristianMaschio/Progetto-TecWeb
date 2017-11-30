@@ -25,7 +25,8 @@ if(!is_admin()) {
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="content" class="contentBox">
+      <div class="box">
       <h2>Crea un nuovo operatore</h2>
         <form action="registrazione_r.php" method="POST" name="form">
                     <label for="username_r">Username</label><input type="text" id="username_r" name="username_r" REQUIRED>
@@ -38,9 +39,12 @@ if(!is_admin()) {
                         $_SESSION['messaggio_registrazione'] = "Operatore registrato correttamente";
                         $_SESSION['redirect_registrazione'] = "utente_scheda.php?id_u=".$_SESSION['user_id'];
                     ?>
-                    <input type="submit" value="Conferma">
-                    <input type="reset" value="Azzera campi">
+            <div class="boxInline">
+                <input type="submit" value="Conferma">
+                <input id="buttonRight" type="reset" value="Azzera campi">
+            </div>
                 </form>
+      </div>
   </div>
 
   <footer>

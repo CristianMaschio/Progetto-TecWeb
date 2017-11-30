@@ -22,10 +22,9 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="box">
-
+  <div id="content" class="contentBox">
+      <div class="box">
   <h2>Crea nuovo evento</h2>
-  <hr>
 
     <form action="evento_crea_r.php" method="POST">
         <!-- TODO: ripensare al fatto che per la giornata lavorativa vada messo 00:00, magari in JS -->
@@ -40,10 +39,12 @@
             }
             ?>
         </select>
-
-        <input type="submit" value="Conferma">
-        <input type="reset" value="Annulla">
+        <div class="boxInline">
+            <input type="submit" value="Conferma">
+            <input id="buttonRight" type="reset" value="Annulla">
+        </div>
     </form>
+      </div>
   </div>
 
   <footer>

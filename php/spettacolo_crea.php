@@ -25,8 +25,8 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="box">
-
+  <div id="content" class="contentBox">
+      <div class="box">
   <h2>Crea nuovo spettacolo</h2>
     <form action="spettacolo_crea_r.php" method="POST">
         <label for="evento_s">Evento</label> <select name="evento_s" required>
@@ -59,11 +59,12 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
         <label for="ora_s">Orario di inizio</label> <input type="time" name="ora_s" required/>
         <label for="posti_s">Posti disponibili</label> <input type="number" name="posti_s" value=0 required/>
         <label for="costo_s">Costo spettacolo</label> <input type="number" step="0.01" name="costo_s" value="0.0" required/>
-
-        <input type="submit" value="Conferma">
-        <input type="reset" value="Annulla">
+        <div class="boxInline">
+            <input type="submit" value="Conferma">
+            <input id="buttonRight" type="reset" value="Annulla">
+        </div>
     </form>
-
+      </div>
   </div>
 
   <footer>

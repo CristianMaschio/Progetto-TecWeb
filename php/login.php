@@ -19,7 +19,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="box">
+  <div id="content" class="contentBox">
+      <div class="box">
     <h2>Login</h2>
       <form method='POST' action='login_r.php'>
           <label lang="en" for="username">Username:</label>
@@ -32,7 +33,7 @@
         Non hai un <span lang="en">account</span>? <a href='registrazione.php'>Registrati!</a>
       </p>
     </div>
-
+  </div>
     <footer>
       <?= printFooter(); ?>
     </footer>
