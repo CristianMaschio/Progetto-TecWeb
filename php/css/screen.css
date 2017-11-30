@@ -115,7 +115,7 @@ html, body {
 }
 
 body{
-    border: 1px solid #DDD; /* errore comune mettere questo nel precedente:
+    border: 1px solid #303030; /* errore comune mettere questo nel precedente:
     					avresti un bordo doppio! */
 
 }
@@ -183,8 +183,10 @@ dd {
 .box {
     margin: 1em auto; /*top-bottom right-left*/
     width: 50%;
-    border: 1px solid #cccccc;
+    border: 2px solid #303030;
     display: block;
+    background-color: #4d4d4d;
+    color: white;
 }
 .box h3, .box h2, .box h1{
     text-align: center;
@@ -192,6 +194,7 @@ dd {
     color: white;
     padding: 0.2em;
     font-size: 1.5em;
+    border-bottom: ridge #CCCCCC;
 }
 
 .box input{

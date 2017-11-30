@@ -43,11 +43,11 @@ require_proprietario($id_u);
         <label for="email" lang="en">Email</label>
         <input id="email" type='email' value="<?php echo $user['email']; ?>" name='email_u'>
 
-      <input type="hidden" value="<?php echo $user['id']; ?>" name='id_u'>
-      <div class="boxInline">
+        <input type="hidden" value="<?php echo $user['id']; ?>" name='id_u'>
+        <div class="boxInline">
           <input type='submit' value='Conferma'>
           <input id="buttonRight" type='reset' value='Annulla'>
-      </div>
+        </div>
     </form>
 
 
