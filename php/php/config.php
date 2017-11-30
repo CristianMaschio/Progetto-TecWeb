@@ -352,10 +352,10 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
 function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nome_spettacolo){
   if($posti_disponibili>0)
   echo"<td>
-  <form method=\"POST\" action=\"prenota.php\" onsubmit=\"return confirm('Confermi di voler prenotare un biglietto per $nome_spettacolo?');\" >
+  <form method=\"POST\" class=\"singleFieldForm\" action=\"prenota.php\" onsubmit=\"return confirm('Confermi di voler prenotare un biglietto per $nome_spettacolo?');\" >
     <input type=\"hidden\" name=\"spettacolo_b\" value=\"".$id_spettacolo."\">
     <input type=\"hidden\" name=\"user_b\" value=\"".$id_user."\">
-    <input type=\"submit\" value=\"Prenota\">
+    <input type=\"submit\" value=\"Prenota\" class=\"singleButton\" >
   </form>
   </td>";
   else
