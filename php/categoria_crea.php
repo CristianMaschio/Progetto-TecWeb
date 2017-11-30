@@ -22,7 +22,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="content" class="contentBox">
       <div class="box">
           <h2>Crea nuova categoria</h2>
             <form action="categoria_crea_r.php" method="POST">
