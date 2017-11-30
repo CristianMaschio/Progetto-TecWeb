@@ -121,7 +121,6 @@ html, body {
   margin: auto;       /* il browser da solo centra il contenuto */
   font-family: Verdana,Arial,Helvetica,sans-serif;
   font-size:100%;
-    min-width: 480px;
 }
 
 body{

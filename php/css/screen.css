@@ -220,6 +220,12 @@ dd {
 .box label{
     font-weight: bold;
 }
+
+.box textarea{
+        resize: none;
+        width: 99.5%;
+        height: 15em;
+    }
 /*  FINE Login e Registrazione */
 
 /*--------------------

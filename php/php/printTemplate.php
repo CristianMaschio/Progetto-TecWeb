@@ -8,8 +8,8 @@ function printHead($title){
   <meta name=\"keywords\" content=\"eventi, spettacoli, cinema, teatro, cultura, eventi sportivi, fiere, musei, musica\">
   <meta name=\"author\" content=\"Gruppo di progetto Tecnologie Web\">
   <script type=\"text/javascript\" src=\"js/functions.js\"></script>
-  <link rel=\"stylesheet\" type=\"text/css\" href=\"css/screen.css\" >
-  <link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 540px)\" href=\"css/mobile.css\">
+  <link rel=\"stylesheet\" type=\"text/css\" media=\"(min-width: 481px)\" href=\"css/screen.css\" >
+  <link rel=\"stylesheet\" type=\"text/css\" media=\"(max-width: 480px)\" href=\"css/mobile.css\">
   <link rel=\"stylesheet\" type=\"text/css\" media=\"print\" href=\"css/print.css\">
   ");
 }
