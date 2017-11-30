@@ -95,8 +95,8 @@ function proprietario($user){
           <?php endif ?>
 
           <div id="amministrazione">
-              <div class="title"><h3>Pannello Amministazione</h3></div>
-              <div id="panAmm" class="panOn">
+              <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
+              <div id="panAmm" class="panOff">
                   <?php if(is_admin() || is_operatore()): ?>
                       <ul>
                           <li><a href="categoria_crea.php">Crea categoria</a></li>

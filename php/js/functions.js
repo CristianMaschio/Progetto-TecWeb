@@ -32,3 +32,15 @@ function menuResponsive() {
         x.className = "On";
     }
 }
+
+function panAmmResponsive() {
+    var x = document.getElementById("panAmm");
+    var title = document.getElementById("titleChange");
+    if (x.className === "panOn") {
+        x.className = "panOff";
+        title.innerHTML="Pannello Amministazione ▼";
+    } else {
+        x.className = "panOn";
+        title.innerHTML="Pannello Amministazione ▲";
+    }
+}

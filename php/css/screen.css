@@ -240,8 +240,7 @@ dd {
     INIZIO pannello amministrazione
 --------------------*/
 #amministrazione{
-    background-color: #303030;
-    padding-bottom: 1em;
+    background-color: #4d4d4d;
 }
 #amministrazione li{
     display: block;
@@ -286,6 +285,8 @@ dd {
 
 .title{
     background-color: #303030;
+    padding-top: 6px;
+    padding-bottom: 6px;
 }
 .title h1, .title h2, .title h3{
     color: white;
