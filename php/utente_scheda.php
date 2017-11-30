@@ -45,6 +45,8 @@ function proprietario($user){
       </dl>";
           ?>
 
+          <div class="linkDestra"><a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
+          </div>
           <?php if(is_logged() && proprietario($user)): ?>
               <hr><h3>Prenotazioni</h3>
               <table>
@@ -89,10 +91,8 @@ function proprietario($user){
                   ?>
                   </tbody>
               </table>
-              <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
-              <hr />
-              <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
-          <?php endif ?>
+              <div class="marginTopBottom"><em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em></div>
+              <hr /> <?php endif ?>
 
           <div id="amministrazione">
               <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>

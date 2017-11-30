@@ -281,7 +281,7 @@ dd {
 
 
 /*--------------------
-    INIZIO content unici
+    INIZIO content UNICI \ GLOBAL
 --------------------*/
 
 .title{
@@ -304,8 +304,19 @@ dd {
     display: block;
 }
 
+.linkDestra {
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    text-align: right;
+}
 
-/*   FINE content unici     */
+.marginTopBottom{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/*   FINE content unici \ GLOBAL    */
 
 /*--------------------
     INIZIO footer
