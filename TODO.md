@@ -6,3 +6,4 @@
 -per accessibilità: mettere un link muto che vada da prima dell header della pagina direttamente al content
 -modificare il database: inserire trigger per cui quando un biglietto viene rimosso viene automaticamente aumentato il unmero di posti disponibili di 1. inoltre mettere tutte le politiche di delete cascade
 - controllare che tutti i caratteri tipo < e > oppure & siano messi con la notazione $parolacheloidentificainUNICODE;
+- riformulare le query per fare in modo che quello che si va a leggere siano solo gli attributi veramente interessanti e non TUTTI

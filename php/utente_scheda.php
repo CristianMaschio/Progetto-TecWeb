@@ -92,7 +92,7 @@ function proprietario($user){
                   </tbody>
               </table>
               <div class="marginTopBottom"><em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em></div>
-              <hr /> <?php endif ?>
+              <?php endif ?>
 
           <div id="amministrazione">
               <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
