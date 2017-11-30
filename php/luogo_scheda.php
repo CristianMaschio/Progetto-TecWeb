@@ -71,8 +71,8 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
 
               <?php //qui carico i varispettacoli
               $sql = "SELECT spettacoli.data_ora,spettacoli.prezzo,spettacoli.id,eventi.nome,eventi.id as idevento,spettacoli.posti_disponibili
-      FROM spettacoli JOIN eventi ON spettacoli.evento_id=eventi.id
-      WHERE spettacoli.luogo_id=$luogo_id ";
+                FROM spettacoli JOIN eventi ON spettacoli.evento_id=eventi.id
+                WHERE spettacoli.luogo_id=$luogo_id AND spettacoli.data_ora >= NOW() ";
               if($filter != NULL) $sql.= " AND eventi.nome LIKE '%$filter%' ";
               if(isset($ord)){
                   // TODO: se fai un ordinamento per nomi devi avere qualcosa nella pagina che ti permetta di richiedere un ordinamento...

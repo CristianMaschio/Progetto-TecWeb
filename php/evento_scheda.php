@@ -67,7 +67,7 @@ require_once('php/printTemplate.php')
               </thead>
               <tbody>
               <?php //leggo i vari spettacoli
-              $spettacoli = select("SELECT * FROM spettacoli WHERE evento_id=".$evento['id']." ORDER BY data_ora");
+              $spettacoli = select("SELECT * FROM spettacoli WHERE evento_id=".$evento['id']." AND spettacoli.data_ora >= NOW() ORDER BY data_ora");
               if ( is_admin() || is_operatore() )	{
                   no_result($spettacoli,7);
               } elseif ( is_logged()) {
