@@ -34,8 +34,10 @@ area_riservata(true,$id_mod);
       <label for="nome_l">Nome</label> <input type="text" value="<?= $cercato['nome'] ?>" maxlength=50 name="nome_l" id="nome_l" required/>
       <label for="indirizzo_l">Indirizzo</label> <input value="<?= $cercato['indirizzo']?>" type="text" name="indirizzo_l" id="indirizzo_l" required/>
       <label for="telefono_l">Telefono</label> <input value="<?= $cercato['telefono']?>" type="text" maxlength=40 name="telefono_l" id="telefono_l" required/>
-      <input type="submit" value="Conferma">
-      <input type="reset" value="Annulla">
+        <div class="boxInline">
+            <input type="submit" value="Conferma">
+            <input id="buttonRight" type="reset" value="Annulla">
+        </div>
     </form>
   </div>
 

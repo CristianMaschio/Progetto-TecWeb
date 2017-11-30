@@ -9,7 +9,7 @@ header {
     background-color: #303030;
     color: white;
     width:100%;
-    height: 3em;
+    height: 2.5em;
 }
 
 nav {
@@ -115,8 +115,9 @@ html, body {
 }
 
 body{
-    border: 1px solid #DDD; /* errore comune mettere questo nel precedente: 
-    						avresti un bordo doppio! */
+    border: 1px solid #DDD; /* errore comune mettere questo nel precedente:
+    					avresti un bordo doppio! */
+
 }
 
 a:link {
@@ -177,7 +178,7 @@ dd {
 }
 
 /*--------------------
-    INIZIO Login e Registrazione
+    INIZIO Login Registrazione Modifiche
 --------------------*/
 .box {
     margin: 1em auto; /*top-bottom right-left*/
@@ -226,7 +227,22 @@ dd {
         width: 99.5%;
         height: 15em;
     }
-/*  FINE Login e Registrazione */
+
+.boxInline{
+    margin-top: 1em;
+    width: 100%;
+}
+
+.boxInline input{
+    display: inline;
+    width: 49%;
+}
+
+#buttonRight{
+    float: right;
+}
+
+/*  FINE Login Registrazione Modifiche*/
 
 /*--------------------
     INIZIO luoghi
@@ -381,89 +397,6 @@ footer img{
 }
 
 /*FINE form di ricerca*/
-
-
-/*--------------------------------------
-INIZIO css per la modifica e 
-la creazione di un evento
----------------------------------------*/
-.formbox {
-	width: 100%;
-	background-color: #cccccc;
-	margin: auto;
-	display: block;
-	padding: 0.1em;	/*in contenuto non c'è*/
-}
-
-/*Serve per contenere
-la combo <label> <input>
-o <label><textarea>, ecc...*/
-.formbox .field {
-	width: 100%;
-	margin: auto;
-	display: block;
-	margin-bottom: 1em;
-	clear: left;
-}
-
-.formbox label {
-	width: 20%;
-	display: inline-block;
-    float: left;
-    clear: left;
-    text-align: right;
-    //margin-right: 0.5em;
-    margin: auto;
-}
-
-
-.formbox input[type=submit], input[type=reset] {
-    width: 20%;
-}
-
-.formbox input[type=time], select {
-	width: 15%;
-}
-
-.formbox textarea{
-    resize: none;
-    width: 50%;
-    height: 15em;
-    margin: auto;
-    //display: block;
-}
-
-.formbox .textinfo {
-	width: 50%;
-	margin: auto;
-	display: inline-block;
-	clear: left;
-	float: right;
-}
-
-.singleFieldForm {
-    width: 100%;
-    height: 100%;
-}
-
-.singleFieldForm .singleButton{
-    width: 100%;
-    height: 100%;
-}
-
-/*--------------------------------------
-FINE css per la modifica e 
-la creazione di un evento
----------------------------------------*/
-
-/*
-schede evento:
-nome, descr ed infox;
-
-
-
-d fare classi per metterle senza box
-*/
 
 
 /*
