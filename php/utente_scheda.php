@@ -91,7 +91,6 @@ function proprietario($user){
               </table>
               <em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em>
               <hr />
-              <a href="logout_r.php">Logout</a>
               <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
           <?php endif ?>
 
@@ -104,6 +103,9 @@ function proprietario($user){
                           <li><a href="evento_crea.php">Crea evento</a></li>
                           <li><a href="luogo_crea.php">Crea luogo</a></li>
                           <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
+                          <?php if(is_admin()): ?>
+                            <li><a href="operatore_crea.php">Crea operatore</a></li>
+                          <?php endif ?>
                       </ul>
                   <?php endif ?>
 

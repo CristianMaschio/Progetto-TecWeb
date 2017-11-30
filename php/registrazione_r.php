@@ -20,10 +20,23 @@ $sql = "INSERT INTO utenti (username,pass,nome,cognome,tipo,email)
 VALUES ('$username_r',PASSWORD('$password_r'),'$nome_r','$cognome_r','$tipo_r','$email_r')";
 query($sql);
 $neo_registrato = select("SELECT id FROM utenti WHERE username='$username_r'");
-$_SESSION['user_id'] = $neo_registrato[0]['id'];
-$_SESSION['user_username'] = $username_r;
-$_SESSION['user_tipo'] = $tipo_r;
-message('Ti sei registrato con successo, benvenuto!',1);
-redirect('home.php');
 
+
+// leggo dalla sessione che tipo di comportamento devo avere dopo la registrazione: per registrazione di utente dovrò comportarmi in un certo modo, per la registrazione di un operatore in un altro per esempio
+if(isset($_SESSION['messaggio_registrazione']) && isset($_SESSION['redirect_registrazione'])){
+  $messaggio_registrazione = $_SESSION['messaggio_registrazione'];
+  unset($_SESSION['messaggio_registrazione']);
+  $redirect_registrazione = $_SESSION['redirect_registrazione'];
+  unset($_SESSION['redirect_registrazione']);
+  message($messaggio_registrazione,1);
+  redirect($redirect_registrazione);
+  } 
+else {
+  // se non sono stati settati messaggio registrazione e redirect registrazione è un tipo di registrazione base
+  $_SESSION['user_id'] = $neo_registrato[0]['id'];
+  $_SESSION['user_username'] = $username_r;
+  $_SESSION['user_tipo'] = $tipo_r;
+  message('Ti sei registrato con successo, benvenuto!',1);
+  redirect('home.php');
+}
 ?>
