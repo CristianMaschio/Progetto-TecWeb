@@ -13,9 +13,10 @@ $usernames = select("SELECT username FROM utenti WHERE username LIKE '%$username
 if(isset($usernames[0]['username']) && $usernames[0]['username'] == $username_r){
   //non posso registrarmi perchè ho già uno che si chiama così!
   message('L\'username inserito non è disponibile',3);
-  redirect('registrazione.php');
+  redirect($_SERVER['HTTP_REFERER']);
   die();
 }
+
 $sql = "INSERT INTO utenti (username,pass,nome,cognome,tipo,email)
 VALUES ('$username_r',PASSWORD('$password_r'),'$nome_r','$cognome_r','$tipo_r','$email_r')";
 query($sql);
@@ -30,8 +31,7 @@ if(isset($_SESSION['messaggio_registrazione']) && isset($_SESSION['redirect_regi
   unset($_SESSION['redirect_registrazione']);
   message($messaggio_registrazione,1);
   redirect($redirect_registrazione);
-  } 
-else {
+  } else {
   // se non sono stati settati messaggio registrazione e redirect registrazione è un tipo di registrazione base
   $_SESSION['user_id'] = $neo_registrato[0]['id'];
   $_SESSION['user_username'] = $username_r;

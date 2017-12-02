@@ -44,9 +44,40 @@ function proprietario($user){
       <dt><span lang=\"en\">Email</span></dt><dd>".$user['email']."</dd>
       </dl>";
           ?>
-
+            <?php if(is_logged() && proprietario($user)): ?>
           <div class="linkDestra"><a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
           </div>
+          <?php endif ?>
+
+          <?php if(is_admin() || is_operatore() || is_gestore_luogo()): ?>
+                <div id="amministrazione">
+                    <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
+                    <div id="panAmm" class="panOff">
+                        <?php if(is_admin() || is_operatore()): ?>
+                            <ul>
+                                <li><a href="categoria_crea.php">Crea categoria</a></li>
+                                <li><a href="evento_crea.php">Crea evento</a></li>
+                                <li><a href="luogo_crea.php">Crea luogo</a></li>
+                                <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
+                                <li><a href="registrazione_utente_luogo.php">Crea amministratore di luogo</a></li>
+                                <?php if(is_admin()): ?>
+                                    <li><a href="operatore_crea.php">Crea operatore</a></li>
+                                <?php endif ?>
+                            </ul>
+                        <?php endif ?>
+
+                        <?php if(is_gestore_luogo()): ?>
+                            <ul>
+                                <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
+                            </ul>
+                        <?php endif ?>
+                    </div>
+
+                
+
+                </div>
+          <?php endif ?>
+
           <?php if(is_logged() && proprietario($user)): ?>
               <hr><h3>Prenotazioni</h3>
               <table>
@@ -93,29 +124,7 @@ function proprietario($user){
               </table>
               <div class="marginTopBottom"><em>Segna il codice e il tuo nome utente (<?= $user['username'] ?>) per poter entrare allo spettacolo</em></div>
               <?php endif ?>
-
-          <div id="amministrazione">
-              <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
-              <div id="panAmm" class="panOff">
-                  <?php if(is_admin() || is_operatore()): ?>
-                      <ul>
-                          <li><a href="categoria_crea.php">Crea categoria</a></li>
-                          <li><a href="evento_crea.php">Crea evento</a></li>
-                          <li><a href="luogo_crea.php">Crea luogo</a></li>
-                          <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
-                          <?php if(is_admin()): ?>
-                            <li><a href="operatore_crea.php">Crea operatore</a></li>
-                          <?php endif ?>
-                      </ul>
-                  <?php endif ?>
-
-                  <?php if(is_gestore_luogo()): ?>
-                      <ul>
-                          <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
-                      </ul>
-                  <?php endif ?>
-              </div>
-          </div>
+            
 
       </div>
 

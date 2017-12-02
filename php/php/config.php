@@ -111,6 +111,15 @@ function evento_has_spettacoli($eventoid){
   else return true;
 }
 
+// ritorna l'ultimo id inserito nel db
+function last_inserted_id(){
+  // TODO 
+  global $conn;
+  if($conn == null)
+    return null;
+  return $conn->insert_id;
+}
+
 
 // FUNZIONE DI REDIRECT
 function redirect($url){
