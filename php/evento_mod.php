@@ -23,7 +23,7 @@ register('id_mod');
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="ContentBox">
+  <div id="content" class="contentBox">
     <div class="box">
     <?php
     $cercato = select("SELECT * FROM eventi WHERE id=$id_mod")[0];

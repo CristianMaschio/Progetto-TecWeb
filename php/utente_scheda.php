@@ -45,7 +45,8 @@ function proprietario($user){
       </dl>";
           ?>
             <?php if(is_logged() && proprietario($user)): ?>
-          <div class="linkDestra"><a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
+          <div class="linkDestra">
+              <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
           </div>
           <?php endif ?>
 
