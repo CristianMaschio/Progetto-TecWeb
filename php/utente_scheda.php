@@ -46,15 +46,17 @@ function proprietario($user){
           ?>
             <?php if(is_logged() && proprietario($user)): ?>
           <div class="linkDestra">
-              <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
+          <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
+          <?php if(is_gestore_luogo()): ?>
+                           <a href="pannello_amministrazione_luogo.php?luogo_id=<?php echo id_luogo_amministrato($_SESSION['user_id']); ?>" >Amministra luogo</a>
+                        <?php endif ?>
           </div>
           <?php endif ?>
 
-          <?php if(is_admin() || is_operatore() || is_gestore_luogo()): ?>
+          <?php if((is_admin() || is_operatore()) && proprietario($user)): ?>
                 <div id="amministrazione">
                     <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
                     <div id="panAmm" class="panOff">
-                        <?php if(is_admin() || is_operatore()): ?>
                             <ul>
                                 <li><a href="categoria_crea.php">Crea categoria</a></li>
                                 <li><a href="evento_crea.php">Crea evento</a></li>
@@ -65,13 +67,9 @@ function proprietario($user){
                                     <li><a href="operatore_crea.php">Crea operatore</a></li>
                                 <?php endif ?>
                             </ul>
-                        <?php endif ?>
+                        
 
-                        <?php if(is_gestore_luogo()): ?>
-                            <ul>
-                                <li><a href="spettacolo_crea.php">Crea spettacolo</a></li>
-                            </ul>
-                        <?php endif ?>
+
                     </div>
 
                 

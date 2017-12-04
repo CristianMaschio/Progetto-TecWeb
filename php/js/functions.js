@@ -24,6 +24,25 @@ function addlocpar(par, val){
     return false;
 }
 
+function ajax(url, dest){ //funzione per richieste ajax
+    var xhttp;
+    if(window.XMLHttpRequest){
+        // Codice per IE7+, Firefox, Chrome, Opera, Safari
+        xhttp=new XMLHttpRequest();
+    } else{
+        // Codice per IE5, IE6
+        xhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xhttp.onreadystatechange = function(){
+        if(xhttp.readyState==4 && xhttp.status==200){
+            document.getElementById(dest).innerHTML = xhttp.responseText;
+        }
+    }
+    xhttp.open("GET", url, true);
+    xhttp.send();
+}
+
+
 function menuResponsive() {
     var x = document.getElementById("nav");
     if (x.className === "On") {

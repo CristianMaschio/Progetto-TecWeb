@@ -33,7 +33,7 @@
         <label for="telefono_l">Telefono</label> <input type="text" maxlength=40 id="telefono_l" name="telefono_l" required/>
       </fieldset>
       <fieldset>
-        <legend>Profilo amministratore del luogo</legend>
+        <legend>Profilo dell'amministratore del luogo</legend>
         <label for="username_r">Username</label> <input type="text" name="username_r" REQUIRED>
             <label for="password_r">Password</label> <input type="password" name="password_r" REQUIRED>
             <label for="nome_r">Nome</label> <input type="text" name="nome_r"  placeholder="Inserisci il nome" REQUIRED>
