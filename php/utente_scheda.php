@@ -37,7 +37,7 @@ register('id_u');
       <dt><span lang=\"en\">Email</span></dt><dd>".$user['email']."</dd>
       </dl>";
           ?>
-            <?php if(is_logged() && proprietario($user)): ?>
+            <?php if(is_logged() && proprietario($user['id'])): ?>
           <div class="linkDestra">
           <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
           <!-- TODO: IL LINK QUA SOTTO POTREBBE ESSERE ROSSO -->
@@ -48,7 +48,7 @@ register('id_u');
           </div>
           <?php endif ?>
 
-          <?php if((is_admin() || is_operatore()) && proprietario($user)): ?>
+          <?php if((is_admin() || is_operatore()) && proprietario($user['id'])): ?>
                 <div id="amministrazione">
                     <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
                     <div id="panAmm" class="panOff">
@@ -72,7 +72,7 @@ register('id_u');
                 </div>
           <?php endif ?>
 
-          <?php if(is_logged() && proprietario($user)): ?>
+          <?php if(is_logged() && proprietario($user['id'])): ?>
               <hr><h3>Prenotazioni</h3>
               <table>
 

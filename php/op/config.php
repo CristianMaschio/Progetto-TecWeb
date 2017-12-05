@@ -245,7 +245,7 @@ function redirect($url){
   if(redirect){
     header('location: '. $url);
   } else {
-    echo "<a href='$url'> should go to $url </a>";
+    echo "<a href='$url'>Dovresti andare a: $url </a>";
   }
 }
 

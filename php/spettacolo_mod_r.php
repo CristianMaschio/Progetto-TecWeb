@@ -15,6 +15,7 @@
     if(is_data_passata($data_s)){
         message('Non puoi inserire spettacoli in date passate',2);
         redirect($_SERVER['HTTP_REFERER']);
+        die();
     }
     
     //formatto il costo in modo corretto

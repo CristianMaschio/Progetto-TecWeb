@@ -14,6 +14,7 @@ if(isset($usernames[0]['username']) && $usernames[0]['username'] == $username_r)
     //non posso registrarmi perchè ho già uno che si chiama così!
     message('Username non disponibile',3);
     redirect('registrazione_utente_luogo.php');
+    die();
 }
 $sql = "INSERT INTO utenti (username,pass,nome,cognome,tipo,email,luogo_id)
 VALUES ('$username_r',PASSWORD('$password_r'),'$nome_r','$cognome_r','$tipo_r','$email_r',$luogo_r)";

@@ -6,6 +6,7 @@ require_once('php/printTemplate.php');
 if(!is_admin()) {
     message('Area riservata',2);
     redirect('home.php');
+    die();
 }
 ?>
 

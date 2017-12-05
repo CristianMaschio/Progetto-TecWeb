@@ -15,6 +15,4 @@ WHERE id = $id_u
 query($sql);
 message('Dati aggiornati correttamente',1);
 redirect('utente_scheda.php?id_u='.$id_u);
-
-
 ?>

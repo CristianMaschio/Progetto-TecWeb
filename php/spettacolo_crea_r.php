@@ -4,6 +4,7 @@ require_once("php/config.php");
 if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
     message('Area riservata',2);
     redirect('home.php');
+    die();
 }
 register('evento_s');
 register('luogo_s');
@@ -17,6 +18,7 @@ register('costo_s');
 if(is_data_passata($data_s)){
     message('Non puoi creare spettacoli in date passate',2);
     redirect('spettacolo_crea.php');
+    die();
 }
 
 //formatto il costo in modo corretto
