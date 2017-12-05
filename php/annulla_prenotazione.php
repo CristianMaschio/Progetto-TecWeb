@@ -12,6 +12,7 @@ $biglietto = select("
 if($biglietto['utente_id'] != $_SESSION['user_id']){
     message('Area riservata',2);
     redirect($_SERVER['HTTP_REFERER']);
+    die;
 }
 
 $sql="DELETE FROM biglietti WHERE id=$id_b "; //il db autonomamente aumenta i posti disponibili

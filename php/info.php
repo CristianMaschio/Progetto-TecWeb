@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<!-- TODO: dare link alle parole usate, aggiungere molte immagini esplicative e aggiungere elenchi puntati (che piacciono) -->
 <?php require_once('php/config.php'); ?>
 <?php require_once('php/printTemplate.php') ?>
 

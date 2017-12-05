@@ -179,8 +179,8 @@ function is_logged(){
 }
 
 // CONTROLLA CHE L'UTENTE LOGGATO SIA PROPRIETARIO DELL'ID PASSATO COME ARGOMENTO: true sse l'utente loggato ha id uguale a quello passato
-function proprietario($user){
-  if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user['id']) return true;
+function proprietario($id_user){
+  if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $id_user) return true;
   else return false;
 }
 
@@ -190,24 +190,33 @@ function require_login($messaggio=''){
     //utente non loggato
     message('Ti devi autenticare per questa sezione',2);
     redirect('home.php');
+    die();
   }
 }
 
 //richiede che l'utente sia loggato e anche che l'id_u che dovrebbe essere quello che viene richiesto dalla pagina
+// function require_proprietario($id_u){
+//   // TODO: NON DOVREBBE USARE LA FUNZIONE PROPRIETARIO?
+//   require_login();
+//   if(!isset($id_u) || $id_u==''){
+//     message('Sezione privata',2);
+//     redirect('home.php');
+//   }
+
+//   $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
+//   if(!isset($user) || !isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user['id']) {
+//     message('Sezione privata',2);
+//     redirect('home.php');
+//   }
+
+// }
+
 function require_proprietario($id_u){
-  // TODO: NON DOVREBBE USARE LA FUNZIONE PROPRIETARIO?
-  require_login();
-  if(!isset($id_u) || $id_u==''){
+  if(!proprietario($id_u)){
     message('Sezione privata',2);
     redirect('home.php');
+    die();
   }
-
-  $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
-  if(!isset($user) || !isset($_SESSION['user_id']) || $_SESSION['user_id'] != $user['id']) {
-    message('Sezione privata',2);
-    redirect('home.php');
-  }
-
 }
 
 // FUNZIONI CHE CONTROLLANO CHE L UTENTE SIA AMMINISTRATORE O OPERATORE. se non vengono passati parametri si assume che si intenda l'utente loggato, per avere informazioni su altri usare il parametro
@@ -355,10 +364,12 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
     && !is_admin() && !is_operatore()){
       message('Area riservata',2);
       redirect('home.php');
+      die();
     }
   } else if(!is_admin() && !is_operatore()){
       message('Area riservata',2);
       redirect('home.php');
+      die();
   }
 }
 

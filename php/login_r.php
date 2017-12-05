@@ -35,5 +35,4 @@ else { // utente non trovato nel database
   message('Login fallito',3);
   redirect($_SERVER['HTTP_REFERER']);
 }
-//redirect('home.php');
 ?>
