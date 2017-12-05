@@ -36,10 +36,8 @@ require_once('php/printTemplate.php')
               <dl>
                   <dt>Durata</dt><dd><?= format_durata($evento['durata'])?></dd>
                   <dt>Categoria</dt><dd><a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
-                  <!-- TODO: manca modifica ed eliminazione dell evento da parte di un amministratore o operatore -->
               </dl>
 
-              <p><?= $evento['descrizione'] ?></p>
               <?php if(is_admin() || is_operatore()): ?>
                   <p class="linkDestra">
                       <a href="evento_mod.php?id_mod= <?= $evt_id ?>">Modifica Evento</a>
@@ -48,6 +46,8 @@ require_once('php/printTemplate.php')
                   </p>
               <?php endif ?>
 
+
+              <p><?= $evento['descrizione'] ?></p>
 
 
           <table>

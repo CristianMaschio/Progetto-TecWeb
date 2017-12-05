@@ -27,6 +27,13 @@ register('filter');
   <div id="content">
       <div class="title"><h2><?= get_nome_categoria($cat_id) ?></h2></div>
       <div class="content">
+      <?php if(is_admin() || is_operatore()): ?>
+              <div class="linkDestra">
+                  <a href="categoria_mod.php?id_mod=<?php echo $cat_id ?>">Modifica Categoria</a>
+                  <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
+                  <a onclick=' return confirm("Confermi di voler eliminare ?")' href ="categoria_elimina.php?id=<?php echo $cat_id ?>">Elimina Categoria</a>
+              </div>
+             <?php endif ?>
           <p> <?php
               $sql = "
     SELECT descrizione
@@ -35,13 +42,6 @@ register('filter');
     ";
               echo(select($sql)[0]['descrizione']);
               ?></p>
-          <?php if(is_admin() || is_operatore()): ?>
-              <div class="linkDestra">
-                  <a href="categoria_mod.php?id_mod=<?php echo $cat_id ?>">Modifica Categoria</a>
-                  <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
-                  <a onclick=' return confirm("Confermi di voler eliminare ?")' href ="categoria_elimina.php?id=<?php echo $cat_id ?>">Elimina Categoria</a>
-              </div>
-             <?php endif ?>
 
           <?= filter_form($filter,'Cerca un evento') ?>
 

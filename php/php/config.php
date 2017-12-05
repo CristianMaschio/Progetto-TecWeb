@@ -178,6 +178,12 @@ function is_logged(){
   else return false;
 }
 
+// CONTROLLA CHE L'UTENTE LOGGATO SIA PROPRIETARIO DELL'ID PASSATO COME ARGOMENTO: true sse l'utente loggato ha id uguale a quello passato
+function proprietario($user){
+  if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user['id']) return true;
+  else return false;
+}
+
 //RICHIEDE CHE UN UTENTE SIA LOGGATO, ALTRIMENTI RIMANDA ALLA HOME
 function require_login($messaggio=''){
   if(!is_logged()){
@@ -189,9 +195,9 @@ function require_login($messaggio=''){
 
 //richiede che l'utente sia loggato e anche che l'id_u che dovrebbe essere quello che viene richiesto dalla pagina
 function require_proprietario($id_u){
+  // TODO: NON DOVREBBE USARE LA FUNZIONE PROPRIETARIO?
   require_login();
   if(!isset($id_u) || $id_u==''){
-    die('non settata');
     message('Sezione privata',2);
     redirect('home.php');
   }

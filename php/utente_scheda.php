@@ -4,13 +4,6 @@
 require_once('php/config.php');
 require_once('php/printTemplate.php');
 register('id_u');
-
-// true sse è la pagina dell'utente loggato
-function proprietario($user){
-  if(isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user['id']) return true;
-  else return false;
-}
-
 ?>
 
 <html lang="it" >
@@ -47,6 +40,8 @@ function proprietario($user){
             <?php if(is_logged() && proprietario($user)): ?>
           <div class="linkDestra">
           <a href="utente_modifica_informazioni.php?id_u=<?=$id_u?>">Modifica informazioni utente</a>
+          <!-- TODO: IL LINK QUA SOTTO POTREBBE ESSERE ROSSO -->
+          <a href="utente_elimina.php?id_u=<?=$id_u?>" onclick="return confirm('Sicuro di voler eliminare il tuo profilo? Non sarà possibile recuperarlo in futuro');">Elimina profilo</a>
           <?php if(is_gestore_luogo()): ?>
                            <a href="pannello_amministrazione_luogo.php?luogo_id=<?php echo id_luogo_amministrato($_SESSION['user_id']); ?>" >Amministra luogo</a>
                         <?php endif ?>
