@@ -18,7 +18,6 @@
   </nav>
 
   <?php echo consumeMessage(); ?>
-
 	<div id="content">
         <div class="title"><h2>Informazioni</h2></div>
             <div class="content">
