@@ -7,7 +7,7 @@
 
 <html lang="it" >
 <head>
-  <?= printHead('Pagina template'); ?>
+  <?= printHead('Categorie'); ?>
 </head>
 <body>
 
