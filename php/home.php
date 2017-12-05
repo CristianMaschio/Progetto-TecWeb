@@ -21,8 +21,7 @@
 
   <div id="content">
     <div class="title"><h2>Home</h2></div>
-    <div class="content">
-
+      <div class="content">
     <aside>
       <h3>Informazioni</h3>
       <p>Benvenuto su BiglietteriaOnline, il portale che ti permette di prenotare online biglietti per <a href="eventi.php">eventi</a> di varie <a href="categorie.php">categorie</a>. Per maggiori informazioni consulta la sezione <a href="info.php"><abbr title="Informazioni">info</abbr></a>

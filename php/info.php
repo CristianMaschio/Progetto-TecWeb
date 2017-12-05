@@ -21,7 +21,7 @@
 
 	<div id="content">
         <div class="title"><h2>Informazioni</h2></div>
-
+            <div class="content">
 				<h4>Chi siamo</h4>
 				<div class="content">
 					Benvenuto nella Biglietteria <span xml:lang="eng">Online</span>. Qui potrai prenotare il tuo posto in un ampia fascia di <a href="categorie.php">categorie</a> di eventi, come biglietti per musei, fiere o cinema. 
@@ -85,7 +85,7 @@
             </p>
         </div>
 		-->
-  	
+            </div>
 	</div>
 
   <footer>
