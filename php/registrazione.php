@@ -17,7 +17,7 @@ tipo_r
 
 <html lang="it" >
 <head>
-  <?= printHead('Pagina template'); ?>
+  <?= printHead('Registrazione'); ?>
 </head>
 <body>
 
