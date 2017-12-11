@@ -135,7 +135,7 @@
     <?php endif ?>
     
     <?php if(sizeof($non_trovati_testo) > 0): ?>
-        <p>Nessun risultato in 
+        <p class="searchResult">Nessun risultato in 
         <?php
             if(sizeof($non_trovati_testo) == 1)
                 echo $non_trovati_testo[0];
