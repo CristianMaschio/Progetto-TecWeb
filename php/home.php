@@ -70,7 +70,7 @@
         <?php $categorie = select("
         SELECT *
         FROM categorie
-        ORDER BY id DESC
+        ORDER BY nome
         ");
         foreach($categorie as $c){
           echo "<dt><a href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>";

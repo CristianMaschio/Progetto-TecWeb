@@ -31,11 +31,12 @@
           <?php
           filter_form($filter,'Cerca un luogo');
           $sql = "SELECT *
-    FROM luoghi
-    WHERE true ";
+          FROM luoghi
+          WHERE true ";
 
           if(isset($filter)) $sql.= " AND nome LIKE '%$filter%' ";
           $sql.=" ORDER BY luoghi.nome ";
+          
 
           $luoghi=select($sql);
           ?>

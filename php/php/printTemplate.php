@@ -23,7 +23,9 @@ function printHeader(){
   </div>
 
   <div id='findAll'>
-  <input type=\"text\" name=\"fname\" placeholder='Cerca'>
+  <form method=\"GET\" action=\"cerca.php\">
+   <input type=\"text\" name=\"filtro\" placeholder='Cerca'>
+  </form>
   </div>
   ");
   //consima sotto l'header (per ora messaggi) se ce ne sono
