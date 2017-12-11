@@ -36,10 +36,11 @@ function printNavBar(){
   echo("
   <ul>
   <li lang=\"en\"><a href=\"home.php\">Home</a></li>
-  <li lang=\"it\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
   <li lang=\"it\"><a href=\"categorie.php\">Categorie</a></li>
+  <li lang=\"it\"><a href=\"spettacoli.php\">Spettacoli</a></li>
   <li lang=\"it\"><a href=\"eventi.php\">Eventi</a></li>
   <li lang=\"it\"><a href=\"luoghi.php\">Luoghi</a></li>
+  <li lang=\"it\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
   </ul>
   ");
   if(!is_logged()){

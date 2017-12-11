@@ -26,7 +26,7 @@
       <div class="title"><h2>Esplora Luoghi</h2></div>
       <div class="content">
           <p>
-              Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare il tuo biglietto.
+              Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare un biglietto.
           </p>
           <?php
           filter_form($filter,'Cerca un luogo');

@@ -373,7 +373,7 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
   }
 }
 
-// STAMPA IL FORM PER LA PRENOTAZIONE DI UN BIGLIETTO
+// STAMPA IL FORM PER LA PRENOTAZIONE DI UN BIGLIETTO, DENTRO UN TD
 
 function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nome_spettacolo){
   if($posti_disponibili>0)
