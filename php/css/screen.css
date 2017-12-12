@@ -13,6 +13,7 @@
     --link-visited-color: #551A8B; /* colore di default */
     --link-color: #0000EE; /* colore di default */
     --content-background-color: white;
+    --title-background-color: #303030;
   }
 
 
@@ -325,15 +326,15 @@ dd {
 --------------------*/
 
 .title{
-    background-color: #303030;
+    background-color: var(--title-background-color);
     padding-top: 6px;
     padding-bottom: 6px;
 }
 .title h1, .title h2, .title h3{
     color: white;
     text-align: center;
-    /* border-top: ridge;
-    border-color: #CCCCCC; */
+    border-top: ridge;
+    border-color: #CCCCCC;
     margin-left: 1em;
     margin-right: 1em;
 }
