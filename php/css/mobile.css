@@ -36,7 +36,6 @@ nav {
 }
 #logoTitle img{
     display: none;
-    float: left;
 }
 #logoTitle a{
     display: block;

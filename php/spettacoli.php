@@ -68,7 +68,7 @@
     ?>
     <h2>Spettacoli</h2><hr />
     <!-- In questa pagina non si presentano gli spettacoli che non hanno dei posti disponibili -->
-    Qui troverai una lista di tutti gli spettacoli che hanno dei posti disponibili.
+    <p>Qui troverai una lista di tutti gli spettacoli che hanno dei posti disponibili.</p>
     <?php filter_form($filter,'Cerca evento, luogo o categoria'); ?>
     <table>
       <thead>

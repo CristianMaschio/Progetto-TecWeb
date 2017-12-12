@@ -17,9 +17,9 @@ function printHead($title){
 function printHeader(){
   echo("
   <div id='logoTitle'>
-  <img src=\"img/icone/view.png\" alt=\"Logo della biglietteria online\" title=\"Logo\" >
-  <a href=\"javascript:void(0);\" class=\"icon\" onclick=\"menuResponsive()\">&#9776;</a>
-  <h1><a href=\"home.php\">Biglietteria</a></h1>
+  <a href=\"home.php\"><img src=\"img/pass.svg\" alt=\"Logo della biglietteria online\" title=\"Logo\" ></a>
+  <a href=\"javascript:void(0);\" id=\"hamburgerMenu\"class=\"icon\" onclick=\"menuResponsive()\">&#9776;</a>
+  <h1>Biglietteria</h1>
   </div>
 
   <div id='findAll'>
