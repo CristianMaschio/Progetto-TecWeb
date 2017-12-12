@@ -327,8 +327,8 @@ dd {
 
 .title{
     background-color: var(--title-background-color);
-    padding-top: 6px;
-    padding-bottom: 6px;
+    /*padding-top: 6px;*/
+    padding-bottom: 0.5em;
 }
 .title h1, .title h2, .title h3{
     color: white;
@@ -370,8 +370,8 @@ dd {
 }
 
 #content h1, h2, h3, h4, h5, h6 {
-    margin-top: 0.4em;
-    margin-bottom: 0.4em;
+   /* margin-top: 0.4em;
+    margin-bottom: 0.4em;*/
   }
 
 .contentBox{
