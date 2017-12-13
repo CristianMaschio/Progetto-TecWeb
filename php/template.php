@@ -21,7 +21,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="corpo">
   </div>
 
   <footer>

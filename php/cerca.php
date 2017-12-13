@@ -22,7 +22,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="corpo">
   <div class="content">
   <?php $non_trovati_testo =array(); // conterrà i tipi di ricerca che non sono state trovate. es: eventi e luoghi
    ?>

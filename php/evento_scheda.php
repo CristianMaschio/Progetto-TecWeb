@@ -26,12 +26,12 @@ require_once('php/printTemplate.php')
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="corpo">
       <?php
       $eventi=select("SELECT * FROM eventi WHERE id=$evt_id");
       $evento = $eventi[0];
       ?>
-      <div class="title"><h2><?= $evento['nome'] ?></h2></div>
+      <div id="title"><h2><?= $evento['nome'] ?></h2></div>
       <div class="content">
               <dl>
                   <dt>Durata</dt><dd><?= format_durata($evento['durata'])?></dd>

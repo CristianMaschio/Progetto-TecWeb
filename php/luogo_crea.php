@@ -22,7 +22,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
     <div class="box">
   <h2>Crea nuovo luogo</h2>
     <form action="luogo_crea_r.php" method="POST">

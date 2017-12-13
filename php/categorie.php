@@ -21,8 +21,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
-  <div class="title"><h2>Esplora le categorie</h2></div>
+  <div id="corpo">
+  <div id="title"><h2>Esplora le categorie</h2></div>
   <div class="content">
   <dl>
         <?php $categorie = select("

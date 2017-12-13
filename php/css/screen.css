@@ -24,7 +24,7 @@ header {
     background-color: var(--header-background-color);
     color: var(--header-text-color);
     width:100%;
-    height: 5em;
+    height: 4em;
 }
 
 nav {
@@ -325,12 +325,12 @@ dd {
     INIZIO content UNICI \ GLOBAL
 --------------------*/
 
-.title{
+#title{
     background-color: var(--title-background-color);
     /*padding-top: 6px;*/
     padding-bottom: 0.5em;
 }
-.title h1, .title h2, .title h3{
+#title h1, #title h2, #title h3{
     color: white;
     padding-top: 6px;
     text-align: center;
@@ -360,16 +360,16 @@ dd {
     margin-bottom: 0.5em;
 }
 
-#content{
+#corpo{
     background-color: var(--content-background-color);
 }
 
-#content p{
+#corpo p{
     margin-top: 0.3em;
     margin-bottom: 0.3em;
 }
 
-#content h1, h2, h3, h4, h5, h6 {
+#corpo h1, h2, h3, h4, h5, h6 {
    /* margin-top: 0.4em;
     margin-bottom: 0.4em;*/
   }
@@ -379,7 +379,7 @@ dd {
     padding-top: 1em;
 }
 
-#content aside, #content section{
+#corpo aside, #corpo section{
     margin-bottom: 1em;
 }
 /*   FINE content unici \ GLOBAL    */

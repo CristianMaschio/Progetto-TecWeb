@@ -27,7 +27,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="corpo">
   <div class="content">
   <h2>Amministrazione <?= get_nome_luogo($luogo_id)?></h2><hr>
 

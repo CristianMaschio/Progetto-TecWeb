@@ -26,7 +26,7 @@ if(!is_admin()) {
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
       <div class="box">
       <h2>Crea un nuovo operatore</h2>
         <form action="registrazione_r.php" method="POST" name="form">

@@ -26,11 +26,11 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="corpo">
     <?php
     $luogo = select("SELECT * FROM luoghi WHERE id=$luogo_id")[0];
     ?>
-    <div class="title"><h2><?= $luogo['nome'] ?></h2> </div>
+    <div id="title"><h2><?= $luogo['nome'] ?></h2> </div>
       <div class="content">
           <aside>
               <dl>

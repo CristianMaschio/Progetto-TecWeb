@@ -25,7 +25,7 @@ require_proprietario($id_u);
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
       <div class="box">
     <?php
     // TODO: aggiungere un javascript in questa pagina che prima di committare chieda all'utente se è sicuro di fare le modifiche?

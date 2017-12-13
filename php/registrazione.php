@@ -31,7 +31,7 @@ tipo_r
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
       <div class="box">
           <h2>Registrazione</h2>
 

@@ -24,8 +24,8 @@ register('filter');
   <?php echo consumeMessage(); ?>
 
 
-  <div id="content">
-      <div class="title"><h2><?= get_nome_categoria($cat_id) ?></h2></div>
+  <div id="corpo">
+      <div id="title"><h2><?= get_nome_categoria($cat_id) ?></h2></div>
       <div class="content">
       <?php if(is_admin() || is_operatore()): ?>
               <div class="linkDestra">

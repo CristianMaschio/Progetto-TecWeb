@@ -26,8 +26,8 @@ register('id_u');
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
-      <div class="title"><h2>Profilo di <?php echo $user['username']?></h2></div>
+  <div id="corpo">
+      <div id="title"><h2>Profilo di <?php echo $user['username']?></h2></div>
       <div class="content">
           <?php
           echo
@@ -50,7 +50,7 @@ register('id_u');
 
           <?php if((is_admin() || is_operatore()) && proprietario($user['id'])): ?>
                 <div id="amministrazione">
-                    <div onclick="panAmmResponsive()" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
+                    <div onclick="panAmmResponsive()" id="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
                     <div id="panAmm" class="panOff">
                             <ul>
                                 <li><a href="categoria_crea.php">Crea categoria</a></li>

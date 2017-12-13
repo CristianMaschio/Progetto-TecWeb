@@ -23,7 +23,7 @@ register('id_mod');
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
       <div class="box">
     <?php
     $cercato = select("SELECT * FROM categorie WHERE id=$id_mod")[0];

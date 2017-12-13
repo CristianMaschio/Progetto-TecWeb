@@ -19,8 +19,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
-    <div class="title"><h2>Home</h2></div>
+  <div id="corpo">
+    <div id="title"><h2>Home</h2></div>
       <div class="content">
     <aside>
       <h3>Informazioni</h3>

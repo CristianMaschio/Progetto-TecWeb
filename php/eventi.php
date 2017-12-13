@@ -22,8 +22,8 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
-      <div class="title"><h2>Esplora Eventi</h2></div>
+  <div id="corpo">
+      <div id="title"><h2>Esplora Eventi</h2></div>
       <div class="content">
           <p>Qui troverai una lista di tutti gli eventi per i quali potrai prenotare un biglietto</p>
           <?php

@@ -19,7 +19,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
       <div class="box">
     <h2>Login</h2>
       <form method='POST' action='login_r.php'>

@@ -23,7 +23,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content">
+  <div id="corpo">
     <div class="content">
     <?php 
     $sql =

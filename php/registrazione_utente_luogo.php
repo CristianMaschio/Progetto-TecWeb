@@ -22,7 +22,7 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="content" class="contentBox">
+  <div id="corpo" class="contentBox">
       <div class="box">
 
           <h2>Aggiungi nuov utente amministratore di luogo</h2>
