@@ -23,12 +23,12 @@ register('id_mod');
 
   <?php echo consumeMessage(); ?>
 
-  <div id="corpo" class="contentBox">
+  <div id="corpo" >
+      <?php
+      $cercato = select("SELECT * FROM categorie WHERE id=$id_mod")[0];
+      ?>
+      <div id="title"><h2>Modifica categoria <?=  $cercato['nome']?></h2></div>
       <div class="box">
-    <?php
-    $cercato = select("SELECT * FROM categorie WHERE id=$id_mod")[0];
-    ?>
-    <h2>Modifica categoria <?=  $cercato['nome']?></h2>
     <form method="post" action="categoria_mod_r.php">
       <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>
       <label for="nome_c">Nome</label> <input value="<?= $cercato['nome'] ?>" placeholder="Inseri il nome della categoria" type="text" maxlength=50 id="nome_c" name="nome_c" required/>

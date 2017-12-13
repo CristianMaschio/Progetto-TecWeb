@@ -26,9 +26,9 @@ if(!is_admin()) {
 
   <?php echo consumeMessage(); ?>
 
-  <div id="corpo" class="contentBox">
+  <div id="corpo" >
+      <div id="title"><h2>Crea un nuovo operatore</h2></div>
       <div class="box">
-      <h2>Crea un nuovo operatore</h2>
         <form action="registrazione_r.php" method="POST" name="form">
                     <label for="username_r">Username</label><input type="text" id="username_r" name="username_r" REQUIRED>
                     <label for="password_r">Password</label><input type="password" id="password_r" name="password_r" REQUIRED>

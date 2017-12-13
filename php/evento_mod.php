@@ -23,13 +23,13 @@ register('id_mod');
 
   <?php echo consumeMessage(); ?>
 
-  <div id="corpo" class="contentBox">
-    <div class="box">
-    <?php
-    $cercato = select("SELECT * FROM eventi WHERE id=$id_mod")[0];
-    ?>
+  <div id="corpo" >
+      <?php
+      $cercato = select("SELECT * FROM eventi WHERE id=$id_mod")[0];
+      ?>
 
-    <h2>Modifica evento <?php echo $cercato['nome']?> </h2>
+      <div id="title"><h2>Modifica evento <?php echo $cercato['nome']?> </h2></div>
+    <div class="box">
 
       <form method="post" action="evento_mod_r.php">
         <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>

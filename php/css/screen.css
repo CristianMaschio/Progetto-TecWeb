@@ -217,6 +217,8 @@ dd {
     display: block;
     background-color: #4d4d4d;
     color: white;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 .box h3, .box h2, .box h1{
     text-align: center;
@@ -334,8 +336,7 @@ dd {
     color: white;
     padding-top: 6px;
     text-align: center;
-    border-top: ridge;
-    border-color: #CCCCCC;
+    border-top: 3px ridge #CCCCCC;
     margin-left: 1em;
     margin-right: 1em;
 }
@@ -374,10 +375,7 @@ dd {
     margin-bottom: 0.4em;*/
   }
 
-.contentBox{
-    padding-bottom: 1em;
-    padding-top: 1em;
-}
+
 
 #corpo aside, #corpo section{
     margin-bottom: 1em;
@@ -394,8 +392,7 @@ footer{
     padding: 1em;
 }
 .footer {
-    border-top: ridge;
-    border-color: #CCCCCC;
+    border-top: 3px ridge #CCCCCC;
     margin-left: 1em;
     margin-right: 1em;
 }

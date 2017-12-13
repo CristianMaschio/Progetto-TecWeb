@@ -25,15 +25,15 @@ area_riservata(true,$id_luogo_spettacolo);
   </nav>
 
   <?php echo consumeMessage(); ?>
-  <div id="corpo" class="contentBox">
-      <div class="box">
-    <?php
-    $cercato = select("SELECT * FROM spettacoli WHERE id=$id_mod")[0];
+  <div id="corpo" >
+      <?php
+      $cercato = select("SELECT * FROM spettacoli WHERE id=$id_mod")[0];
 
-    $data = substr($cercato['data_ora'],0,10);
-    $ora = substr($cercato['data_ora'],11,5);
-    ?>
-    <h2>Modifica spettacolo per  <?=get_evento_from_spettacolo($cercato['id'])['nome']?></h2>
+      $data = substr($cercato['data_ora'],0,10);
+      $ora = substr($cercato['data_ora'],11,5);
+      ?>
+      <div id="title"> <h2>Modifica spettacolo per  <?=get_evento_from_spettacolo($cercato['id'])['nome']?></h2></div>
+      <div class="box">
 
     <form method="post" action="spettacolo_mod_r.php">
       

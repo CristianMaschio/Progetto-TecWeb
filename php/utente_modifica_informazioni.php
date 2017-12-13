@@ -25,13 +25,13 @@ require_proprietario($id_u);
 
   <?php echo consumeMessage(); ?>
 
-  <div id="corpo" class="contentBox">
+  <div id="corpo" >
+      <?php
+      // TODO: aggiungere un javascript in questa pagina che prima di committare chieda all'utente se è sicuro di fare le modifiche?
+      $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
+      ?>
+      <div id="title"><h2>Modifica le tue informazioni, <?php echo $user['username']; ?></h2></div>
       <div class="box">
-    <?php
-    // TODO: aggiungere un javascript in questa pagina che prima di committare chieda all'utente se è sicuro di fare le modifiche?
-    $user=select("SELECT * FROM utenti WHERE id=$id_u")[0];
-    ?>
-    <h2>Modifica le tue informazioni, <?php echo $user['username']; ?></h2>
 
     <form method='POST' action='utente_modifica_informazioni_r.php'>
         <label for="nome">Nome:</label>

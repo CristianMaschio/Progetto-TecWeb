@@ -24,6 +24,8 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo">
+
+      <div id="title"><h2>Spettacoli</h2></div>
     <div class="content">
     <?php 
     $sql =
@@ -66,7 +68,6 @@
       $sql.= "ORDER BY eventi.nome, luoghi.nome, categorie.nome, spettacoli.data_ora, spettacoli.prezzo";
     $spettacoli = select($sql);
     ?>
-    <h2>Spettacoli</h2><hr />
     <!-- In questa pagina non si presentano gli spettacoli che non hanno dei posti disponibili -->
     <p>Qui troverai una lista di tutti gli spettacoli che hanno dei posti disponibili.</p>
     <?php filter_form($filter,'Cerca evento, luogo o categoria'); ?>

@@ -19,9 +19,9 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="corpo" class="contentBox">
+  <div id="corpo" >
+      <div id="title"><h2>Login</h2></div>
       <div class="box">
-    <h2>Login</h2>
       <form method='POST' action='login_r.php'>
           <label lang="en" for="username">Username:</label>
           <input id="username" type='text' name='username'>

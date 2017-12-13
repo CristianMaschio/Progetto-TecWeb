@@ -22,9 +22,9 @@
 
   <?php echo consumeMessage(); ?>
 
-  <div id="corpo" class="contentBox">
+  <div id="corpo" >
+      <div id="title"><h2>Crea nuovo evento</h2></div>
       <div class="box">
-  <h2>Crea nuovo evento</h2>
 
     <form action="evento_crea_r.php" method="POST">
         <!-- TODO: ripensare al fatto che per la giornata lavorativa vada messo 00:00, magari in JS -->
