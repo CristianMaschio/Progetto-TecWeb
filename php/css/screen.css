@@ -132,6 +132,15 @@ INIZIO messaggi verso utente
     color: white;
     text-align: center;
 }
+
+.messageOff{
+    display: none;
+}
+
+.messageCloseButton{
+    float: right;
+    margin-right: 2.5%;
+}
 /*FINE messaggi verso utente*/
 
 
@@ -347,6 +356,11 @@ dd {
     display: block;
     padding-bottom: 1em;
     padding-top: 1em;
+}
+
+.content h2, h3, h4, h5, h6 {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
 }
 
 .linkDestra {

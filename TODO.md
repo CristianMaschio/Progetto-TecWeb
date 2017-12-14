@@ -8,3 +8,6 @@
 - controllare che tutti i caratteri tipo < e > oppure & siano messi con la notazione $parolacheloidentificainUNICODE;
 - riformulare le query per fare in modo che quello che si va a leggere siano solo gli attributi veramente interessanti e non TUTTI
 - chiudere tutti gli hr e br: va scritto <hr /> e non <hr>
+- in tutte le pagine la nav bar ha un id che si chiama nav, ovviamente non va bene va tolto
+
+-mettere nella relazione

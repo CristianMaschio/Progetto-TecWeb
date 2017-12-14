@@ -163,7 +163,9 @@ function consumeMessage(){
         default: $tipo_messaggio='message-warning'; //se mal settato il tipo è warning
       }
     }
-    $return = "<div class='$tipo_messaggio'> ".$_SESSION['message']."</div>";
+    // <input id="cookie-hide" class="cookie-hide" onclick="this.parentNode.parentNode.style.display = 'none'" value="I understand" type="button">
+
+    $return = "<div id='topMessage'class='$tipo_messaggio'> ".$_SESSION['message']." <input title=\"Chiudi messaggio\"type=\"button\" class=\"messageCloseButton\" value=\"Chiudi\" onclick=\"document.getElementById('topMessage').classList.add('messageOff');\"></div>";
     unset($_SESSION['message']);
     unset($_SESSION['msg_type']);
     return $return;
