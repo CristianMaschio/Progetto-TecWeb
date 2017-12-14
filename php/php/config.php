@@ -190,7 +190,7 @@ function proprietario($id_user){
 function require_login($messaggio=''){
   if(!is_logged()){
     //utente non loggato
-    message('Ti devi autenticare per questa sezione',2);
+    message('Ti devi autenticare per la sezione',2);
     redirect('home.php');
     die();
   }
