@@ -23,7 +23,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Crea nuovo luogo</h2></div>
+      <div class="title"><h2>Crea nuovo luogo</h2></div>
     <div class="box">
 
     <form action="luogo_crea_r.php" method="POST">
@@ -40,7 +40,7 @@
             <label for="nome_r">Nome</label> <input type="text" name="nome_r"  placeholder="Inserisci il nome" REQUIRED>
             <label for="cognome_r">Cognome</label> <input type="text" name="cognome_r" placeholder="Inserisci il cognome" REQUIRED>
             <label for="email_r">Email</label><input type="email" name="email_r" placeholder="esempio@esempio.com" REQUIRED>
-            <input type="hidden" name="tipo_r" value="L"><hr>
+            <input type="hidden" name="tipo_r" value="L">
       </fieldset>
         <div class="boxInline">
             <input type="submit" value="Conferma">

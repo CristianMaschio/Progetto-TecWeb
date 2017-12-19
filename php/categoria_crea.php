@@ -23,7 +23,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Crea nuova categoria</h2></div>
+      <div class="title"><h2>Crea nuova categoria</h2></div>
       <div class="box">
             <form action="categoria_crea_r.php" method="POST">
                 <label for="nome_c">Nome</label> <input placeholder="Inseri il nome della categoria" type="text" maxlength=50 id="nome_c" name="nome_c" required/>

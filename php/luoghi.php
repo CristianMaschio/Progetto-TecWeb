@@ -23,7 +23,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo">
-      <div id="title"><h2>Esplora Luoghi</h2></div>
+      <div class="title"><h2>Esplora Luoghi</h2></div>
       <div class="content">
           <p>
               Qui troverai una lista dei luoghi in cui si terranno gli spettacoli per i quali potrai prenotare un biglietto.

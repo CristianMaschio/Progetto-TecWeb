@@ -32,7 +32,7 @@ tipo_r
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Registrazione</h2></div>
+      <div class="title"><h2>Registrazione</h2></div>
       <div class="box">
 
         <form action="registrazione_r.php" method="POST" name="form">

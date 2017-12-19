@@ -20,7 +20,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Login</h2></div>
+      <div class="title"><h2>Login</h2></div>
       <div class="box">
       <form method='POST' action='login_r.php'>
           <label lang="en" for="username">Username:</label>

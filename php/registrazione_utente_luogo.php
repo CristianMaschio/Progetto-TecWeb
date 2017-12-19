@@ -23,7 +23,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Aggiungi nuov utente amministratore di luogo</h2></div>
+      <div class="title"><h2>Aggiungi nuov utente amministratore di luogo</h2></div>
       <div class="box">
           <form action="registrazione_utente_luogo_r.php" method="POST" name="form">
                 <label for="username_r">Username</label> <input type="text" name="username_r" REQUIRED>

@@ -23,7 +23,7 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Crea nuovo evento</h2></div>
+      <div class="title"><h2>Crea nuovo evento</h2></div>
       <div class="box">
 
     <form action="evento_crea_r.php" method="POST">

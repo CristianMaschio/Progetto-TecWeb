@@ -221,7 +221,7 @@ dd {
     INIZIO content unici
 --------------------*/
 
-#title{
+.title{
   background-color: #303030;
   padding-right: 1em;
   padding-left: 1em;

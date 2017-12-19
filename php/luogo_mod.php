@@ -27,7 +27,7 @@ area_riservata(true,$id_mod);
       <?php
       $cercato = select("SELECT * FROM luoghi WHERE id=$id_mod")[0];
       ?>
-      <div id="title"><h2>Modifica informazioni <?=  $cercato['nome']?></h2></div>
+      <div class="title"><h2>Modifica informazioni <?=  $cercato['nome']?></h2></div>
 
 
       <div class="box">

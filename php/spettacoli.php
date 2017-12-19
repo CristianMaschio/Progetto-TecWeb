@@ -25,7 +25,7 @@
 
   <div id="corpo">
 
-      <div id="title"><h2>Spettacoli</h2></div>
+      <div class="title"><h2>Spettacoli</h2></div>
     <div class="content">
     <?php 
     $sql =

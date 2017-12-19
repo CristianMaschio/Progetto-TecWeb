@@ -27,7 +27,7 @@ if(!is_admin() && !is_operatore() && !is_gestore_luogo()){
   <?php echo consumeMessage(); ?>
 
   <div id="corpo" >
-      <div id="title"><h2>Crea nuovo spettacolo</h2></div>
+      <div class="title"><h2>Crea nuovo spettacolo</h2></div>
       <div class="box">
 
     <form action="spettacolo_crea_r.php" method="POST">

@@ -228,6 +228,7 @@ dd {
     color: white;
     margin-top: 1em;
     margin-bottom: 1em;
+    padding: 0.4em;
 }
 .box h3, .box h2, .box h1{
     text-align: center;
@@ -280,6 +281,10 @@ dd {
 .boxInline input{
     display: inline;
     width: 49%;
+}
+
+.box fieldset{
+    margin-bottom: 0.5em;
 }
 
 #buttonRight{
@@ -336,12 +341,12 @@ dd {
     INIZIO content UNICI \ GLOBAL
 --------------------*/
 
-#title{
+.title{
     background-color: var(--title-background-color);
     /*padding-top: 6px;*/
     padding-bottom: 0.5em;
 }
-#title h1, #title h2, #title h3{
+.title h1, .title h2, .title h3{
     color: white;
     padding-top: 6px;
     text-align: center;
@@ -405,7 +410,7 @@ footer{
     font-size: 0.8em;
     padding: 1em;
 }
-.footer {
+.footerContent {
     border-top: 3px ridge #CCCCCC;
     margin-left: 1em;
     margin-right: 1em;
@@ -449,6 +454,10 @@ footer img{
 #filterform #cercaText{
     height: 1.7em;
     width: 50%;
+}
+
+#titleChange{
+    border: none;
 }
 
 /*FINE form di ricerca*/
