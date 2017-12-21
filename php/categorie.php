@@ -31,7 +31,9 @@
         ORDER BY nome
         ");
         foreach($categorie as $c){
-          echo "<dt><a href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>";
+          echo "<dt><a href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione'];
+          echo '<img src="data:image/jpeg;base64,'.base64_encode( $c['immagine'] ).'"/>';
+          echo "</dd>";
         }
         ?>
       </dl>

@@ -81,6 +81,7 @@ function printFooter(){
 </div>
 
   ");
+  // TODO: QUI DOVREI TEORICAMENTE CHIUDERE LA CONNESSIONE 
 }
 
 ?>

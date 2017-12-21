@@ -44,7 +44,7 @@
 
 				<h4>Come cercare uno spettacolo</h4>
 				<!-- TODO: vedere se è abbastnza chiara la differenza spettacolo/evento-->
-					<p><span style="color:red">AGGIORNARE QUANDO ESISTERANNO LA RICERCA SPECIFICA E LA RICERCA PER SPETTACOLO, CON IMMAGINI</span>
+					<!-- <p><span style="color:red">AGGIORNARE QUANDO ESISTERANNO LA RICERCA SPECIFICA E LA RICERCA PER SPETTACOLO, CON IMMAGINI</span> -->
 					Attraverso la barra di ricerca posta in alto a destra puoi ricercare tutti gli Spettacoli di una certa categoria digitando il nome della categoria (ad esempio: "Cinema"), oppure gli Spettacoli che si svolgeranno in un certo luogo digitando il nome del luogo (ad esempio: "Porto Astra"). Puoi anche ricercare uno Evento direttamente con il suo nome! Dopo aver effetuato la ricerca ti si presenterà davanti una tabella contenente i risultati. Nella tabella puoi cliccare sui vari campi per ottenere ulteriori informazioni riguardo il determinato campo. Se ad esempio hai ricercato "Van Gogh" e vuoi ottenere ulteriori informazioni sulla <span lang="eng">location</span> oppure altri eventi in musei ti bastera cliccare rispettivamente sulle rispettive voci. Se vuoi procedere ad effettuare una prenotazione invece clicca sul nome dell'evento. Se infine sei interessato a vedere tutti gli <a href="eventi.php">Eventi</a>, i <a href="luoghi.php">Luoghi</a> e le <a href="categorie.php">Categorie</a> puoi cliccare sul <span lang="eng">link</span> rispettivo proprio sotto il nostro logo nella barra dei menu.</p>
 
 

@@ -400,5 +400,5 @@ function print_form_anullamento($id_biglietto,$nome_spettacolo){
   </form>
   </td>";
 }
-
+// TODO: forse usare htmlentities()
 ?>
