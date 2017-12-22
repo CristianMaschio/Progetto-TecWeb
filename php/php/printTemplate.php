@@ -43,6 +43,7 @@ function printNavBar(){
   <li lang=\"it\"><a href=\"categorie.php\">Categorie</a></li>
   <li lang=\"it\"><a href=\"eventi.php\">Eventi</a></li>
   <li lang=\"it\"><a href=\"luoghi.php\">Luoghi</a></li>
+  <li lang=\"it\"><a href=\"ciauzzone.php\">NOON VISITARE</a></li>
   <li lang=\"it\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
   </ul>
   ");
