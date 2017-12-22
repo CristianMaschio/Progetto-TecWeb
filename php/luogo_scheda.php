@@ -54,9 +54,9 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
 
               <thead>
               <tr>
-                  <th onclick="addlocpar('ord','e')"><a>Evento</a></th>
-                  <th onclick="addlocpar('ord','d')"><a>Data</a></th>
-                  <th onclick="addlocpar('ord','p')"><a>Prezzo</a></th>
+                  <th onclick="addlocpar('ord','e')"><a>Evento</a><?php echo is_ordered_by_this($ord,'e'); ?></th>
+                  <th onclick="addlocpar('ord','d')"><a>Data</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
+                  <th onclick="addlocpar('ord','p')"><a>Prezzo</a><?php echo is_ordered_by_this($ord,'p'); ?></th>
                   <?php if(is_logged()): ?>
                       <th>Prenotazione</th>
                   <?php endif ?>

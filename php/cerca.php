@@ -146,7 +146,7 @@
                 echo " e ".$non_trovati_testo[sizeof($non_trovati_testo)-1];
             }
         ?>
-        che corrisponda ad '<?php echo "$filtro"; ?>' è stato trovato</p>
+        che corrisponda a '<?php echo "$filtro"; ?>' è stato trovato</p>
     <?php endif ?>
   
   <!-- fine nel div con class content -->

@@ -50,7 +50,7 @@ register('id_u');
 
           <?php if((is_admin() || is_operatore()) && proprietario($user['id'])): ?>
                 <div id="amministrazione">
-                    <div onclick="panAmmResponsive()" id="title" class="title"><h3 id="titleChange">Pannello Amministazione ▼</h3></div>
+                    <div onclick="panAmmResponsive()" id="title" class="title"><h3 id="titleChange">Pannello Amministazione &#11206;</h3></div>
                     <div id="panAmm" class="panOff">
                             <ul>
                                 <li><a href="categoria_crea.php">Crea categoria</a></li>

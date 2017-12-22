@@ -355,6 +355,17 @@ function no_result($array,$colonne){
   }
 }
 
+function is_ordered_by_this($ord, $char){
+  
+  if(isset($ord)){
+    
+    if($ord == $char){
+      return "&#11206;";
+    }
+  }
+  return null;
+}
+
 //la variabile deve essere impostata a a valore true se si vuole che l admin di un luogo possa accadere a un' area riservata.
 //in tal caso deve essere impostata anche la variabile che indica l' id del luogo a cui si deve accedere
 

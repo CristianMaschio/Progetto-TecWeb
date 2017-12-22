@@ -68,9 +68,9 @@ $eventi=select($sql);
 <table>
 <thead>
 <tr>
-<th onclick="addlocpar('ord','n')"><a>Nome</a></th>
-<th onclick="addlocpar('ord','c')"><a>Categoria</a></th>
-<th onclick="addlocpar('ord','d')"><a>Durata</a></th>
+<th onclick="addlocpar('ord','n')"><a id="th_nome">Nome </a><?php echo is_ordered_by_this($ord,'n'); ?></th>
+<th onclick="addlocpar('ord','c')"><a>Categoria</a><?php echo is_ordered_by_this($ord,'c'); ?></th>
+<th onclick="addlocpar('ord','d')"><a>Durata</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
 <th >Spettacoli disponibili</th>
 </tr>
 </thead>

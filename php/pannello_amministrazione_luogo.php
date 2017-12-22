@@ -90,9 +90,9 @@
         <table>
         <thead>
             <tr>
-                <th onclick="addlocpar('ord','u')"><a>Utente</a></th>
-                <th onclick="addlocpar('ord','e')"><a>Evento</a></th>
-                <th onclick="addlocpar('ord','d')"><a>Data</a></th>
+                <th onclick="addlocpar('ord','u')"><a>Utente</a><?php echo is_ordered_by_this($ord,'u'); ?></th>
+                <th onclick="addlocpar('ord','e')"><a>Evento</a><?php echo is_ordered_by_this($ord,'e'); ?></th>
+                <th onclick="addlocpar('ord','d')"><a>Data</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
                 <th >Prezzo</th>
                 <th >Codice</th>
                 <th >Utilizzato</th>
