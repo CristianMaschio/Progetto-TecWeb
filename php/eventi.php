@@ -68,9 +68,9 @@ $eventi=select($sql);
 <table>
 <thead>
 <tr>
-<th onclick="addlocpar('ord','n')">Nome</th>
-<th onclick="addlocpar('ord','c')">Categoria</th>
-<th onclick="addlocpar('ord','d')">Durata</th>
+<th onclick="addlocpar('ord','n')"><a>Nome</a></th>
+<th onclick="addlocpar('ord','c')"><a>Categoria</a></th>
+<th onclick="addlocpar('ord','d')"><a>Durata</a></th>
 <th >Spettacoli disponibili</th>
 </tr>
 </thead>

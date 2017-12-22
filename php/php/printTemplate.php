@@ -2,7 +2,7 @@
 
 function printHead($title){
   echo("
-  <title>".$title."</title>
+  <title>".$title." - Biglietteria</title>
   <meta charset=\"UTF-8\">
   <meta name=\"description\" content=\"Servizio di prenotazione biglietti per eventi di vario genere\">
   <meta name=\"keywords\" content=\"eventi, spettacoli, cinema, teatro, cultura, eventi sportivi, fiere, musei, musica\">

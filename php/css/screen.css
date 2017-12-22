@@ -7,21 +7,40 @@
     VARIABILI
 --------------------*/
 :root {
+    --rosso: #E63946;
+    --indian: rgb(205,92,92);
+    --light-indian: rgba(205, 92, 92, 0.171);
+    --blu: #457B9d;
+    --blu-scuro: #1D3557;
+    --blu-chiaro: #A8DADC;
+    --cielo: #0088ff;
+    --grigio-azzurro: #F1FAEE;
+    --grigio: #A9A9A9;
+    --grigio-chiaro: rgb(243, 243, 243);
+
+
     /* Colori nell'header */
-    --header-background-color: #303030;
+    --header-background-color: var(--blu-scuro);
     --header-text-color: white;
-    --header-link-hover-color: #0084ff;
-    --header-link-visited-color: #8fffdd; /* colore di default */
-    --header-link-color: #0000EE; /* colore di default */
+    --header-link-hover-color: var(--indian);
+    --header-link-visited-color: white; /* colore di default */
+    --header-link-color: var(--grigio); /* colore di default */
 
     /* Colori nel corpo della pagina */
-    --link-hover-color: #0088ff;
-    --link-visited-color: #551188; /* colore di default */
+    --link-hover-color: var(--indian);
+    --link-visited-color: var(--blu); /* colore di default */
     --link-color: #0000EE; /* colore di default */
     --content-background-color: white;
-    --title-background-color: #303030;
-    --table-odd-cell: rgb(241, 241, 241);
+    --title-background-color: var(--blu-scuro);
+    --table-odd-cell: rgb(241, 241, 241);;
     --table-even-cell: white;
+    --table-header: var(--blu-scuro);
+
+    /* BOX */
+    --box-background: var(--blu-scuro);
+
+    /* FOOTER */
+    --footer-background: var(--blu-scuro);
   }
 
 
@@ -193,7 +212,7 @@ table {
 }
 
 thead {
-	background-color: #303030;
+	background-color: var(--table-header);
     color: white;
     text-align: left;
 }
@@ -204,6 +223,10 @@ tr:nth-child(even) {background-color: var(--table-even-cell);}
 
 th, td {
 	padding: 0.5em;
+}
+
+th a {
+    text-decoration: underline;
 }
 
 td {
@@ -237,7 +260,7 @@ dd {
     min-width: 25em;
     border: 2px solid #303030;
     display: block;
-    background-color: #4d4d4d;
+    background-color: var(--box-background);
     color: white;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -310,7 +333,7 @@ dd {
     INIZIO pannello amministrazione
 --------------------*/
 #amministrazione{
-    background-color: #4d4d4d;
+    background-color: var(--grigio-chiaro);
 }
 #amministrazione li{
     display: block;
@@ -322,22 +345,19 @@ dd {
 }
                         /* Link amm */
 
-#amministrazione a:link {
+/* #amministrazione a:link {
     color: white;
     text-decoration: none;
 }
-/* visited link */
 #amministrazione a:visited {
     color: #cccccc;
 }
-/* mouse over link */
 #amministrazione a:hover {
     font-weight: bold;
 }
-/* selected link */
 #amministrazione a:hover {
     color: #cccccc;
-}
+} */
 
 .panOn{
     display: block;
@@ -418,7 +438,7 @@ dd {
     INIZIO footer
 --------------------*/
 footer{
-    background-color: #303030;
+    background-color: var(--footer-background);
     color: white;
     font-size: 0.8em;
     padding: 1em;

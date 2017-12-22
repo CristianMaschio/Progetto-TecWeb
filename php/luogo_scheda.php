@@ -54,9 +54,9 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
 
               <thead>
               <tr>
-                  <th><a>Evento</a></th>
-                  <th><a>Data</a></th>
-                  <th>Prezzo</th>
+                  <th onclick="addlocpar('ord','e')"><a>Evento</a></th>
+                  <th onclick="addlocpar('ord','d')"><a>Data</a></th>
+                  <th onclick="addlocpar('ord','p')"><a>Prezzo</a></th>
                   <?php if(is_logged()): ?>
                       <th>Prenotazione</th>
                   <?php endif ?>
@@ -76,14 +76,15 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
                 WHERE spettacoli.luogo_id=$luogo_id AND spettacoli.data_ora >= NOW() ";
               if($filter != NULL) $sql.= " AND eventi.nome LIKE '%$filter%' ";
               if(isset($ord)){
-                  // TODO: se fai un ordinamento per nomi devi avere qualcosa nella pagina che ti permetta di richiedere un ordinamento...
                   switch($ord){
-                      case 'n': $sql.= "ORDER BY eventi.nome";
+                      case 'e': $sql.= "ORDER BY eventi.nome";
                           break;
                       case 'd': $sql.= "ORDER BY spettacoli.data_ora ASC";
                           break;
-                      default:  $sql.= "ORDER BY eventi.nome";
+                      case 'p':  $sql.= "ORDER BY spettacoli.prezzo";
                   }
+              } else {
+                    $sql.=" ORDER BY eventi.nome";
               }
               $spettacoli = select($sql);
 

@@ -53,9 +53,9 @@ require_once('php/printTemplate.php')
           <table>
               <thead>
               <tr>
-                  <th>Luogo</th>
-                  <th>Data</th>
-                  <th>Prezzo</th>
+                  <th onclick="addlocpar('ord','l')"><a>Luogo</a></th>
+                  <th onclick="addlocpar('ord','d')"><a>Data</a></th>
+                  <th onclick="addlocpar('ord','p')"><a>Prezzo</a></th>
                   <?php if(is_logged()): ?>
                       <th>Prenotazione</th>
                   <?php endif ?>
@@ -68,7 +68,26 @@ require_once('php/printTemplate.php')
               </thead>
               <tbody>
               <?php //leggo i vari spettacoli
-              $spettacoli = select("SELECT * FROM spettacoli WHERE evento_id=".$evento['id']." AND spettacoli.data_ora >= NOW() ORDER BY data_ora");
+              $spettacoli_query = "SELECT * 
+              FROM spettacoli JOIN eventi ON eventi.id=spettacoli.evento_id
+              JOIN luoghi ON luoghi.id=spettacoli.luogo_id
+              WHERE evento_id=".$evento['id']." 
+              AND spettacoli.data_ora >= NOW() ";
+              
+
+              if(isset($ord)){
+                switch($ord){
+                case 'l': $spettacoli_query.= "ORDER BY luoghi.nome";
+                break;
+                case 'c': $spettacoli_query.= "ORDER BY spettacoli.data_ora DESC";
+                break;
+                case 'p': $spettacoli_query.= "ORDER BY spettacoli.prezzo ASC";
+                
+                }
+            } else {
+                $spettacoli_query .= " ORDER BY data_ora";
+            }
+            $spettacoli = select($spettacoli_query);
               if ( is_admin() || is_operatore() )	{
                   no_result($spettacoli,7);
               } elseif ( is_logged()) {

@@ -28,8 +28,9 @@
   <?php echo consumeMessage(); ?>
 
   <div id="corpo">
+  <div class="title"><h2>Amministrazione <?= get_nome_luogo($luogo_id)?></h2></div>
   <div class="content">
-  <h2>Amministrazione <?= get_nome_luogo($luogo_id)?></h2><hr>
+  
 
   <ul>
     <a href="luogo_mod.php?id_mod=<?=$luogo_id?>">Modifica informazioni luogo</a>
@@ -89,9 +90,9 @@
         <table>
         <thead>
             <tr>
-                <th onclick="addlocpar('ord','u')">Utente</th>
-                <th onclick="addlocpar('ord','e')">Evento</th>
-                <th onclick="addlocpar('ord','d')">Data</th>
+                <th onclick="addlocpar('ord','u')"><a>Utente</a></th>
+                <th onclick="addlocpar('ord','e')"><a>Evento</a></th>
+                <th onclick="addlocpar('ord','d')"><a>Data</a></th>
                 <th >Prezzo</th>
                 <th >Codice</th>
                 <th >Utilizzato</th>
