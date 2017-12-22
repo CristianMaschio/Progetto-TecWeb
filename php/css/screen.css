@@ -20,6 +20,8 @@
     --link-color: #0000EE; /* colore di default */
     --content-background-color: white;
     --title-background-color: #303030;
+    --table-odd-cell: rgb(241, 241, 241);
+    --table-even-cell: white;
   }
 
 
@@ -183,6 +185,7 @@ a:hover {
 table {
     width: 100%;
     background-color: rgb(221, 221, 221);
+    background-color: var(--table-odd-cell);
     border: solid 1px black;
     border-collapse: collapse;/*fa collassare i bordi della
     						tabella con quelli dei th, e td
@@ -197,6 +200,7 @@ thead {
 
 /*tabella a strisce di zebra*/
 tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(even) {background-color: var(--table-even-cell);}
 
 th, td {
 	padding: 0.5em;
