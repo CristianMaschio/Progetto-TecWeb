@@ -2,7 +2,7 @@
 //faccio partire la sessione
 session_start();
 
-// TODO: sarà da togliere prima di consegnare, lo metto finchè scriviamo per avere un feedback
+// TODO: TODO: sarà da togliere prima di consegnare, lo metto finchè scriviamo per avere un feedback TODO: TODO:
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -77,34 +77,39 @@ function select($sql){
 
 // FUNZIONI DI UTILITÀ GENERALE NEL DATABASE
 
+//ritorna il nome di  un utente con un certo id
 function get_nome_utente($id){
   $utente=select("SELECT * FROM utenti WHERE id=$id");
   return $utente[0]['username'];
 }
 
+//ritorna il nome della categoria con un certo id
 function get_nome_categoria($id){
   $cat=select("SELECT nome FROM categorie WHERE id=$id");
   return $cat[0]['nome'];
 }
 
+//ritorna il nome dell'evento con un certo id
 function get_nome_evento($id){
   $evt=select("SELECT nome FROM eventi WHERE id=$id");
   return $evt[0]['nome'];
 }
 
+//ritorna il nome del luogo con un certo id
 function get_nome_luogo($id){
   $luogo=select("SELECT nome FROM luoghi WHERE id=$id");
   return $luogo[0]['nome'];
 }
 
+//restituisce l'evento a cui è collegalo lo spettacolo con l'id passato
 function get_evento_from_spettacolo($id_spettacolo){
   $ret=select("SELECT eventi.* FROM eventi JOIN spettacoli ON eventi.id=spettacoli.evento_id
     WHERE spettacoli.id=$id_spettacolo");
     $ritorno = $ret[0];
     return $ritorno;
-  }
+}
 
-
+//ritorna true se vi sono spettacoli istanziati di un certo evento, altrimenti false
 function evento_has_spettacoli($eventoid){
   $spettacoli = select("SELECT * FROM eventi JOIN spettacoli ON eventi.id=spettacoli.evento_id WHERE eventi.id=$eventoid");
   if($spettacoli == NULL) return false;
@@ -196,6 +201,7 @@ function require_login($messaggio=''){
   }
 }
 
+// TODO: È DA CANCELLARE STAROBA?
 //richiede che l'utente sia loggato e anche che l'id_u che dovrebbe essere quello che viene richiesto dalla pagina
 // function require_proprietario($id_u){
 //   // TODO: NON DOVREBBE USARE LA FUNZIONE PROPRIETARIO?
@@ -213,6 +219,7 @@ function require_login($messaggio=''){
 
 // }
 
+//funzione che alscia proseguire solamente se l'utente passato è quello correntemente loggato, altrimenti die
 function require_proprietario($id_u){
   if(!proprietario($id_u)){
     message('Sezione privata',2);
@@ -223,6 +230,8 @@ function require_proprietario($id_u){
 
 // FUNZIONI CHE CONTROLLANO CHE L UTENTE SIA AMMINISTRATORE O OPERATORE. se non vengono passati parametri si assume che si intenda l'utente loggato, per avere informazioni su altri usare il parametro
 
+//ritorna true se l'id passato appartiene ad un utente di tipologia admin, altirmenti false
+//se non viene passato alcun valore il controllo viene effettuato sull'utente correntemente loggato
 function is_admin($id_a=NULL) {
   //l' inizializzazione serve perchè se non si passano parametri si da per scontato che l' utente richiesto sia quello loggato
   if($id_a == NULL)
@@ -234,6 +243,8 @@ function is_admin($id_a=NULL) {
   else return false;
 }
 
+//ritorna true se l'id passato appartiene ad un utente di tipologia gestore luogo, altirmenti false
+//se non viene passato alcun valore il controllo viene effettuato sull'utente correntemente loggato
 function is_gestore_luogo($id_a=NULL) {
   //l' inizializzazione serve perchè se non si passano parametri si da per scontato che l' utente richiesto sia quello loggato
   if($id_a == NULL)
@@ -245,6 +256,8 @@ function is_gestore_luogo($id_a=NULL) {
   else return false;
 }
 
+//ritorna true se l'id passato appartiene ad un utente di tipologia operatore, altirmenti false
+//se non viene passato alcun valore il controllo viene effettuato sull'utente correntemente loggato
 function is_operatore($id_o=NULL) {
   if($id_o == NULL)
   if(isset($_SESSION['user_tipo']) && $_SESSION['user_tipo'] == 'O') return true;
@@ -255,6 +268,8 @@ function is_operatore($id_o=NULL) {
   else return false;
 }
 
+//ritorna true se l'utente correntemente loggato è collegato al luogo con l'id passato.
+//con collegato si intende se l'utente è amminsitratore del tale luogo
 function user_linked_to_luogo($idluogo){
   // TODO: mettere controllo su tipologie utente="L"
   if(!is_logged()) return false;
@@ -266,7 +281,7 @@ function user_linked_to_luogo($idluogo){
   else return false;
 }
 
-// se è un amministratore di luogo ritorna l 'id del luogo amministrato, altrimentin NULL
+//se è un amministratore di luogo ritorna l 'id del luogo amministrato, altrimentin NULL
 function id_luogo_amministrato($id_user){
   if(!is_gestore_luogo($id_user))
     return NULL;
@@ -316,7 +331,7 @@ function format_data_ora($data){
   return $ret->format('j/m/Y, H:i');
 }
 
-
+//ritorna true se la data passatagli risulta essere del passato.
 function is_data_passata($data){
   //creo un oggetto con la data di oggi
   $stringa_oggi = date('Y-m-d');
@@ -332,6 +347,7 @@ function is_data_passata($data){
     return false; #data disponibile
 }
 
+//formatta il costo passatogli 
 function format_costo($costo){
   $ret = str_replace(',','.',$costo);
   //controllo che sia stato inserito il valore decimale
@@ -347,7 +363,6 @@ function format_costo($costo){
 
 
 
-
 // FUNZIONE PER STAMPARE UN MESSAGGIO DI TABELLA VUOTA QUANDO LA TABELLA È VUOTA
 function no_result($array,$colonne){
   if($array == NULL){
@@ -355,6 +370,7 @@ function no_result($array,$colonne){
   }
 }
 
+//TODO: doc
 function is_ordered_by_this($ord, $char){
   
   if(isset($ord)){
@@ -366,9 +382,8 @@ function is_ordered_by_this($ord, $char){
   return null;
 }
 
-//la variabile deve essere impostata a a valore true se si vuole che l admin di un luogo possa accadere a un' area riservata.
+//la variabile deve essere impostata a a valore true se si vuole che l'admin di un luogo possa accadere a un' area riservata.
 //in tal caso deve essere impostata anche la variabile che indica l' id del luogo a cui si deve accedere
-
 function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
   // TODO: Pprobabilmente mettere un redirect ad http referer e non home
   require_login();
@@ -387,7 +402,6 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
 }
 
 // STAMPA IL FORM PER LA PRENOTAZIONE DI UN BIGLIETTO, DENTRO UN TD
-
 function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nome_spettacolo){
   if($posti_disponibili>0)
   echo"<td>
@@ -402,7 +416,6 @@ function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nom
 }
 
 //STAMPA IL FORM PER L'ANNULLAMENTO DELLA PRENOTAZIONE DI UN BIGLIETTO
-
 function print_form_anullamento($id_biglietto,$nome_spettacolo){
   echo"<td>
   <form method=\"POST\" action=\"annulla_prenotazione.php\" onsubmit=\"return confirm('Confermi di voler annullare la prenotazione per $nome_spettacolo?');\" >
