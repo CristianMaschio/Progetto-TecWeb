@@ -51,8 +51,8 @@
                 <input type="hidden" name="tipo_r" value="L">
                 <!-- TODO: NON PUOI MANDARE A REGISTRAZIONE_R STA ROBA, DEVI FARE UNA PAGINA R APPOSTA -->
               <div class="boxInline">
-                <input type="submit" value="Completa registrazione">
-                <input id="buttonRight" type="reset" value="Azzera campi">
+                <input tabindex=70 type="submit" value="Completa registrazione">
+                <input tabindex=80 id="buttonRight" type="reset" value="Azzera campi">
               </div>
           </form>
       </div>
