@@ -52,10 +52,10 @@
             foreach($eventi as $e){
                 echo "<tr>";
 
-                echo "<td><a href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
+                echo "<td><a title=\"Vai all'evento\" href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
                 echo "</a></td>";
 
-                echo "<td><a href=categoria_scheda.php?cat_id=".$e['id_categoria'].">".get_nome_categoria($e['categoria_id']);
+                echo "<td><a title=\"Vai alla categoria\" href=categoria_scheda.php?cat_id=".$e['id_categoria'].">".get_nome_categoria($e['categoria_id']);
                 echo "</a></td>";
 
                 echo "<td>".format_durata($e['durata']);
@@ -98,7 +98,7 @@
         foreach($luoghi as $l){
             echo "<tr>";
 
-            echo "<td><a href='luogo_scheda.php?luogo_id=".$l['id']."'>".$l['nome'];
+            echo "<td><a title=\"Vai al luogo\" href='luogo_scheda.php?luogo_id=".$l['id']."'>".$l['nome'];
             echo "</a></td>";
 
             echo "<td>".$l['indirizzo'];
@@ -126,7 +126,7 @@
     <dl>
         <?php 
         foreach($categorie as $c){
-          echo "<dt><a href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>";
+          echo "<dt><a title=\"Vai alla categoria\"  href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>";
         }
         ?>
     </dl>

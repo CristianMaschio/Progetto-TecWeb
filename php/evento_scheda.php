@@ -35,14 +35,14 @@ require_once('php/printTemplate.php')
       <div class="content">
               <dl>
                   <dt>Durata</dt><dd><?= format_durata($evento['durata'])?></dd>
-                  <dt>Categoria</dt><dd><a href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
+                  <dt>Categoria</dt><dd><a  title="Vai alla categoria"  href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
               </dl>
 
               <?php if(is_admin() || is_operatore()): ?>
                   <p class="linkDestra">
-                      <a href="evento_mod.php?id_mod= <?= $evt_id ?>">Modifica Evento</a>
+                      <a  title="Modifica evento"  href="evento_mod.php?id_mod= <?= $evt_id ?>">Modifica Evento</a>
                       <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
-                      <a onclick='return confirm("Confermi di voler eliminare questo evento?")' href ="evento_elimina.php?id=<?php echo $evt_id;?>">Elimina evento</a>
+                      <a title="Elimina evento" onclick='return confirm("Confermi di voler eliminare questo evento?")' href ="evento_elimina.php?id=<?php echo $evt_id;?>">Elimina evento</a>
                   </p>
               <?php endif ?>
 
@@ -53,9 +53,9 @@ require_once('php/printTemplate.php')
           <table>
               <thead>
               <tr>
-                  <th onclick="addlocpar('ord','l')"><a>Luogo</a><?php echo is_ordered_by_this($ord,'l'); ?></th>
-                  <th onclick="addlocpar('ord','d')"><a>Data</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
-                  <th onclick="addlocpar('ord','p')"><a>Prezzo</a><?php echo is_ordered_by_this($ord,'p'); ?></th>
+                  <th onclick="addlocpar('ord','l')"><a title="Ordina Luoghi">Luogo</a><?php echo is_ordered_by_this($ord,'l'); ?></th>
+                  <th onclick="addlocpar('ord','d')"><a title="Ordina Date">Data</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
+                  <th onclick="addlocpar('ord','p')"><a title="Ordina Prezzi">Prezzo</a><?php echo is_ordered_by_this($ord,'p'); ?></th>
                   <?php if(is_logged()): ?>
                       <th>Prenotazione</th>
                   <?php endif ?>
@@ -97,7 +97,7 @@ require_once('php/printTemplate.php')
               }
               foreach($spettacoli as $s){
                   echo "<tr>";
-                  echo "<td><a href=luogo_scheda.php?luogo_id=".$s['luogo_id'].">".get_nome_luogo($s['luogo_id']);
+                  echo "<td><a  title=\"Vai alla pagina del luogo\" href=luogo_scheda.php?luogo_id=".$s['luogo_id'].">".get_nome_luogo($s['luogo_id']);
                   echo "</a></td>";
                   echo "<td>".format_data_ora($s['data_ora']);
                   echo "</td>";
@@ -110,9 +110,9 @@ require_once('php/printTemplate.php')
                   if(is_admin() || is_operatore()){
                       echo "<td>".$s['posti_disponibili']."</td>";
                       echo "<td>";
-                      echo "<a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit";
+                      echo "<a title=\"Modifica lo spettacolo\" href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit";
                       echo "</td>";
-                      echo "<td><a href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
+                      echo "<td><a title=\"Elimina lo spettacolo\" href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
                   }
 
               }

@@ -55,7 +55,7 @@
               foreach($luoghi as $l){
                   echo "<tr>";
 
-                  echo "<td><a href='luogo_scheda.php?luogo_id=".$l['id']."'>".$l['nome'];
+                  echo "<td><a title=\"Vai alla pagina del luogo\" href='luogo_scheda.php?luogo_id=".$l['id']."'>".$l['nome'];
                   echo "</a></td>";
 
                   echo "<td>".$l['indirizzo'];

@@ -23,7 +23,7 @@
     <div class="title"><h2>Home</h2></div>
       <div class="content">
       <h3>Informazioni</h3>
-      <p>Benvenuto su BiglietteriaOnline, il portale che ti permette di prenotare online biglietti per <a href="eventi.php">eventi</a> di varie <a href="categorie.php">categorie</a>. Per maggiori informazioni consulta la sezione <a href="info.php"><abbr title="Informazioni">info</abbr></a>
+      <p>Benvenuto su BiglietteriaOnline, il portale che ti permette di prenotare online biglietti per <a title="Vai alla sezione eventi" href="eventi.php">eventi</a> di varie <a title="Vai alla sezione categorie" href="categorie.php">categorie</a>. Per maggiori informazioni consulta la sezione <a title="Vai alla sezione Informazioni" href="info.php"><abbr title="Informazioni">info</abbr></a>
       </p>
 
       <h3>Prossimi eventi in programma</h3>
@@ -54,7 +54,11 @@ $prossimi_eventi = select($sql); //seleziona solamente eventi che hanno spettaco
 <?php 
 no_result($prossimi_eventi,3);
 foreach($prossimi_eventi as $e){
-	echo "<tr><td><a href=\"evento_scheda.php?evt_id=".$e['id_evento']."\">".$e['nome_evento']."</a></td><td><a href=\"luogo_scheda.php?luogo_id=".$e['id_luogo']."\">".$e['nome_luogo']."</a></td><td>".format_data_ora($e['data_ora'])."</td></tr>";
+	echo "<tr>
+					<td><a title=\"Vai all' Evento\" href=\"evento_scheda.php?evt_id=".$e['id_evento']."\">".$e['nome_evento']."</a></td>
+					<td><a title=\"Vai al Luogo\" href=\"luogo_scheda.php?luogo_id=".$e['id_luogo']."\">".$e['nome_luogo']."</a></td>
+					<td>".format_data_ora($e['data_ora'])."</td>
+				</tr>";
 }
 ?>
 	</tbody>
@@ -68,7 +72,8 @@ foreach($prossimi_eventi as $e){
 	ORDER BY nome
 	");
 	foreach($categorie as $c){
-	  echo "<dt><a href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>";
+		echo "<dt><a title=\"Vai alla Categoria\"  href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> 
+					<dd>".$c['descrizione']."</dd>";
 	}
 	?>
       </dl>
