@@ -43,7 +43,7 @@ area_riservata(true,$id_luogo_spettacolo);
 
       <label for="luogo_s" >Luogo</label>
 
-        <select id="luogo_s" name="luogo_s" required>
+        <select tabindex=10 id="luogo_s" name="luogo_s" required>
 
           <?php $luoghi = select("SELECT * FROM luoghi ORDER BY nome ASC");
           foreach($luoghi as $l){
@@ -61,19 +61,19 @@ area_riservata(true,$id_luogo_spettacolo);
       </select>
 
       <label for="data_s">Data</label>
-      <input id="data_s" value="<?php echo"$data" ?>" type="date" name="data_s" required/>
+      <input tabindex=20 id="data_s" value="<?php echo"$data" ?>" type="date" name="data_s" required/>
 
       <label for="ora_s">Orario di inizio</label>
-      <input if="ora_s" value="<?php echo"$ora" ?>" type="time" name="ora_s" required/>
+      <input tabindex=30 if="ora_s" value="<?php echo"$ora" ?>" type="time" name="ora_s" required/>
 
       <label for="posti_s">Posti disponibili</label>
-      <input id="posti_s" value="<?php echo($cercato['posti_disponibili']); ?>" type="number" name="posti_s" value=0 required/>
+      <input tabindex=40 id="posti_s" value="<?php echo($cercato['posti_disponibili']); ?>" type="number" name="posti_s" value=0 required/>
 
       <label for="costo_s">Costo spettacolo</label>
-      <input id="costo_s" value="<?php echo($cercato['prezzo']); ?>" type="number" step="0.01" name="costo_s" value="0.0" required/>
+      <input tabindex=50 id="costo_s" value="<?php echo($cercato['prezzo']); ?>" type="number" step="0.01" name="costo_s" value="0.0" required/>
         <div class="boxInline">
-            <input type="submit" value="Conferma">
-            <input id="buttonRight" type="reset" value="Annulla">
+            <input tabindex=60 type="submit" value="Conferma">
+            <input tabindex=70  id="buttonRight" type="reset" value="Annulla">
         </div>
     </form>
       </div>

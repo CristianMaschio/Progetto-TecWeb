@@ -26,12 +26,18 @@
       <div class="title"><h2>Aggiungi nuov utente amministratore di luogo</h2></div>
       <div class="box">
           <form action="registrazione_utente_luogo_r.php" method="POST" name="form">
-                <label for="username_r">Username</label> <input type="text" name="username_r" REQUIRED>
-                <label for="password_r">Password</label> <input type="password" name="password_r" REQUIRED>
-                <label for="nome_r">Nome</label> <input type="text" name="nome_r"  placeholder="Inserisci il nome" REQUIRED>
-                <label for="cognome_r">Cognome</label> <input type="text" name="cognome_r" placeholder="Inserisci il cognome" REQUIRED>
-                <label for="email_r">Email</label><input type="email" name="email_r" placeholder="esempio@esempio.com" REQUIRED>
-                <label for="luogo_r">Luogo</label><select name="luogo_r" required>
+                <label for="username_r">Username</label>
+                <input type="text" id="username_r" name="username_r" REQUIRED>
+                <label for="password_r">Password</label>
+                <input type="password" id="password_r" name="password_r" REQUIRED>
+                <label for="nome_r">Nome</label>
+                <input type="text"  id="nome_r" name="nome_r"  placeholder="Inserisci il nome" REQUIRED>
+                <label for="cognome_r">Cognome</label>
+                <input type="text"  id="cognome_r" name="cognome_r" placeholder="Inserisci il cognome" REQUIRED>
+                <label for="email_r">Email</label>
+                <input type="email"  id="email_r"name="email_r" placeholder="esempio@esempio.com" REQUIRED>
+                <label for="luogo_r">Luogo</label>
+                <select  id="luogo_r" name="luogo_r" required>
                     <?php $luoghi = select("SELECT * FROM luoghi ORDER BY nome ASC");
                     foreach($luoghi as $l){
                         echo "<option value=".$l['id'].">".$l['nome']."</option>";

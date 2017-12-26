@@ -62,7 +62,7 @@ register('filter');
           no_result($eventi,2);
           foreach($eventi as $e){
               echo "<tr>";
-              echo "<td><a href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
+              echo "<td><a  title=\"Vai all'evento\" href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
               echo "</a></td>";
 
               echo "<td>".format_durata($e['durata']);

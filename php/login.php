@@ -24,13 +24,13 @@
       <div class="box">
       <form method='POST' action='login_r.php'>
           <label lang="en" for="username">Username:</label>
-          <input id="username" type='text' name='username'>
+          <input tabindex="10" id="username" type='text' name='username'>
           <label lang="en" for="password">Password:</label>
-          <input id="password" type='password' name='pass'>
-          <input id="buttonAccedi" type='submit' value='Accedi'>
+          <input tabindex="20" id="password" type='password' name='pass'>
+          <input tabindex="30" id="buttonAccedi" type='submit' value='Accedi'>
       </form>
       <p>
-        Non hai un <span lang="en">account</span>? <a href='registrazione.php'>Registrati!</a>
+        Non hai un <span lang="en">account</span>? <a title="Vai alla pagina di registrazione" href='registrazione.php'>Registrati!</a>
       </p>
     </div>
   </div>

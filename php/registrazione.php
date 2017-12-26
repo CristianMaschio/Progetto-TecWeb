@@ -34,27 +34,27 @@ tipo_r
   <div id="corpo" >
       <div class="title"><h2>Registrazione</h2></div>
       <div class="box">
-
         <form action="registrazione_r.php" method="POST" name="form">
           <label lang="en" for="username">Username</label>
-            <input id="username" type="text" name="username_r" REQUIRED />
+          <input tabindex="10" id="username" type="text" name="username_r" REQUIRED />
+          
           <label lang="en" for="password">Password</label>
-            <input id="password" type="password" name="password_r" REQUIRED />
+          <input tabindex="20" id="password" type="password" name="password_r" REQUIRED />
 
           <label for="nome">Nome</label>
-            <input id="nome" type="text" name="nome_r"  placeholder="Inserisci il tuo nome" REQUIRED>
+          <input tabindex="30" id="nome" type="text" name="nome_r"  placeholder="Inserisci il tuo nome" REQUIRED>
 
           <label for="cognome">Cognome</label>
-            <input id="cognome" type="text" name="cognome_r" placeholder="Inserisci il tuo cognome" REQUIRED>
+          <input tabindex="40" id="cognome" type="text" name="cognome_r" placeholder="Inserisci il tuo cognome" REQUIRED>
 
           <label lang="en" for="email">Email</label>
-            <input id="email" type="email" name="email_r" placeholder="esempio@esempio.com" REQUIRED>
+          <input tabindex="50" id="email" type="email" name="email_r" placeholder="esempio@esempio.com" REQUIRED>
 
           <input type="hidden" name="tipo_r" value="U"><hr>
-            <div class="boxInline">
-              <input type="submit" value="Completa registrazione">
-              <input id="buttonRight" type="reset" value="Azzera campi">
-            </div>
+          <div class="boxInline">
+            <input tabindex="60" type="submit" value="Completa registrazione">
+            <input tabindex="70" id="buttonRight" type="reset" value="Azzera campi">
+          </div>
         </form>
       </div>
   </div>

@@ -26,14 +26,17 @@
       <div class="title"><h2>Crea nuova categoria</h2></div>
       <div class="box">
             <form action="categoria_crea_r.php" method="POST">
-                <label for="nome_c">Nome</label> <input placeholder="Inseri il nome della categoria" type="text" maxlength=50 id="nome_c" name="nome_c" required/>
+                <label for="nome_c">Nome</label> 
+                <input tabindex=10 placeholder="Inseri il nome della categoria" type="text" maxlength=50 id="nome_c" name="nome_c" required/>
+                
                 <label for="descrizione_c">Descrizione</label>
-                <textarea name="descrizione_c" id="descrizione_c"></textarea>
+                <textarea tabindex=20 name="descrizione_c" id="descrizione_c"></textarea>
+                
                 <label for="immagine_c">Immagine</label>
-                <input type="file" name="i_c" id="i_c" accept="image/*" REQUIRED>
+                <input tabindex=30 type="file" name="i_c" id="i_c" accept="image/*" REQUIRED>
                 <div class="boxInline">
-                    <input type="submit" value="Conferma">
-                    <input id="buttonRight" type="reset" value="Annulla">
+                    <input tabindex=40 type="submit" value="Conferma">
+                    <input tabindex=50 id="buttonRight" type="reset" value="Annulla">
                 </div>
             </form>
       </div>
