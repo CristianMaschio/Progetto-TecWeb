@@ -68,7 +68,19 @@ require_once('php/printTemplate.php')
               </thead>
               <tbody>
               <?php //leggo i vari spettacoli
-              $spettacoli_query = "SELECT * 
+            //   $spettacoli_query = "SELECT * 
+            //   FROM spettacoli JOIN eventi ON eventi.id=spettacoli.evento_id
+            //   JOIN luoghi ON luoghi.id=spettacoli.luogo_id
+            //   WHERE evento_id=".$evento['id']." 
+            //   AND spettacoli.data_ora >= NOW() ";
+
+              $spettacoli_query = "SELECT 
+                spettacoli.id AS id,
+                luoghi.id AS luogo_id, 
+                spettacoli.data_ora AS data_ora,
+                spettacoli.prezzo AS prezzo,
+                spettacoli.posti_disponibili AS posti_disponibili,
+                eventi.nome AS nome_evento 
               FROM spettacoli JOIN eventi ON eventi.id=spettacoli.evento_id
               JOIN luoghi ON luoghi.id=spettacoli.luogo_id
               WHERE evento_id=".$evento['id']." 
@@ -104,7 +116,8 @@ require_once('php/printTemplate.php')
                   echo "<td>".$s['prezzo']."&euro;";
                   echo "</td>";
                   if(is_logged()){
-                      print_form_prenotazione($s['id'], $_SESSION['user_id'],$s['posti_disponibili'],get_evento_from_spettacolo($s['id'])['nome']);
+
+                      print_form_prenotazione($s['id'], $_SESSION['user_id'],$s['posti_disponibili'],$s['nome_evento']);
                   }
 
                   if(is_admin() || is_operatore()){
