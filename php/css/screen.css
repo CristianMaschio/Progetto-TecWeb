@@ -17,6 +17,7 @@
     --grigio-azzurro: #F1FAEE;
     --grigio: #A9A9A9;
     --grigio-chiaro: rgb(243, 243, 243);
+    --grigio-sfondo: rgb(226, 226, 226);
 
 
     /* Colori nell'header */
@@ -234,20 +235,18 @@ td {
 	vertical-align: bottom;
 }
 
-dl {
+.borderDl dl {
     border: 3px double #ccc;
     padding: 0.5em;
 }
-dt {
+.borderDl dt {
     float: left;
     clear: left;
     padding-left: 0.3em;
     font-weight: bold;
 }
-dt::after {
-    content: ":";
-}
-dd {
+
+.borderDl dd {
     margin: 0 0 0 7em;
     padding: 0 0 0.5em 0;
 }
@@ -331,6 +330,51 @@ dd {
 /*  FINE Login Registrazione Modifiche*/
 
 /*--------------------
+    INIZIO box delle categorie
+--------------------*/
+
+.categoryBox{
+    margin: 1.2em 1.2em  0 0;  
+    border:  black;
+    background: var(--grigio-sfondo);
+    overflow: auto
+}
+
+.categoryBox .categoryImg{
+    width: 20%;
+    float: left;
+}
+
+.categoryBox .categoryImg img{
+    display: block;
+    width: 100%;
+}
+
+.categoryBox .categoryText{
+    
+    margin-left: 22%;
+}
+
+.categoryBox .categoryText dt{
+    font-weight: bold;
+    font-size: 2.5em;
+    clear: none;
+    float: none;
+}
+
+.categoryBox .categoryText dd{
+    
+    margin-top: 1em; 
+    font-size: 1.4em;
+}
+
+dl.expandedCategories{
+    border: none;
+}
+
+/*  FINE box delle categoire*/
+
+/*--------------------
     INIZIO pannello amministrazione
 --------------------*/
 #amministrazione{
@@ -387,6 +431,10 @@ dd {
     border-top: 3px ridge #CCCCCC;
     margin-left: 1em;
     margin-right: 1em;
+}
+
+.title a{
+    cursor: pointer;
 }
 
 .content {

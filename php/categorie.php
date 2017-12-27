@@ -24,16 +24,19 @@
   <div id="corpo">
   <div class="title"><h2>Esplora le categorie</h2></div>
   <div class="content">
-  <dl>
+  <dl class="expandedCategories">
         <?php $categorie = select("
         SELECT *
         FROM categorie
         ORDER BY nome
         ");
         foreach($categorie as $c){
-          echo "<dt><a title=\"Vai alla categoria\" href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione'];
-          echo '<img src="data:image/jpeg;base64,'.base64_encode( $c['immagine'] ).'"/>';
-          echo "</dd>";
+          echo "<div class=\"categoryBox\">";
+          echo '<div class="categoryImg"><img class="categoryImg" src="data:image/jpeg;base64,'.base64_encode( $c['immagine'] ).'"/></div>';
+          echo "<div class=\"categoryText\">
+          <dt><a title=\"Vai alla categoria\" href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> <dd>".$c['descrizione']."</dd>
+          </div>";
+          echo "</div>";
         }
         ?>
       </dl>

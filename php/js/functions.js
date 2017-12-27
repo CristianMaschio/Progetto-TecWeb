@@ -57,9 +57,9 @@ function panAmmResponsive() {
     var title = document.getElementById("titleChange");
     if (x.className === "panOn") {
         x.className = "panOff";
-        title.innerHTML="Pannello Amministazione ▼";
+        title.innerHTML="<a title=\"Mostra opzioni per amministratore\">Pannello Amministazione &#11206;</a>";
     } else {
         x.className = "panOn";
-        title.innerHTML="Pannello Amministazione ▲";
+        title.innerHTML="<a title=\"Nascondi opzioni per amministratore\">Pannello Amministazione &#11205;</a>";
     }
 }

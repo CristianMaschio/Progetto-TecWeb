@@ -31,6 +31,7 @@
 
 				<h4>Spettacoli, eventi e luoghi</h4>
 				<p>Ecco alcuni chiarimenti sulle terminologie utilizzate in questa piattaforma:
+				<div class="borderDl">
 				<dl>
 					<dt>Evento</dt>
 						<dd>un evento è la descrizione di ciò che sarà possibile andare a vedere effettivamente, che si tratti di un film piuttosto che di un'opera teatrale . Non è possibile prenotare un biglietto per un <em>evento</em>, in quanto ad esso non sono associati un luogo ed un prezzo. Piuttosto è possibile prenotare biglietti per uno <em>spettacolo</em>. </dd>
@@ -39,6 +40,7 @@
 					<dt>Luogo</dt>
 						<dd>un luogo è un posto nel quale si svolgono gli spettacoli.</dd>
 				</dl>
+				</div>
 				</p>
 
 

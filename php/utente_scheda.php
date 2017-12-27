@@ -31,11 +31,11 @@ register('id_u');
       <div class="content">
           <?php
           echo
-              "<dl>
+              "<div class=\"borderDl\"><dl>
       <dt>Nome</dt><dd>".$user['nome']."</dd>
       <dt>Cognome</dt><dd>".$user['cognome']."</dd>
       <dt><span lang=\"en\">Email</span></dt><dd>".$user['email']."</dd>
-      </dl>";
+      </dl></div>";
           ?>
             <?php if(is_logged() && proprietario($user['id'])): ?>
           <div class="linkDestra">
@@ -50,7 +50,7 @@ register('id_u');
 
           <?php if((is_admin() || is_operatore()) && proprietario($user['id'])): ?>
                 <div id="amministrazione">
-                    <div onclick="panAmmResponsive()" id="title" class="title"><h3 id="titleChange">Pannello Amministazione &#11206;</h3></div>
+                    <div onclick="panAmmResponsive()" id="title" class="title"><h3 id="titleChange" ><a title="Mostra opzioni per amministratore">Pannello Amministazione &#11206;</a></h3></div>
                     <div id="panAmm" class="panOff">
                             <ul>
                                 <li><a href="categoria_crea.php">Crea categoria</a></li>

@@ -123,6 +123,7 @@
     ?>
     <?php if(sizeof($categorie) > 0): ?>
     <h3>Categorie</h3>
+    <div class="borderDl">
     <dl>
         <?php 
         foreach($categorie as $c){
@@ -130,6 +131,7 @@
         }
         ?>
     </dl>
+    </div>
     <?php else: ?>
             <?php array_push($non_trovati_testo,"categorie")?>
     <?php endif ?>

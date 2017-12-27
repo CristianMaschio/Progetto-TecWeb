@@ -33,10 +33,12 @@ require_once('php/printTemplate.php')
       ?>
       <div class="title"><h2><?= $evento['nome'] ?></h2></div>
       <div class="content">
+            <div class="borderDl">
               <dl>
                   <dt>Durata</dt><dd><?= format_durata($evento['durata'])?></dd>
                   <dt>Categoria</dt><dd><a  title="Vai alla categoria"  href='categoria_scheda.php?cat_id=<?= $evento['categoria_id'] ?>'><?= get_nome_categoria($evento['categoria_id']) ?></a></dt>
               </dl>
+</div>
 
               <?php if(is_admin() || is_operatore()): ?>
                   <p class="linkDestra">

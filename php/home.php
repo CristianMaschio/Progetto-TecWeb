@@ -65,8 +65,10 @@ foreach($prossimi_eventi as $e){
 	</tbody>
       </table>
 
-      <h3>Categorie disponibili</h3>
+			<h3>Categorie disponibili</h3>
+			<div class="borderDl">
       <dl>
+			
 <?php $categorie = select("
 	SELECT *
 	FROM categorie
@@ -77,7 +79,8 @@ foreach($prossimi_eventi as $e){
 					<dd>".$c['descrizione']."</dd>";
 	}
 	?>
-      </dl>
+			</dl>
+</div>
 
 
     </div>

@@ -33,10 +33,12 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
     <div class="title"><h2><?= $luogo['nome'] ?></h2> </div>
       <div class="content">
           <aside>
+          <div class="borderDl">
               <dl>
                   <dt>Indirizzo</dt><dd><?= $luogo['indirizzo'] ?></dd>
                   <dt>Telefono</dt><dd><?= $luogo['telefono'] ?></dd>
               </dl>
+</div>
 
               <?php if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)): ?>
                   <p class="linkDestra">
