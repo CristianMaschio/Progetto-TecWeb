@@ -403,6 +403,7 @@ function area_riservata($allow_admin_luogo=false,$id_luogo=NULL){
 
 // STAMPA IL FORM PER LA PRENOTAZIONE DI UN BIGLIETTO, DENTRO UN TD
 function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nome_spettacolo){
+  $nome_spettacolo=addslashes($nome_spettacolo);
   if($posti_disponibili>0)
   echo"<td>
   <form method=\"POST\" class=\"singleFieldForm\" action=\"prenota.php\" onsubmit=\"return confirm('Confermi di voler prenotare un biglietto per $nome_spettacolo?');\" >
@@ -417,6 +418,7 @@ function print_form_prenotazione($id_spettacolo,$id_user,$posti_disponibili,$nom
 
 //STAMPA IL FORM PER L'ANNULLAMENTO DELLA PRENOTAZIONE DI UN BIGLIETTO
 function print_form_anullamento($id_biglietto,$nome_spettacolo){
+  $nome_spettacolo=addslashes($nome_spettacolo);
   echo"<td>
   <form method=\"POST\" action=\"annulla_prenotazione.php\" onsubmit=\"return confirm('Confermi di voler annullare la prenotazione per $nome_spettacolo?');\" >
     <input type=\"hidden\" name=\"id_b\" value=\"".$id_biglietto."\">

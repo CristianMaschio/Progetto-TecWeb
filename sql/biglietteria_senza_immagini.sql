@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `biglietti`
 --
 
-CREATE TABLE `biglietti` (
+CREATE OR REPLACE TABLE `biglietti` (
   `id` int(11) NOT NULL,
   `utente_id` int(11) NOT NULL DEFAULT '0',
   `spettacolo_id` int(11) NOT NULL DEFAULT '0',
