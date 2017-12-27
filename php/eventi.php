@@ -80,10 +80,11 @@ no_result($eventi,4);
 foreach($eventi as $e){
 	echo "<tr>";
 
-	echo "<td><a title=\"Vai all'evento\"  href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
+	echo "<td><a title=\"Vai alla scheda dell'evento ".$e['nome']."\" href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
 	echo "</a></td>";
 
-	echo "<td><a  title=\"Vai alla categoria\" href=categoria_scheda.php?cat_id=".$e['id_categoria'].">".get_nome_categoria($e['categoria_id']);
+	echo "<td><a  title=\"Vai alla scheda della categoria ".get_nome_categoria($e['categoria_id'])."\"
+	 href=categoria_scheda.php?cat_id=".$e['id_categoria'].">".get_nome_categoria($e['categoria_id']);
 	echo "</a></td>";
 
 	echo "<td>".format_durata($e['durata']);

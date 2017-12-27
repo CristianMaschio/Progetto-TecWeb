@@ -55,8 +55,9 @@ $prossimi_eventi = select($sql); //seleziona solamente eventi che hanno spettaco
 no_result($prossimi_eventi,3);
 foreach($prossimi_eventi as $e){
 	echo "<tr>
-					<td><a title=\"Vai all' Evento\" href=\"evento_scheda.php?evt_id=".$e['id_evento']."\">".$e['nome_evento']."</a></td>
-					<td><a title=\"Vai al Luogo\" href=\"luogo_scheda.php?luogo_id=".$e['id_luogo']."\">".$e['nome_luogo']."</a></td>
+					<td><a title=\"Vai alla scheda dell'evento ".$e['nome_evento']."\" href=\"evento_scheda.php?evt_id=".$e['id_evento']."\">".$e['nome_evento']."</a></td>
+
+					<td><a title=\"Vai alla scheda del luogo ".$e['nome_luogo']."\" href=\"luogo_scheda.php?luogo_id=".$e['id_luogo']."\">".$e['nome_luogo']."</a></td>
 					<td>".format_data_ora($e['data_ora'])."</td>
 				</tr>";
 }
@@ -72,7 +73,7 @@ foreach($prossimi_eventi as $e){
 	ORDER BY nome
 	");
 	foreach($categorie as $c){
-		echo "<dt><a title=\"Vai alla Categoria\"  href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> 
+		echo "<dt><a title=\"Vai alla scheda della categoria ".$c['nome']."\"  href=\"categoria_scheda.php?cat_id=".$c['id']."\">".$c['nome']."</a></dt> 
 					<dd>".$c['descrizione']."</dd>";
 	}
 	?>
