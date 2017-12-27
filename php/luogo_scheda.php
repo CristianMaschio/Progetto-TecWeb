@@ -40,7 +40,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
 
               <?php if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)): ?>
                   <p class="linkDestra">
-                      <a href="luogo_mod.php?id_mod= <?= $luogo_id ?>">Modifica Luogo</a>
+                      <a title="Modifica il luogo" href="luogo_mod.php?id_mod= <?= $luogo_id ?>">Modifica Luogo</a>
                       <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
                       <?php if(is_admin() || is_operatore()): ?>
                           <!-- metto questo solo ad admin e operatori in quanto un amministratore di luogo non dovrebbe essere in grado di eliminare il suo luogo -->
@@ -54,9 +54,9 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
 
               <thead>
               <tr>
-                  <th onclick="addlocpar('ord','e')"><a>Evento</a><?php echo is_ordered_by_this($ord,'e'); ?></th>
-                  <th onclick="addlocpar('ord','d')"><a>Data</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
-                  <th onclick="addlocpar('ord','p')"><a>Prezzo</a><?php echo is_ordered_by_this($ord,'p'); ?></th>
+                  <th onclick="addlocpar('ord','e')"><a title="Ordina gli eventi">Evento</a><?php echo is_ordered_by_this($ord,'e'); ?></th>
+                  <th onclick="addlocpar('ord','d')"><a title="Ordina le date">Data</a><?php echo is_ordered_by_this($ord,'d'); ?></th>
+                  <th onclick="addlocpar('ord','p')"><a title="Ordina i prezzi">Prezzo</a><?php echo is_ordered_by_this($ord,'p'); ?></th>
                   <?php if(is_logged()): ?>
                       <th>Prenotazione</th>
                   <?php endif ?>
@@ -100,7 +100,7 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
               foreach($spettacoli as $s){
                   echo "<tr>";
 
-                  echo "<td><a href='evento_scheda.php?evt_id=".$s['idevento']."'>".$s['nome'];
+                  echo "<td><a title=\"Vai alla scheda dell'evento\" href='evento_scheda.php?evt_id=".$s['idevento']."'>".$s['nome'];
                   echo "</a></td>";
 
                   echo "<td>".format_data_ora($s['data_ora']);
@@ -114,8 +114,8 @@ $_SESSION['redirect_from_spettacolo'] = 'luogo_scheda.php?luogo_id='.$luogo_id; 
                   }
                   if(is_admin() || is_operatore() || user_linked_to_luogo($luogo_id)){
                       echo "<td>".$s['posti_disponibili']."</td>";
-                      echo "<td><a href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
-                      echo "<td><a href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
+                      echo "<td><a title=\"Modifica lo spettacolo\" href=\"spettacolo_mod.php?id_mod=".$s['id']."\">edit</a></td>";
+                      echo "<td><a title=\"Elimina lo spettacolo\" href=\"spettacolo_elimina.php?id_s=".$s['id']."\" >delete</a></td>";
                   }
 
                   echo "</tr>";

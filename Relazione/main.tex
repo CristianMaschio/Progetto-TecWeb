@@ -132,12 +132,23 @@ Andrea Favero \newline Francesco Parolini}
 \section{Target di utenza}
 
 \section{Accessibilità}
-	\subsection{Separazione contenuto, presentazione e strutura}
+	\subsection{Separazione contenuto, presentazione e struttura}
 	\subsection{Schema colori}
 	\subsection{Tag meta}
 	\subsection{Screen Reader}
 	\subsection{Facilitazioni per la navigazione}
-
+		->sono appunti per quando scriveremo la relazione vera e propria.
+	
+		nei form (vedi registrazione.php): label, tabindex. Poi abbiamo favorito la visibilità con forte contrasto tra sfondo e i campi.
+		
+		nelle tabelle:
+		http://www.html.it/pag/15826/lattributo-summary-e-lattributo-th/  (possiamo prendere info da questa "fonte")
+			attributo summaryy in <table>
+			<th> table header: le "celle d’intestazione", con le info vanno messe dentro questo tag, in td vanno le informazioni (celle dati)
+			scope: con <th> va specificato anche lo scope, ovvero il raggio d'azione dell'intestazione <th scope="col, colgroup, row" >
+			può anche essere usato in un td (anzi generalmente lo è per "raggruppare" elementdi di una riga)
+			poi mettiamo <caption> (è come summary, però solamente per utenti visuali)
+			thead, tbody, tfoot.... probabilmente a noi basteranno i primi 2 per header e dati
 \section{Usabilità}
 
 \section{Gerarchia dei file}

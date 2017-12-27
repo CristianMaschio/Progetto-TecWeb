@@ -33,12 +33,15 @@ area_riservata(true,$id_mod);
       <div class="box">
     <form method="post" action="luogo_mod_r.php">
       <input type="hidden" name="id_mod" value="<?= $id_mod ?>"/>
-      <label for="nome_l">Nome</label> <input type="text" value="<?= $cercato['nome'] ?>" maxlength=50 name="nome_l" id="nome_l" required/>
-      <label for="indirizzo_l">Indirizzo</label> <input value="<?= $cercato['indirizzo']?>" type="text" name="indirizzo_l" id="indirizzo_l" required/>
-      <label for="telefono_l">Telefono</label> <input value="<?= $cercato['telefono']?>" type="text" maxlength=40 name="telefono_l" id="telefono_l" required/>
+      <label for="nome_l">Nome</label>
+      <input tabindex=10 type="text" value="<?= $cercato['nome'] ?>" maxlength=50 name="nome_l" id="nome_l" required/>
+      <label for="indirizzo_l">Indirizzo</label>
+      <input tabindex=20 value="<?= $cercato['indirizzo']?>" type="text" name="indirizzo_l" id="indirizzo_l" required/>
+      <label for="telefono_l">Telefono</label>
+      <input tabindex=30 value="<?= $cercato['telefono']?>" type="text" maxlength=40 name="telefono_l" id="telefono_l" required/>
         <div class="boxInline">
-            <input type="submit" value="Conferma">
-            <input id="buttonRight" type="reset" value="Annulla">
+            <input tabindex=40 type="submit" value="Conferma">
+            <input tabindex=50 id="buttonRight" type="reset" value="Annulla">
         </div>
     </form>
       </div>

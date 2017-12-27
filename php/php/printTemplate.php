@@ -27,9 +27,10 @@ function printHeader(){
    <input type=\"text\" name=\"filtro\" placeholder='Cerca'>
   </form>
   </div>
-
+  
   <a href=\"#corpo\" id=\"linkToCorpo\" name=\"Contenuto della pagina\">Contenuto della pagina</a>
   ");
+  //TODO: a cosa serve la riga 31?   <a href=\"#corpo\" id=\"linkToCorpo\" name=\"Contenuto della pagina\">Contenuto della pagina</a>
   //consima sotto l'header (per ora messaggi) se ce ne sono
 
 }
@@ -39,18 +40,18 @@ function printNavBar(){
   //TODO: non vanno messi span?
   echo("
   <ul>
-  <li lang=\"en\"><a href=\"home.php\">Home</a></li>
-  <li lang=\"it\"><a href=\"categorie.php\">Categorie</a></li>
-  <li lang=\"it\"><a href=\"eventi.php\">Eventi</a></li>
-  <li lang=\"it\"><a href=\"luoghi.php\">Luoghi</a></li>
-  <li lang=\"it\"><a href=\"ciauzzone.php\">NOON VISITARE</a></li>
-  <li lang=\"it\"><a href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
+  <li lang=\"en\"><a title=\"Vai alla Home\" href=\"home.php\">Home</a></li>
+  <li lang=\"it\"><a title=\"Vai alle Categorie\" href=\"categorie.php\">Categorie</a></li>
+  <li lang=\"it\"><a title=\"Vai agli Eventi\" href=\"eventi.php\">Eventi</a></li>
+  <li lang=\"it\"><a title=\"Vai al Luoghi\" href=\"luoghi.php\">Luoghi</a></li>
+  <li lang=\"it\"><a title=\"Vai al NOON VISITARE\" href=\"ciauzzone.php\">NOON VISITARE</a></li>
+  <li lang=\"it\"><a title=\"Vai alle Informazioni\" href=\"info.php\"><abbr title=\"Informazioni\">Info</abbr></a></li>
   </ul>
   ");
   if(!is_logged()){
     //utente non loggato: mostriamo la pagina di login
     echo("<div id='navLog'>
-    <a href=\"login.php\"><span lang=\"en\">Login</span>/Registrazione</a>
+    <a title=\"Vai alla Registrazione\" href=\"login.php\"><span lang=\"en\">Login</span>/Registrazione</a>
     </div>
     ");
   } else {
@@ -58,8 +59,8 @@ function printNavBar(){
     echo(
     "<div id='navLog'>
     <ul>
-      <li><a href=\"utente_scheda.php?id_u=".$_SESSION['user_id']."\">".$_SESSION['user_username']."</a> </li>
-      <li><a href=logout_r.php >Logout</a> <li>
+      <li><a title=\"Vai alla tua pagina personale\" href=\"utente_scheda.php?id_u=".$_SESSION['user_id']."\">".$_SESSION['user_username']."</a> </li>
+      <li><a title=\"Effettua Logout\" href=logout_r.php >Logout</a> <li>
     </ul>
     </div>
     ");

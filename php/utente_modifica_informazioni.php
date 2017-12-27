@@ -35,18 +35,18 @@ require_proprietario($id_u);
 
     <form method='POST' action='utente_modifica_informazioni_r.php'>
         <label for="nome">Nome:</label>
-        <input id="nome" type='text' value="<?php echo $user['nome']; ?>" name='nome_u'>
+        <input tabindex=10 id="nome" type='text' value="<?php echo $user['nome']; ?>" name='nome_u'>
 
         <label for="cognome">Cognome</label>
-        <input id="cognome" type='text' value="<?php echo $user['cognome']; ?>" name='cognome_u'>
+        <input tabindex=20 id="cognome" type='text' value="<?php echo $user['cognome']; ?>" name='cognome_u'>
 
         <label for="email" lang="en">Email</label>
-        <input id="email" type='email' value="<?php echo $user['email']; ?>" name='email_u'>
+        <input tabindex=30 id="email" type='email' value="<?php echo $user['email']; ?>" name='email_u'>
 
         <input type="hidden" value="<?php echo $user['id']; ?>" name='id_u'>
         <div class="boxInline">
-          <input type='submit' value='Conferma'>
-          <input id="buttonRight" type='reset' value='Annulla'>
+          <input tabindex=40  type='submit' value='Conferma'>
+          <input tabindex=50 id="buttonRight" type='reset' value='Annulla'>
         </div>
     </form>
 

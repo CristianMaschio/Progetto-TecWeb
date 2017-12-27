@@ -23,7 +23,7 @@
             <div class="content">
 
 				<h4>Chi siamo</h4>
-					<p>Benvenuto nella Biglietteria <span lang="eng">Online</span>. Qui potrai prenotare il tuo posto in un ampia fascia di <a href="categorie.php">categorie</a> di eventi, come biglietti per musei, fiere o cinema. </p>
+					<p>Benvenuto nella Biglietteria <span lang="eng">Online</span>. Qui potrai prenotare il tuo posto in un ampia fascia di <a title="Vai alle Categorie" href="categorie.php">categorie</a> di eventi, come biglietti per musei, fiere o cinema. </p>
 
 
 				<h4>Cosa facciamo</h4>
@@ -45,7 +45,7 @@
 				<h4>Come cercare uno spettacolo</h4>
 				<!-- TODO: vedere se è abbastnza chiara la differenza spettacolo/evento-->
 					<!-- <p><span style="color:red">AGGIORNARE QUANDO ESISTERANNO LA RICERCA SPECIFICA E LA RICERCA PER SPETTACOLO, CON IMMAGINI</span> -->
-					Attraverso la barra di ricerca posta in alto a destra puoi ricercare tutti gli Spettacoli di una certa categoria digitando il nome della categoria (ad esempio: "Cinema"), oppure gli Spettacoli che si svolgeranno in un certo luogo digitando il nome del luogo (ad esempio: "Porto Astra"). Puoi anche ricercare uno Evento direttamente con il suo nome! Dopo aver effetuato la ricerca ti si presenterà davanti una tabella contenente i risultati. Nella tabella puoi cliccare sui vari campi per ottenere ulteriori informazioni riguardo il determinato campo. Se ad esempio hai ricercato "Van Gogh" e vuoi ottenere ulteriori informazioni sulla <span lang="eng">location</span> oppure altri eventi in musei ti bastera cliccare rispettivamente sulle rispettive voci. Se vuoi procedere ad effettuare una prenotazione invece clicca sul nome dell'evento. Se infine sei interessato a vedere tutti gli <a href="eventi.php">Eventi</a>, i <a href="luoghi.php">Luoghi</a> e le <a href="categorie.php">Categorie</a> puoi cliccare sul <span lang="eng">link</span> rispettivo proprio sotto il nostro logo nella barra dei menu.</p>
+					Attraverso la barra di ricerca posta in alto a destra puoi ricercare tutti gli Spettacoli di una certa categoria digitando il nome della categoria (ad esempio: "Cinema"), oppure gli Spettacoli che si svolgeranno in un certo luogo digitando il nome del luogo (ad esempio: "Porto Astra"). Puoi anche ricercare uno Evento direttamente con il suo nome! Dopo aver effetuato la ricerca ti si presenterà davanti una tabella contenente i risultati. Nella tabella puoi cliccare sui vari campi per ottenere ulteriori informazioni riguardo il determinato campo. Se ad esempio hai ricercato "Van Gogh" e vuoi ottenere ulteriori informazioni sulla <span lang="eng">location</span> oppure altri eventi in musei ti bastera cliccare rispettivamente sulle rispettive voci. Se vuoi procedere ad effettuare una prenotazione invece clicca sul nome dell'evento. Se infine sei interessato a vedere tutti gli <a title="Vai agli Eventi" href="eventi.php">Eventi</a>, i <a title="Vai ai Luoghi" href="luoghi.php">Luoghi</a> e le <a title="Vai alle Categorie" href="categorie.php">Categorie</a> puoi cliccare sul <span lang="eng">link</span> rispettivo proprio sotto il nostro logo nella barra dei menu.</p>
 
 
 				<h4>Come prenotare un biglietto</h4>
@@ -60,12 +60,12 @@
 
 				<h4>Come registrarti</h4>
 					<p>
-					Il primo passo per entrare a far parte del nostro sistema di prenotazione dei biglietti è creare un <span lang="eng">account</span>. Per fare ciò ti basta cliccare sul <span lang="eng">link</span> "<span lang="eng">Login</span>/Registrazione" che puoi trovare in alto a destra, proprio sotto la barra di ricerca. Il <span lang="eng">link</span> ti porterà ad una finestra in cui ti verranno chieste le credenziali di accesso. Tu clicca sul <span lang="eng">link</span> "Registrati" in basso per arrivare alla schermata apposita, oppure clicca direttamente <a href="registrazione.php">qui</a>. In questa pagina ti verrà richiesto di inserire alcuni dati: <span lang="eng">username</span>, <span lang="eng">password</span>, nome, cognome e <span lang="eng">email</span>. Inviando questo modulo il sistema controllerà che il nome utente scelto non sia già occupato, in caso tutto vada bene potrai da subito iniziare a prenotare biglietti per i tuoi eventi preferiti.</p>
+					Il primo passo per entrare a far parte del nostro sistema di prenotazione dei biglietti è creare un <span lang="eng">account</span>. Per fare ciò ti basta cliccare sul <span lang="eng">link</span> "<span lang="eng">Login</span>/Registrazione" che puoi trovare in alto a destra, proprio sotto la barra di ricerca. Il <span lang="eng">link</span> ti porterà ad una finestra in cui ti verranno chieste le credenziali di accesso. Tu clicca sul <span lang="eng">link</span> "Registrati" in basso per arrivare alla schermata apposita, oppure clicca direttamente <a title="Vai alla registrazione" href="registrazione.php">qui</a>. In questa pagina ti verrà richiesto di inserire alcuni dati: <span lang="eng">username</span>, <span lang="eng">password</span>, nome, cognome e <span lang="eng">email</span>. Inviando questo modulo il sistema controllerà che il nome utente scelto non sia già occupato, in caso tutto vada bene potrai da subito iniziare a prenotare biglietti per i tuoi eventi preferiti.</p>
 
 
 				<h4>Sei registrato e non sai come entrare?</h4>
 					<p>
-					Se hai già completato la procedura di registrazione e vuoi entrare nel nostro sistema non devi fare altro che cliccare sul <span lang="eng">link</span> "<span lang="eng">Login</span>/Registrazione". Puoi anche cliccare <a href="login.php">qui</a> per arrivare direttamente alla pagina di <span lang="eng">login</span>. Dopodichè dovrai inserire i tuoi dati ed entrerai nel sistema.</p>
+					Se hai già completato la procedura di registrazione e vuoi entrare nel nostro sistema non devi fare altro che cliccare sul <span lang="eng">link</span> "<span lang="eng">Login</span>/Registrazione". Puoi anche cliccare <a title="Vai al login" href="login.php">qui</a> per arrivare direttamente alla pagina di <span lang="eng">login</span>. Dopodichè dovrai inserire i tuoi dati ed entrerai nel sistema.</p>
 
 
 				<h4>Come vedere e modificare i tuoi dati</h4>

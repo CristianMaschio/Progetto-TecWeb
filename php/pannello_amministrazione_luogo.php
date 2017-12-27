@@ -33,8 +33,8 @@
   
 
   <ul>
-    <a href="luogo_mod.php?id_mod=<?=$luogo_id?>">Modifica informazioni luogo</a>
-    <a href="spettacolo_crea.php">Crea nuovo spettacolo</a>
+    <a title="Modifica le informazioni del luogo" href="luogo_mod.php?id_mod=<?=$luogo_id?>">Modifica informazioni luogo</a>
+    <a title="Crea un nuovo spettacolo" href="spettacolo_crea.php">Crea nuovo spettacolo</a>
   </ul>
         <h3>Spettacoli</h3><hr>
             <?php

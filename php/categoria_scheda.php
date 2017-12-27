@@ -29,9 +29,9 @@ register('filter');
       <div class="content">
       <?php if(is_admin() || is_operatore()): ?>
               <div class="linkDestra">
-                  <a href="categoria_mod.php?id_mod=<?php echo $cat_id ?>">Modifica Categoria</a>
+                  <a title="Modifica la categoria" href="categoria_mod.php?id_mod=<?php echo $cat_id ?>">Modifica Categoria</a>
                   <!-- TODO: riprendere da qui per gestire le eliminazioni di cose:  o fai una pagina php muta tipo op oppure fai una funzione php -->
-                  <a onclick=' return confirm("Confermi di voler eliminare ?")' href ="categoria_elimina.php?id=<?php echo $cat_id ?>">Elimina Categoria</a>
+                  <a title="Elimina la categoria" onclick=' return confirm("Confermi di voler eliminare ?")' href ="categoria_elimina.php?id=<?php echo $cat_id ?>">Elimina Categoria</a>
               </div>
              <?php endif ?>
           <p> <?php
@@ -62,7 +62,7 @@ register('filter');
           no_result($eventi,2);
           foreach($eventi as $e){
               echo "<tr>";
-              echo "<td><a href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
+              echo "<td><a  title=\"Vai all'evento\" href='evento_scheda.php?evt_id=".$e['id']."'>".$e['nome'];
               echo "</a></td>";
 
               echo "<td>".format_durata($e['durata']);
