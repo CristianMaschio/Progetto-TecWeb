@@ -1,0 +1,65 @@
+ENTRO IL 7
+
+FREPPO
+[X] mettere a posto visualizzazione costo del biglietto moltiplicato per numero di biglietti
+[X] togliere i link circolari sul riordinamento
+[X] chiedere la connessione al database ad ogni pagina
+[X] Pensare a mettere pulsante prenota anche per non loggati  
+[X] Aggiungere icona da displayare da browwer 
+[] far funzionare le pagine che riordinano le tabelle anche se js disabilitato(ovvero mettere un href e vedere se tutto funzia) 
+
+PAOLO
+[x] ripensare info -> mettere anche paragrafo per gestori di luoghi -> in questa sezione aggiungere che si necessita di avere una connessiona a internet + computer con javascript abilitato (di versione del browser associata)
+[x] mettere foto in info 
+[x] far validare le pagine con totalvalidator, validatore di html5 e css
+
+    -categoria.php          ***shit
+    -eventi.php             ***ha 3 errori per link vuoto in riordinamento tabella    
+    -luoghi.php             clean as fuckerini
+    -info.php               clean af
+    -registrazione.php      clean af
+    -login.php              clean af
+    -eventoscheda.php       ***ha 3 errori per link vuoto in riordinamento tabella
+    -luogoscheda.pgp        ***ha 3 errori per link vuoto in riordinamento tabella    
+    -categoriasceda.php     clean as fuckeroni
+    -utentescheda.php       clean af
+    -utentemodificainfo.php clean af
+    
+[] finire relazione (CONTENT ADAPTABILITY)
+[x] stampare (è roba di accessibilità) ??? 
+[x] sistemare in mobile.css la cosa del label input bottone
+
+
+ANDREA
+[x] mettere nella relazione la cosa che gli amministratori di luoghi abbiano Javascript come prerequisito
+[x] aggiungere che amministratori nostri devono avere javascript abilitato per corretta creazione degli eventi
+[X] mettere tutti i punti che ha scritto ballan online
+[x] specificare nella relazione che stampiamo le pagine con un template dinamico e che anche se è più lenta la generazioni delle tali ciò non risulta attualmente un problema in quanto il sito è leggero(poche immagini) -> se dovesse diventare più pesante risulterebbe necessario metterlo a posto bene.
+[x] discorso dell'attributo time -> lo usano solo amministratori, operatori e amministratori di luogo: questo vuol dire che sono utenti su cui abbiamo il controllo di ciò che usano => mettere che devono avere una versione del browser che lo supporto(devi andarti a cercare e mettere da quando sono supportati)
+[X] mettere online sul server (seguendo le indicazioni che ha dato) il sito così com è adesso e controllare che tutto funzioni
+[x] mandare una email chiedendo informazioni se si devono iscrivere tutti o solo qualcuno robe così
+[x] mettere nella relazione la cosa dei colori web safe 
+[] riscrivere bene perché abbiamo usato php7 -> NON LO FARE! NON ABBIAMO USATO LE CLASSI -> tralascia la versione che è un misto (usiamo anche i die)
+[X] aggiungere biglietti e spettacoli CHE ABBIANO SENSO
+[X] mettersi responsabile
+[X] aggiungere tutti gli utenti in copertina
+[X] togliere il colore rosso dall’indice
+[X] scrivere che visto che usiamo date e time da safari gli admin (sia normali che di luoghi) non possono fare un cazzo
+[X più o meno, bottoni chiudi di merda] compatibilità browser?
+[X] quando il sito è stato caricato nella sua versione finale, rimuovere tutte le funzioni che visualizzano errori 
+[X] quando si carica nel sito per l’ultima volta ricordarsi di sistemare le credenziali per accedere al DB
+[X] al momento della consegna rimuovere la cartella immagini_back_up
+[] scrivere che devono cambiare nome utente e password nel DB per installare nella loro macchina il sito, andare su config.php
+[X] controllare che per ogni luogo nel DB ci sia un amministratore
+
+[X] Compilare tex
+[X] Mettere tutti i file nel server 
+[X] esportare sql
+[X] zappare
+
+
+CRISTIAN
+[x] mettere barra di ricerca anche nel mobile
+[x] controllare come si vede la casella di ricerca con il bottone cerca(nuovo)
+[x] mettere il menu che appare ad hamburger a destra
+[x] mettere a posto i colori -> metterli web safe (ovvero uguali a due a due): modificare quelli in esadecimale e mettere quelli in rgb in modalità esadecimale e web safe

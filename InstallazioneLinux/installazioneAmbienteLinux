@@ -1,0 +1,64 @@
+########################################
+#         Installazione ambiente di lavoro su macchina Linux
+########################################
+# come prima cosa controllate di essere nella cartella del file "biglietteriadump.sql"
+# in tal caso potete eseguire semplicemente questo file e leggere nei commenti i comandi da dare, ma per la maggior parte sarà tutto automatico
+
+# 1. Installazione di apache
+sudo apt-get install -y apache2 apache2-doc apache2-utils libexpat1 ssl-cert
+# Utilizzo
+# sudo service apache2 start //per avviarlo
+# sudo service apache2 stop //per fermarlo
+# sudo service apache2 reload //per applicare modifiche alle impostazioni
+# sudo service apache2 restart //per riavviarlo
+# per verificare che funzioni date il comando di avvio e sul browser andate all'indirizzo 127.0.0.1
+
+# 2. Installazione di PHP
+# se avete già avviato il webserver è necessario riavviarlo per rendere php funzionante
+sudo apt-get install -y libapache2-mod-php php-mysql
+
+# Dove vanno a finire le pagine web?
+# -> in /var/www/html/ questa è la cartella dove le pagine vengono(per ora!) hostate dal web server. Per fare qualsiasi azione su questa cartella è necessario essere amministratori
+
+# 3. Installazione MySQL
+# IMPORTANTE: quando vi chiederà di inserire la password mettete root per l'utente root
+sudo apt-get install -y mysql-server mysql-client
+# Utilizzo
+# sudo service mysql start //per avviarlo
+# sudo service mysql stop //per bloccarlo
+# per avviare il client: > mysql -u root -p
+
+# 4. Importare il database
+sudo service mysql start # fa partire il database
+mysql -u root -p < biglietteriadump.sql # importa il database
+# che vi chiederà di inserire la password, ma dopo farà tutto da solo
+
+# 5. Installazione di un comando che fa avviare velocemente webserver e database
+# è un script che si deve trovare nella stessa directory di questo file, col nome "startlamp"
+# quando vorrete lavorare sul progetto vi basterà accedere al terminale e digitare "startlamp"
+# per avviare webserver e database
+sudo chmod 777 startlamp
+sudo cp startlamp /bin/
+
+# 6. Cambio della cartella di destinazione dei files html
+# Purtroppo questo passaggio va fatto a mano e non è automatizzabile
+# è necessario:
+#   6.1 lanciare "sudo gedit /etc/apache2/sites-available/000-default.conf" e sostituire la stringa "DocumentRoot /var/www/html" con il path che volete avere voi,
+#       consiglio caldamente di impostare la cartella php che sta nella git, così non dovrete fare continuamente copia e incolla. nel mio caso è
+#       "DocumentRoot /home/phreppo/Documents/Progetto-TecWeb/php", se avete gittato nella cartella Documents. Salvate e chiudte
+#   6.2 lanciare "sudo gedit /etc/apache2/apache2.conf" e aggiungere a riga 176 circa (sotto tutte le entry simili a questa insomma):
+#         <Directory /pathassoluto/allavostracartella/ >
+#         	Options Indexes FollowSymLinks
+#         	AllowOverride None
+#         	Require all granted
+#         </Directory>
+#       nel mio caso:
+#         <Directory /home/phreppo/Documents/Progetto-TecWeb/php>
+#         	Options Indexes FollowSymLinks
+#         	AllowOverride None
+#         	Require all granted
+#         </Directory>
+#
+# per provare se tutto funziona correttamente date "sudo service apache2 restart", aprite chrome e date come indirizzo 127.0.0.1/ciao.php, dove ovviamente ciao.php deve essere una pagina che avete nelal repository del progetto che avete indicato come DocumentRoot (e se hai clonato la cartella senza cambiare tutto e hai dato come path esattamente quello php c'è)
+#
+
